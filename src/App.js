@@ -8,6 +8,9 @@ function App() {
         <button className="mode-button">Recommend a Game</button>
         <button className="mode-button">Random Game</button>
       </div>
+      <div id="games-released-today">
+        <h1>Games Released Today</h1>
+      </div>
     </div>
   );
 }
