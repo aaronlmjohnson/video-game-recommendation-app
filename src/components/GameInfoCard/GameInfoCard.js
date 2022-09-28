@@ -7,8 +7,8 @@ const GameInfoCard = (props)=>{
             <p className="game-release-date">
                 9/17/2013
             </p>
-            <p className="game-developer">
-                Rockstar
+            <p className="game-rating">
+                4.47
             </p>
         </div>
     );
