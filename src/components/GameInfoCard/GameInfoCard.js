@@ -1,14 +1,14 @@
-const GameInfoCard = (props)=>{
+const GameInfoCard = ({name, releaseDate, rating})=>{
     return(
         <div className="game-info-card">
             <h1 className="game-name">
-                Grand Theft Auto 5
+                {name}
             </h1>
             <p className="game-release-date">
-                9/17/2013
+                {releaseDate}
             </p>
             <p className="game-rating">
-                4.47
+                {rating}
             </p>
         </div>
     );

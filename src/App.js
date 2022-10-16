@@ -7,7 +7,7 @@ function App() {
     <div id="app-container">
       <h1>Video Game Recommender</h1>
       <ModeButtons />
-      <GamesReleasedToday />
+      <GamesReleasedToday cards={[0, 1, 2, 3, 4, 5, 6, 7, 8]}/>
     </div>
   );
 }
