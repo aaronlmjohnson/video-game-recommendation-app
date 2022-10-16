@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import useGameAPI from "./useGameAPI";
-import Axios from 'axios';
+//import useGameAPI from "./useGameAPI";
+import { useState } from 'react';
 import axios from 'axios';
 
 jest.mock('axios');
@@ -16,10 +16,10 @@ const mockData = {
 }
 
 describe("Game Info Card API", ()=>{
-    // need useState for the GameInfoCardAPI
-    //rename ot useGameAPI
+
     it('returns the name of the game', async ()=>{
-        axios.get.mockResolvedValue(mockData);
+       axios.get.mockResolvedValue(mockData)
+    //    console.log(gameData);
     });
 });
 
