@@ -4,7 +4,7 @@ import YearSelectionForm from '../YearSelectionForm/YearSelectionForm';
 const PopularGames = ({data, year, updateYear, changePopularYearData})=>{
     return (
         <div id="popular-games-for-this-year">
-            <h1>Popular Games of YEAR</h1>
+            <h1>Popular Games of {year}</h1>
             <YearSelectionForm 
                 year={year} 
                 updateYear={updateYear} 
