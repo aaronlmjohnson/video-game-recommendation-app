@@ -1,6 +1,10 @@
-const YearSelectionForm = ({year, updateYear})=>{
+const YearSelectionForm = ({year, updateYear, changePopularYearData})=>{
     return (
-        <form>
+        <form onSubmit={(e)=> {
+                e.preventDefault();
+                changePopularYearData();
+            }
+        }>
             <input 
             type="number" 
             min="1971" 
@@ -9,8 +13,7 @@ const YearSelectionForm = ({year, updateYear})=>{
             onChange={(e)=>updateYear(e.target.value)}
             />
             <input type="submit" />
-        </form>
-        
+        </form>  
     );
 }
 export default YearSelectionForm;
