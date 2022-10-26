@@ -1,17 +1,14 @@
 import GameInfoCard from '../GameInfoCard/GameInfoCard';
+import YearSelectionForm from '../YearSelectionForm/YearSelectionForm';
 
 const PopularGames = ({data, year, updateYear})=>{
     return (
         <div id="popular-games-for-this-year">
             <h1>Popular Games of YEAR</h1>
-            <input 
-                type="number" 
-                min="1971" 
-                max="2022"
-                value={year}
-                onChange={(e)=>updateYear(e.target.value)}
+            <YearSelectionForm 
+                year={year} 
+                updateYear={updateYear} 
             />
-
             {data.map((game)=>{
                 return <GameInfoCard 
                     name={game.name}
