@@ -1,7 +1,6 @@
 import './App.css';
 import ModeButtons from './components/ModeButtons/ModeButtons';
 import PopularGames from './components/PopularGames/PopularGames';
-import PopularGameData from './data.json';
 import { useEffect, useState } from 'react';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 
@@ -23,7 +22,7 @@ function App() {
   const changePopularYearData = ()=>{
     const endpoint = `&dates=${year}-01-01,${year}-12-31&page_size=8`;
     const url = `${GAMES_URL}${endpoint}`;
-    console.log(url);
+    refetch(url);
   }
 
   return (
