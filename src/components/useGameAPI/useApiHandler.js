@@ -16,6 +16,7 @@ const useApiHandler =  (url)=>{
                 setLoading(true);
                 const response = await fetch(url, {mode:'cors'});
                 const apiData = await response.json();
+                console.log(apiData);
                 setData(apiData);
             }catch(e){
                 setError(e);
