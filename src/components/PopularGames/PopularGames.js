@@ -11,7 +11,6 @@ const PopularGames = ({data, year, updateYear, changePopularYearData})=>{
                 changePopularYearData={changePopularYearData}
             />
             {data && data.map((game)=>{
-                console.log(game.name);
                 return <GameInfoCard 
                     name={game.name}
                     releaseDate = {game.released}
