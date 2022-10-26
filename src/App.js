@@ -5,6 +5,7 @@ import PopularGameData from './data.json';
 import { useState } from 'react';
 
 function App() {
+  const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const [year, setYear] = useState(new Date().getFullYear());
 
   const updateYear = (value)=>{
@@ -12,7 +13,7 @@ function App() {
   }
 
   const changePopularYearData = ()=>{
-    const url = `https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045&dates=${year}-01-01,${year}-12-31&page_size=8`;
+    const url = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${year}-01-01,${year}-12-31&page_size=8`;
     console.log(url);
   }
   return (
