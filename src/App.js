@@ -11,7 +11,7 @@ function App() {
   const [year, setYear] = useState(new Date().getFullYear());
   const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
   const [popularGameData, setPopularGameData] = useState({});
-  const {game, getRandomGame} = useRandomGame();
+  const {gameData, getRandomGame} = useRandomGame();
 
   useEffect(()=>{
     setPopularGameData(data);
@@ -31,16 +31,21 @@ function App() {
     <div id="app-container">
       <h1>Video Game Recommender</h1>
       <ModeButtons 
-        
+        game={gameData}
+        getRandomGame={getRandomGame}
       />
-      <PopularGames 
+      {/* <PopularGames 
         data={popularGameData.results}
         year = {year}
         updateYear = {updateYear}
         changePopularYearData = {changePopularYearData}
-      />
+      /> */}      
+      
     </div>
   );
 }
 
 export default App;
+
+
+/*TODO figure out why random game button takes two clicks */
