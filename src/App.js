@@ -13,6 +13,7 @@ function App() {
   const [popularGameData, setPopularGameData] = useState({});
   const {gameData, getRandomGame} = useRandomGame();
 
+
   useEffect(()=>{
     setPopularGameData(data);
   }, [data]);
@@ -30,16 +31,18 @@ function App() {
   return (
     <div id="app-container">
       <h1>Video Game Recommender</h1>
+
       <ModeButtons 
         game={gameData}
         getRandomGame={getRandomGame}
       />
-      {/* <PopularGames 
+
+      <PopularGames 
         data={popularGameData.results}
         year = {year}
         updateYear = {updateYear}
         changePopularYearData = {changePopularYearData}
-      /> */}      
+      />      
       
     </div>
   );
