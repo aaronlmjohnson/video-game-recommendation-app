@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useApiHandler from "../useGameAPI/useApiHandler";
 
 const useRandomGame = ()=>{
-    const [gameData, setGameData ] = useState([]);
+    const [gameData, setGameData ] = useState({});
     const NUMBER_OF_GAMES = 815664;
     const {data, refetch } = useApiHandler('');
 
@@ -21,7 +21,11 @@ const useRandomGame = ()=>{
         getRandomGame();
     },[]);
 
-    return {gameData, getRandomGame}
+    const gameDataIsEmpty = ()=>{
+        return Object.keys(gameData).length < 1;
+    }
+
+    return {gameData, getRandomGame, gameDataIsEmpty}
 }
 
 export default useRandomGame;
