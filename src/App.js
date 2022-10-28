@@ -4,7 +4,7 @@ import PopularGames from './components/PopularGames/PopularGames';
 import { useEffect, useState } from 'react';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import useRandomGame from './components/useRandomGame/useRandomGame';
-
+import GamePage from './components/GamePage/GamePage';
 function App() {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
@@ -35,6 +35,9 @@ function App() {
         game={gameData}
         getRandomGame={getRandomGame}
       />
+      {!gameDataIsEmpty() && <GamePage data={gameData} />}
+
+      
 
       <PopularGames 
         data={popularGameData.results}
@@ -48,6 +51,3 @@ function App() {
 }
 
 export default App;
-
-
-/*TODO figure out why random game button takes two clicks */
