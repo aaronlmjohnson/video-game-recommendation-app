@@ -14,7 +14,6 @@ const useRandomGame = ()=>{
 
         })
         setGameData(data);
-        console.log(gameData);
     }
 
     useEffect(()=>{
@@ -25,7 +24,11 @@ const useRandomGame = ()=>{
         return Object.keys(gameData).length < 1;
     }
 
-    return {gameData, getRandomGame, gameDataIsEmpty}
+    const clearGameData = ()=>{
+        setGameData({});
+    }
+
+    return {gameData, getRandomGame, gameDataIsEmpty, clearGameData}
 }
 
 export default useRandomGame;

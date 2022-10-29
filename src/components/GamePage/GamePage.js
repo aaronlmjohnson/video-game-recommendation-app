@@ -1,6 +1,7 @@
-const GamePage = ({data})=>{
+const GamePage = ({data, clearGameData})=>{
     return(
         <div className="game-page">
+            <button onClick={clearGameData}>Delete</button>
             <img src={data.background_image} alt={data.name} width="500px"/>
             <h1 className="game-title">{data.name}</h1>
             <p className="game-released">{data.released}</p>

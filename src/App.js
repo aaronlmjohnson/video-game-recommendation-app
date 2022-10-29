@@ -5,13 +5,14 @@ import { useEffect, useState } from 'react';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import useRandomGame from './components/useRandomGame/useRandomGame';
 import GamePage from './components/GamePage/GamePage';
+import { clear } from '@testing-library/user-event/dist/clear';
 function App() {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   const [year, setYear] = useState(new Date().getFullYear());
   const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
   const [popularGameData, setPopularGameData] = useState({});
-  const {gameData, getRandomGame, gameDataIsEmpty} = useRandomGame();
+  const {gameData, getRandomGame, gameDataIsEmpty, clearGameData} = useRandomGame();
 
 
   useEffect(()=>{
@@ -35,7 +36,7 @@ function App() {
         game={gameData}
         getRandomGame={getRandomGame}
       />
-      {!gameDataIsEmpty() && <GamePage data={gameData} />}
+      {!gameDataIsEmpty() && <GamePage data={gameData} clearGameData={clearGameData} />}
 
       
 
