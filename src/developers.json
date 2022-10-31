@@ -1,0 +1,1807 @@
+{
+    "count": 391766,
+    "next": "https://api.rawg.io/api/developers?key=9ff2d4cc97c24f959f6e39996f82a045&page=2&page_size=100",
+    "previous": null,
+    "results": [
+      {
+        "id": 405,
+        "name": "Ubisoft",
+        "slug": "ubisoft",
+        "games_count": 336,
+        "image_background": "https://media.rawg.io/media/games/a86/a86ce0afaf2d5ec2b0f048989f01795e.jpg",
+        "games": [
+          {
+            "id": 4161,
+            "slug": "far-cry-3",
+            "name": "Far Cry 3",
+            "added": 8642
+          },
+          {
+            "id": 362,
+            "slug": "for-honor",
+            "name": "For Honor",
+            "added": 8034
+          },
+          {
+            "id": 3841,
+            "slug": "assassins-creed-iv-black-flag",
+            "name": "Assassin’s Creed IV: Black Flag",
+            "added": 7966
+          },
+          {
+            "id": 3687,
+            "slug": "watch-dogs",
+            "name": "Watch Dogs",
+            "added": 6861
+          },
+          {
+            "id": 23585,
+            "slug": "far-cry-5",
+            "name": "Far Cry 5",
+            "added": 6751
+          },
+          {
+            "id": 58616,
+            "slug": "assassins-creed-odyssey",
+            "name": "Assassin's Creed Odyssey",
+            "added": 6587
+          }
+        ]
+      },
+      {
+        "id": 1612,
+        "name": "Valve Software",
+        "slug": "valve-software",
+        "games_count": 42,
+        "image_background": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+        "games": [
+          {
+            "id": 4200,
+            "slug": "portal-2",
+            "name": "Portal 2",
+            "added": 15971
+          },
+          {
+            "id": 4291,
+            "slug": "counter-strike-global-offensive",
+            "name": "Counter-Strike: Global Offensive",
+            "added": 13796
+          },
+          {
+            "id": 12020,
+            "slug": "left-4-dead-2",
+            "name": "Left 4 Dead 2",
+            "added": 13590
+          },
+          {
+            "id": 13536,
+            "slug": "portal",
+            "name": "Portal",
+            "added": 13505
+          },
+          {
+            "id": 13537,
+            "slug": "half-life-2",
+            "name": "Half-Life 2",
+            "added": 12191
+          },
+          {
+            "id": 11859,
+            "slug": "team-fortress-2",
+            "name": "Team Fortress 2",
+            "added": 11102
+          }
+        ]
+      },
+      {
+        "id": 18893,
+        "name": "Feral Interactive",
+        "slug": "feral-interactive",
+        "games_count": 106,
+        "image_background": "https://media.rawg.io/media/games/0fa/0fadc446fd1e9ae9e23a32793d9a5406.jpg",
+        "games": [
+          {
+            "id": 7689,
+            "slug": "rise-of-the-tomb-raider",
+            "name": "Rise of the Tomb Raider",
+            "added": 10056
+          },
+          {
+            "id": 11973,
+            "slug": "shadow-of-mordor",
+            "name": "Middle-earth: Shadow of Mordor",
+            "added": 9528
+          },
+          {
+            "id": 4427,
+            "slug": "bioshock-2",
+            "name": "BioShock 2",
+            "added": 9243
+          },
+          {
+            "id": 10035,
+            "slug": "hitman",
+            "name": "Hitman",
+            "added": 9195
+          },
+          {
+            "id": 10754,
+            "slug": "bioshock-remastered",
+            "name": "BioShock Remastered",
+            "added": 8626
+          },
+          {
+            "id": 10243,
+            "slug": "company-of-heroes-2",
+            "name": "Company of Heroes 2",
+            "added": 7876
+          }
+        ]
+      },
+      {
+        "id": 109,
+        "name": "Electronic Arts",
+        "slug": "electronic-arts",
+        "games_count": 320,
+        "image_background": "https://media.rawg.io/media/games/662/6625a20ca1d13699ee7c191b20a02408.jpg",
+        "games": [
+          {
+            "id": 4570,
+            "slug": "dead-space",
+            "name": "Dead Space",
+            "added": 8102
+          },
+          {
+            "id": 5525,
+            "slug": "brutal-legend",
+            "name": "Brutal Legend",
+            "added": 7186
+          },
+          {
+            "id": 998,
+            "slug": "battlefield-1",
+            "name": "Battlefield 1",
+            "added": 6329
+          },
+          {
+            "id": 4550,
+            "slug": "dead-space-2",
+            "name": "Dead Space 2",
+            "added": 5646
+          },
+          {
+            "id": 3842,
+            "slug": "battlefield-4",
+            "name": "Battlefield 4",
+            "added": 5391
+          },
+          {
+            "id": 50778,
+            "slug": "a-way-out-2018",
+            "name": "A Way Out",
+            "added": 4711
+          }
+        ]
+      },
+      {
+        "id": 3709,
+        "name": "Ubisoft Montreal",
+        "slug": "ubisoft-montreal",
+        "games_count": 118,
+        "image_background": "https://media.rawg.io/media/games/4e0/4e0e7b6d6906a131307c94266e5c9a1c.jpg",
+        "games": [
+          {
+            "id": 4161,
+            "slug": "far-cry-3",
+            "name": "Far Cry 3",
+            "added": 8642
+          },
+          {
+            "id": 362,
+            "slug": "for-honor",
+            "name": "For Honor",
+            "added": 8034
+          },
+          {
+            "id": 3841,
+            "slug": "assassins-creed-iv-black-flag",
+            "name": "Assassin’s Creed IV: Black Flag",
+            "added": 7966
+          },
+          {
+            "id": 3687,
+            "slug": "watch-dogs",
+            "name": "Watch Dogs",
+            "added": 6861
+          },
+          {
+            "id": 28568,
+            "slug": "assassins-creed-ii",
+            "name": "Assassin's Creed II",
+            "added": 6751
+          },
+          {
+            "id": 23585,
+            "slug": "far-cry-5",
+            "name": "Far Cry 5",
+            "added": 6751
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Sony Interactive Entertainment",
+        "slug": "sony-interactive-entertainment",
+        "games_count": 613,
+        "image_background": "https://media.rawg.io/media/games/84d/84da5a0c948592becea7a022e151a8b0.jpg",
+        "games": [
+          {
+            "id": 3387,
+            "slug": "bloodborne",
+            "name": "Bloodborne",
+            "added": 7699
+          },
+          {
+            "id": 3254,
+            "slug": "journey",
+            "name": "Journey",
+            "added": 7465
+          },
+          {
+            "id": 5159,
+            "slug": "resident-evil-2",
+            "name": "Resident Evil 2 (1998)",
+            "added": 5002
+          },
+          {
+            "id": 5193,
+            "slug": "oddworld-abes-oddysee",
+            "name": "Oddworld: Abe's Oddysee",
+            "added": 4874
+          },
+          {
+            "id": 4491,
+            "slug": "shadow-of-the-colossus",
+            "name": "Shadow of the Colossus (2011)",
+            "added": 4181
+          },
+          {
+            "id": 693,
+            "slug": "the-last-guardian",
+            "name": "The Last Guardian",
+            "added": 2870
+          }
+        ]
+      },
+      {
+        "id": 4132,
+        "name": "Square Enix",
+        "slug": "square-enix",
+        "games_count": 343,
+        "image_background": "https://media.rawg.io/media/screenshots/474/47478ccb205e4e0d0117986107625599.jpg",
+        "games": [
+          {
+            "id": 10035,
+            "slug": "hitman",
+            "name": "Hitman",
+            "added": 9195
+          },
+          {
+            "id": 3017,
+            "slug": "just-cause-3",
+            "name": "Just Cause 3",
+            "added": 7582
+          },
+          {
+            "id": 4513,
+            "slug": "just-cause-2",
+            "name": "Just Cause 2",
+            "added": 7345
+          },
+          {
+            "id": 3766,
+            "slug": "thief",
+            "name": "Thief",
+            "added": 6055
+          },
+          {
+            "id": 3474,
+            "slug": "lara-croft-and-the-temple-of-osiris",
+            "name": "Lara Croft and the Temple of Osiris",
+            "added": 5906
+          },
+          {
+            "id": 750,
+            "slug": "final-fantasy-xv",
+            "name": "FINAL FANTASY XV",
+            "added": 5149
+          }
+        ]
+      },
+      {
+        "id": 3678,
+        "name": "Capcom",
+        "slug": "capcom",
+        "games_count": 428,
+        "image_background": "https://media.rawg.io/media/games/09e/09e34396a92952c57b1bfb1decfddfa3.jpg",
+        "games": [
+          {
+            "id": 46889,
+            "slug": "monster-hunter-world-2",
+            "name": "Monster Hunter: World",
+            "added": 7208
+          },
+          {
+            "id": 480,
+            "slug": "resident-evil-7-biohazard",
+            "name": "Resident Evil 7: Biohazard",
+            "added": 6916
+          },
+          {
+            "id": 13461,
+            "slug": "resident-evil-5-biohazard-5",
+            "name": "Resident Evil 5",
+            "added": 6247
+          },
+          {
+            "id": 56184,
+            "slug": "resident-evil-4",
+            "name": "Resident Evil 4 (2005)",
+            "added": 5602
+          },
+          {
+            "id": 58755,
+            "slug": "devil-may-cry-5",
+            "name": "Devil May Cry 5",
+            "added": 5264
+          },
+          {
+            "id": 2623,
+            "slug": "resident-evil-6",
+            "name": "Resident Evil 6",
+            "added": 5173
+          }
+        ]
+      },
+      {
+        "id": 17132,
+        "name": "Aspyr Media",
+        "slug": "aspyr-media",
+        "games_count": 62,
+        "image_background": "https://media.rawg.io/media/games/50c/50c69996b917ae50d8d319f6ce9bed37.jpg",
+        "games": [
+          {
+            "id": 4062,
+            "slug": "bioshock-infinite",
+            "name": "BioShock Infinite",
+            "added": 13200
+          },
+          {
+            "id": 802,
+            "slug": "borderlands-2",
+            "name": "Borderlands 2",
+            "added": 13048
+          },
+          {
+            "id": 13633,
+            "slug": "civilization-v",
+            "name": "Sid Meier's Civilization V",
+            "added": 8085
+          },
+          {
+            "id": 3543,
+            "slug": "borderlands-the-pre-sequel",
+            "name": "Borderlands: The Pre-Sequel",
+            "added": 7618
+          },
+          {
+            "id": 4527,
+            "slug": "modern-warfare-2",
+            "name": "Call of Duty: Modern Warfare 2",
+            "added": 6286
+          },
+          {
+            "id": 15859,
+            "slug": "star-wars-knights-of-the-old-republic-2",
+            "name": "Star Wars: Knights of the Old Republic",
+            "added": 5663
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Bethesda Softworks",
+        "slug": "bethesda-softworks",
+        "games_count": 62,
+        "image_background": "https://media.rawg.io/media/games/a0e/a0ef08621301a1eab5e04fa5c96978fa.jpeg",
+        "games": [
+          {
+            "id": 5679,
+            "slug": "the-elder-scrolls-v-skyrim",
+            "name": "The Elder Scrolls V: Skyrim",
+            "added": 13731
+          },
+          {
+            "id": 2454,
+            "slug": "doom",
+            "name": "DOOM (2016)",
+            "added": 11463
+          },
+          {
+            "id": 3696,
+            "slug": "wolfenstein-the-new-order",
+            "name": "Wolfenstein: The New Order",
+            "added": 8413
+          },
+          {
+            "id": 4248,
+            "slug": "dishonored",
+            "name": "Dishonored",
+            "added": 7928
+          },
+          {
+            "id": 864,
+            "slug": "dishonored-2",
+            "name": "Dishonored 2",
+            "added": 7516
+          },
+          {
+            "id": 28202,
+            "slug": "wolfenstein-2-the-new-colossus",
+            "name": "Wolfenstein II: The New Colossus",
+            "added": 5961
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Warner Bros. Interactive",
+        "slug": "warner-bros-interactive",
+        "games_count": 83,
+        "image_background": "https://media.rawg.io/media/screenshots/52c/52ce473a52dea733e831e1aeacce2d89.jpg",
+        "games": [
+          {
+            "id": 3287,
+            "slug": "batman-arkham-knight",
+            "name": "Batman: Arkham Knight",
+            "added": 9777
+          },
+          {
+            "id": 108,
+            "slug": "mortal-kombat-x",
+            "name": "Mortal Kombat X",
+            "added": 7533
+          },
+          {
+            "id": 613,
+            "slug": "bastion",
+            "name": "Bastion",
+            "added": 7483
+          },
+          {
+            "id": 25,
+            "slug": "middle-earth-shadow-of-war",
+            "name": "Middle-earth: Shadow of War",
+            "added": 6674
+          },
+          {
+            "id": 2235,
+            "slug": "batman-arkham-origins",
+            "name": "Batman: Arkham Origins",
+            "added": 6529
+          },
+          {
+            "id": 28623,
+            "slug": "batman-arkham-city-2",
+            "name": "Batman: Arkham City",
+            "added": 5682
+          }
+        ]
+      },
+      {
+        "id": 425,
+        "name": "SEGA",
+        "slug": "sega",
+        "games_count": 566,
+        "image_background": "https://media.rawg.io/media/games/31b/31b1a1a45ad7103e52eed8ef658209a2.jpg",
+        "games": [
+          {
+            "id": 28179,
+            "slug": "sega-mega-drive-and-genesis-classics",
+            "name": "SEGA Mega Drive and Genesis Classics",
+            "added": 6895
+          },
+          {
+            "id": 3556,
+            "slug": "alien-isolation",
+            "name": "Alien: Isolation",
+            "added": 6708
+          },
+          {
+            "id": 492,
+            "slug": "yakuza-0",
+            "name": "Yakuza 0",
+            "added": 5230
+          },
+          {
+            "id": 53341,
+            "slug": "jet-set-radio-2012",
+            "name": "Jet Set Radio",
+            "added": 4534
+          },
+          {
+            "id": 23587,
+            "slug": "sonic-mania",
+            "name": "Sonic Mania",
+            "added": 4253
+          },
+          {
+            "id": 3965,
+            "slug": "binary-domain",
+            "name": "Binary Domain",
+            "added": 4037
+          }
+        ]
+      },
+      {
+        "id": 694,
+        "name": "Telltale Games",
+        "slug": "telltale-games",
+        "games_count": 133,
+        "image_background": "https://media.rawg.io/media/screenshots/8f3/8f33142dd75fdd6897efc06aadbe7aab.jpg",
+        "games": [
+          {
+            "id": 23027,
+            "slug": "the-walking-dead",
+            "name": "The Walking Dead: Season 1",
+            "added": 9834
+          },
+          {
+            "id": 1682,
+            "slug": "the-wolf-among-us",
+            "name": "The Wolf Among Us",
+            "added": 6454
+          },
+          {
+            "id": 15834,
+            "slug": "the-walking-dead-season-2",
+            "name": "The Walking Dead: Season 2",
+            "added": 5265
+          },
+          {
+            "id": 2166,
+            "slug": "game-of-thrones-a-telltale-games-series",
+            "name": "Game of Thrones - A Telltale Games Series",
+            "added": 4674
+          },
+          {
+            "id": 2100,
+            "slug": "tales-from-the-borderlands",
+            "name": "Tales from the Borderlands",
+            "added": 4386
+          },
+          {
+            "id": 2255,
+            "slug": "7-days-to-die",
+            "name": "7 Days to Die",
+            "added": 3028
+          }
+        ]
+      },
+      {
+        "id": 386,
+        "name": "BANDAI NAMCO Entertainment America",
+        "slug": "bandai-namco-entertainment-america-inc",
+        "games_count": 145,
+        "image_background": "https://media.rawg.io/media/games/729/729822a7ac978607241a310677c7775d.jpg",
+        "games": [
+          {
+            "id": 2551,
+            "slug": "dark-souls-iii",
+            "name": "Dark Souls III",
+            "added": 8865
+          },
+          {
+            "id": 41,
+            "slug": "little-nightmares",
+            "name": "Little Nightmares",
+            "added": 8716
+          },
+          {
+            "id": 3371,
+            "slug": "dark-souls-ii-scholar-of-the-first-sin",
+            "name": "Dark Souls II: Scholar of the First Sin",
+            "added": 4860
+          },
+          {
+            "id": 36,
+            "slug": "tekken-7",
+            "name": "TEKKEN 7",
+            "added": 3255
+          },
+          {
+            "id": 5538,
+            "slug": "dark-souls",
+            "name": "Dark Souls",
+            "added": 2981
+          },
+          {
+            "id": 3751,
+            "slug": "dark-souls-ii",
+            "name": "Dark Souls II",
+            "added": 2452
+          }
+        ]
+      },
+      {
+        "id": 436,
+        "name": "Devolver Digital",
+        "slug": "devolver-digital",
+        "games_count": 59,
+        "image_background": "https://media.rawg.io/media/games/948/948fe7f00b6cba8472f5ecd07a455077.jpg",
+        "games": [
+          {
+            "id": 3612,
+            "slug": "hotline-miami",
+            "name": "Hotline Miami",
+            "added": 8908
+          },
+          {
+            "id": 11435,
+            "slug": "viscera-cleanup-detail-shadow-warrior",
+            "name": "Viscera Cleanup Detail: Shadow Warrior",
+            "added": 6196
+          },
+          {
+            "id": 2733,
+            "slug": "broforce",
+            "name": "Broforce",
+            "added": 5353
+          },
+          {
+            "id": 3408,
+            "slug": "hotline-miami-2-wrong-number",
+            "name": "Hotline Miami 2: Wrong Number",
+            "added": 5169
+          },
+          {
+            "id": 3368,
+            "slug": "titan-souls",
+            "name": "Titan Souls",
+            "added": 4645
+          },
+          {
+            "id": 3697,
+            "slug": "serious-sam-3-bfe",
+            "name": "Serious Sam 3: BFE",
+            "added": 4434
+          }
+        ]
+      },
+      {
+        "id": 383,
+        "name": "2K",
+        "slug": "2k",
+        "games_count": 59,
+        "image_background": "https://media.rawg.io/media/games/884/884e6a520b60aac011a38f4954303448.jpg",
+        "games": [
+          {
+            "id": 802,
+            "slug": "borderlands-2",
+            "name": "Borderlands 2",
+            "added": 13048
+          },
+          {
+            "id": 4427,
+            "slug": "bioshock-2",
+            "name": "BioShock 2",
+            "added": 9243
+          },
+          {
+            "id": 4828,
+            "slug": "borderlands",
+            "name": "Borderlands",
+            "added": 8407
+          },
+          {
+            "id": 3543,
+            "slug": "borderlands-the-pre-sequel",
+            "name": "Borderlands: The Pre-Sequel",
+            "added": 7618
+          },
+          {
+            "id": 13910,
+            "slug": "xcom-enemy-unknown",
+            "name": "XCOM: Enemy Unknown",
+            "added": 7245
+          },
+          {
+            "id": 4223,
+            "slug": "the-darkness-ii",
+            "name": "The Darkness II",
+            "added": 6804
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Capcom U.S.A",
+        "slug": "capcom-usa-inc",
+        "games_count": 88,
+        "image_background": "https://media.rawg.io/media/games/65d/65d65ee902f66bdc01d8b6c3d2a0a588.jpg",
+        "games": [
+          {
+            "id": 46889,
+            "slug": "monster-hunter-world-2",
+            "name": "Monster Hunter: World",
+            "added": 7208
+          },
+          {
+            "id": 480,
+            "slug": "resident-evil-7-biohazard",
+            "name": "Resident Evil 7: Biohazard",
+            "added": 6916
+          },
+          {
+            "id": 13461,
+            "slug": "resident-evil-5-biohazard-5",
+            "name": "Resident Evil 5",
+            "added": 6247
+          },
+          {
+            "id": 56184,
+            "slug": "resident-evil-4",
+            "name": "Resident Evil 4 (2005)",
+            "added": 5602
+          },
+          {
+            "id": 2623,
+            "slug": "resident-evil-6",
+            "name": "Resident Evil 6",
+            "added": 5173
+          },
+          {
+            "id": 4000,
+            "slug": "remember-me",
+            "name": "Remember Me",
+            "added": 4412
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "name": "THQ Nordic",
+        "slug": "thq-nordic",
+        "games_count": 71,
+        "image_background": "https://media.rawg.io/media/screenshots/9db/9db5d5ae17b26e26174d289e2654ed60.jpg",
+        "games": [
+          {
+            "id": 11052,
+            "slug": "titan-quest-anniversary-edition",
+            "name": "Titan Quest Anniversary Edition",
+            "added": 6381
+          },
+          {
+            "id": 3486,
+            "slug": "syberia",
+            "name": "Syberia",
+            "added": 5462
+          },
+          {
+            "id": 22781,
+            "slug": "syberia-2",
+            "name": "Syberia 2",
+            "added": 4951
+          },
+          {
+            "id": 4179,
+            "slug": "darksiders-ii",
+            "name": "Darksiders II",
+            "added": 4737
+          },
+          {
+            "id": 10449,
+            "slug": "darksiders-ii-deathinitive-edition",
+            "name": "Darksiders II Deathinitive Edition",
+            "added": 4602
+          },
+          {
+            "id": 15566,
+            "slug": "red-faction-guerrilla-2",
+            "name": "Red Faction: Guerrilla",
+            "added": 3952
+          }
+        ]
+      },
+      {
+        "id": 343,
+        "name": "id Software",
+        "slug": "id-software",
+        "games_count": 83,
+        "image_background": "https://media.rawg.io/media/screenshots/58d/58da72d37b507d498de66e124c4e266d.jpg",
+        "games": [
+          {
+            "id": 2454,
+            "slug": "doom",
+            "name": "DOOM (2016)",
+            "added": 11463
+          },
+          {
+            "id": 28202,
+            "slug": "wolfenstein-2-the-new-colossus",
+            "name": "Wolfenstein II: The New Colossus",
+            "added": 5961
+          },
+          {
+            "id": 58777,
+            "slug": "doom-eternal",
+            "name": "DOOM Eternal",
+            "added": 5784
+          },
+          {
+            "id": 43877,
+            "slug": "quake-champions",
+            "name": "Quake Champions",
+            "added": 5658
+          },
+          {
+            "id": 5636,
+            "slug": "rage",
+            "name": "Rage",
+            "added": 3901
+          },
+          {
+            "id": 19458,
+            "slug": "doom-3",
+            "name": "DOOM 3",
+            "added": 2868
+          }
+        ]
+      },
+      {
+        "id": 23342,
+        "name": "NVIDIA Lightspeed Studios",
+        "slug": "nvidia-lightspeed-studios",
+        "games_count": 23,
+        "image_background": "https://media.rawg.io/media/screenshots/a0f/a0f898ff084625c10e7f84058325b2eb.jpg",
+        "games": [
+          {
+            "id": 13536,
+            "slug": "portal",
+            "name": "Portal",
+            "added": 13505
+          },
+          {
+            "id": 13537,
+            "slug": "half-life-2",
+            "name": "Half-Life 2",
+            "added": 12191
+          },
+          {
+            "id": 19710,
+            "slug": "half-life-2-episode-one",
+            "name": "Half-Life 2: Episode One",
+            "added": 9149
+          },
+          {
+            "id": 19709,
+            "slug": "half-life-2-episode-two",
+            "name": "Half-Life 2: Episode Two",
+            "added": 9042
+          },
+          {
+            "id": 3144,
+            "slug": "super-meat-boy",
+            "name": "Super Meat Boy",
+            "added": 8197
+          },
+          {
+            "id": 2873,
+            "slug": "the-witness",
+            "name": "The Witness",
+            "added": 5389
+          }
+        ]
+      },
+      {
+        "id": 4015,
+        "name": "Gearbox Software",
+        "slug": "gearbox-software",
+        "games_count": 56,
+        "image_background": "https://media.rawg.io/media/games/9df/9dff3770c2ce5747acb2da33d3b18c02.jpg",
+        "games": [
+          {
+            "id": 802,
+            "slug": "borderlands-2",
+            "name": "Borderlands 2",
+            "added": 13048
+          },
+          {
+            "id": 4828,
+            "slug": "borderlands",
+            "name": "Borderlands",
+            "added": 8407
+          },
+          {
+            "id": 18080,
+            "slug": "half-life",
+            "name": "Half-Life",
+            "added": 8270
+          },
+          {
+            "id": 3543,
+            "slug": "borderlands-the-pre-sequel",
+            "name": "Borderlands: The Pre-Sequel",
+            "added": 7618
+          },
+          {
+            "id": 19542,
+            "slug": "half-life-blue-shift",
+            "name": "Half-Life: Blue Shift",
+            "added": 5397
+          },
+          {
+            "id": 21265,
+            "slug": "half-life-opposing-force",
+            "name": "Half-Life: Opposing Force",
+            "added": 5391
+          }
+        ]
+      },
+      {
+        "id": 3524,
+        "name": "Rockstar North",
+        "slug": "rockstar-north",
+        "games_count": 29,
+        "image_background": "https://media.rawg.io/media/screenshots/b98/b98adb52b2123a14d1c88e828a6b49f3.jpg",
+        "games": [
+          {
+            "id": 3498,
+            "slug": "grand-theft-auto-v",
+            "name": "Grand Theft Auto V",
+            "added": 18146
+          },
+          {
+            "id": 4459,
+            "slug": "grand-theft-auto-iv",
+            "name": "Grand Theft Auto IV",
+            "added": 10775
+          },
+          {
+            "id": 416,
+            "slug": "grand-theft-auto-san-andreas",
+            "name": "Grand Theft Auto: San Andreas",
+            "added": 9489
+          },
+          {
+            "id": 430,
+            "slug": "grand-theft-auto-vice-city",
+            "name": "Grand Theft Auto: Vice City",
+            "added": 7910
+          },
+          {
+            "id": 4544,
+            "slug": "red-dead-redemption",
+            "name": "Red Dead Redemption",
+            "added": 6298
+          },
+          {
+            "id": 432,
+            "slug": "grand-theft-auto-iii",
+            "name": "Grand Theft Auto III",
+            "added": 6013
+          }
+        ]
+      },
+      {
+        "id": 1971,
+        "name": "Konami Digital Entertainment",
+        "slug": "konami-digital-entertainment",
+        "games_count": 451,
+        "image_background": "https://media.rawg.io/media/games/8dd/8dd95766d6f1dfcfe47128a82ed22699.jpg",
+        "games": [
+          {
+            "id": 3192,
+            "slug": "metal-gear-solid-v-the-phantom-pain",
+            "name": "Metal Gear Solid V: The Phantom Pain",
+            "added": 10160
+          },
+          {
+            "id": 3747,
+            "slug": "metal-gear-solid-v-ground-zeroes",
+            "name": "Metal Gear Solid V: Ground Zeroes",
+            "added": 7685
+          },
+          {
+            "id": 4094,
+            "slug": "metal-gear-rising-revengeance",
+            "name": "Metal Gear Rising: Revengeance",
+            "added": 4835
+          },
+          {
+            "id": 3469,
+            "slug": "metal-gear-solid-4-guns-of-the-patriots",
+            "name": "Metal Gear Solid 4: Guns of the Patriots",
+            "added": 1938
+          },
+          {
+            "id": 57607,
+            "slug": "metal-gear-solid-1",
+            "name": "Metal Gear Solid",
+            "added": 1808
+          },
+          {
+            "id": 3759,
+            "slug": "castlevania-lords-of-shadow-2",
+            "name": "Castlevania: Lords of Shadow 2",
+            "added": 1544
+          }
+        ]
+      },
+      {
+        "id": 4207,
+        "name": "Bethesda Game Studios",
+        "slug": "bethesda-game-studios",
+        "games_count": 37,
+        "image_background": "https://media.rawg.io/media/screenshots/54a/54a2aefe78e4879b939649a92332eaa7.jpg",
+        "games": [
+          {
+            "id": 5679,
+            "slug": "the-elder-scrolls-v-skyrim",
+            "name": "The Elder Scrolls V: Skyrim",
+            "added": 13731
+          },
+          {
+            "id": 3070,
+            "slug": "fallout-4",
+            "name": "Fallout 4",
+            "added": 11394
+          },
+          {
+            "id": 12447,
+            "slug": "the-elder-scrolls-v-skyrim-special-edition",
+            "name": "The Elder Scrolls V: Skyrim Special Edition",
+            "added": 7749
+          },
+          {
+            "id": 5562,
+            "slug": "fallout-3",
+            "name": "Fallout 3",
+            "added": 5652
+          },
+          {
+            "id": 58777,
+            "slug": "doom-eternal",
+            "name": "DOOM Eternal",
+            "added": 5784
+          },
+          {
+            "id": 559,
+            "slug": "fallout-shelter",
+            "name": "Fallout Shelter",
+            "added": 5405
+          }
+        ]
+      },
+      {
+        "id": 16257,
+        "name": "Nintendo",
+        "slug": "nintendo",
+        "games_count": 416,
+        "image_background": "https://media.rawg.io/media/games/d9c/d9c8b7edc78391619566adfeb52b5a9a.jpg",
+        "games": [
+          {
+            "id": 22511,
+            "slug": "the-legend-of-zelda-breath-of-the-wild",
+            "name": "The Legend of Zelda: Breath of the Wild",
+            "added": 4994
+          },
+          {
+            "id": 28026,
+            "slug": "super-mario-odyssey",
+            "name": "Super Mario Odyssey",
+            "added": 3143
+          },
+          {
+            "id": 58829,
+            "slug": "super-smash-bros-ultimate",
+            "name": "Super Smash Bros. Ultimate",
+            "added": 1946
+          },
+          {
+            "id": 23165,
+            "slug": "mario-kart-8-deluxe",
+            "name": "Mario Kart 8 Deluxe",
+            "added": 1567
+          },
+          {
+            "id": 421698,
+            "slug": "animal-crossing-2019",
+            "name": "Animal Crossing: New Horizons",
+            "added": 1533
+          },
+          {
+            "id": 25097,
+            "slug": "the-legend-of-zelda-ocarina-of-time",
+            "name": "The Legend of Zelda: Ocarina of Time",
+            "added": 1449
+          }
+        ]
+      },
+      {
+        "id": 1072,
+        "name": "Digital Extremes",
+        "slug": "digital-extremes",
+        "games_count": 21,
+        "image_background": "https://media.rawg.io/media/games/c04/c04e614c0a892abfb0c0ab6d735a7022.jpg",
+        "games": [
+          {
+            "id": 4286,
+            "slug": "bioshock",
+            "name": "BioShock",
+            "added": 12038
+          },
+          {
+            "id": 766,
+            "slug": "warframe",
+            "name": "Warframe",
+            "added": 10181
+          },
+          {
+            "id": 4427,
+            "slug": "bioshock-2",
+            "name": "BioShock 2",
+            "added": 9243
+          },
+          {
+            "id": 10754,
+            "slug": "bioshock-remastered",
+            "name": "BioShock Remastered",
+            "added": 8626
+          },
+          {
+            "id": 11142,
+            "slug": "bioshock-2-remastered",
+            "name": "BioShock 2 Remastered",
+            "added": 7139
+          },
+          {
+            "id": 4223,
+            "slug": "the-darkness-ii",
+            "name": "The Darkness II",
+            "added": 6804
+          }
+        ]
+      },
+      {
+        "id": 13071,
+        "name": "Naughty Dog",
+        "slug": "naughty-dog",
+        "games_count": 26,
+        "image_background": "https://media.rawg.io/media/games/709/709bf81f874ce5d25d625b37b014cb63.jpg",
+        "games": [
+          {
+            "id": 2462,
+            "slug": "uncharted-4-a-thiefs-end",
+            "name": "Uncharted 4: A Thief’s End",
+            "added": 8518
+          },
+          {
+            "id": 3636,
+            "slug": "the-last-of-us-remastered",
+            "name": "The Last Of Us Remastered",
+            "added": 8046
+          },
+          {
+            "id": 5703,
+            "slug": "uncharted-3-drakes-deception",
+            "name": "Uncharted 3: Drake's Deception",
+            "added": 6111
+          },
+          {
+            "id": 3990,
+            "slug": "the-last-of-us",
+            "name": "The Last Of Us",
+            "added": 6034
+          },
+          {
+            "id": 51325,
+            "slug": "the-last-of-us-part-2",
+            "name": "The Last of Us Part II",
+            "added": 5986
+          },
+          {
+            "id": 21926,
+            "slug": "uncharted-the-lost-legacy",
+            "name": "Uncharted: The Lost Legacy",
+            "added": 3819
+          }
+        ]
+      },
+      {
+        "id": 5833,
+        "name": "Raven Software",
+        "slug": "raven-software",
+        "games_count": 43,
+        "image_background": "https://media.rawg.io/media/games/3b0/3b01313965c19adc6b6c37a3d9d33576.jpg",
+        "games": [
+          {
+            "id": 906,
+            "slug": "cod-black-ops-iii",
+            "name": "Call of Duty: Black Ops III",
+            "added": 6034
+          },
+          {
+            "id": 865,
+            "slug": "call-of-duty-black-ops",
+            "name": "Call of Duty: Black Ops",
+            "added": 5853
+          },
+          {
+            "id": 11276,
+            "slug": "call-of-duty-modern-warfare-3",
+            "name": "Call of Duty: Modern Warfare 3",
+            "added": 5287
+          },
+          {
+            "id": 884,
+            "slug": "call-of-duty-modern-warfare-remastered",
+            "name": "Call of Duty: Modern Warfare Remastered",
+            "added": 3966
+          },
+          {
+            "id": 11970,
+            "slug": "star-wars-jedi-knight-jedi-academy",
+            "name": "Star Wars Jedi Knight: Jedi Academy",
+            "added": 3540
+          },
+          {
+            "id": 4535,
+            "slug": "modern-warfare",
+            "name": "Call of Duty 4: Modern Warfare",
+            "added": 3454
+          }
+        ]
+      },
+      {
+        "id": 4037,
+        "name": "Crystal Dynamics",
+        "slug": "crystal-dynamics",
+        "games_count": 39,
+        "image_background": "https://media.rawg.io/media/screenshots/3da/3dad3d05f2b60f53cbd4f8c5ddaf3c7c.jpg",
+        "games": [
+          {
+            "id": 5286,
+            "slug": "tomb-raider",
+            "name": "Tomb Raider (2013)",
+            "added": 14200
+          },
+          {
+            "id": 7689,
+            "slug": "rise-of-the-tomb-raider",
+            "name": "Rise of the Tomb Raider",
+            "added": 10056
+          },
+          {
+            "id": 3474,
+            "slug": "lara-croft-and-the-temple-of-osiris",
+            "name": "Lara Croft and the Temple of Osiris",
+            "added": 5906
+          },
+          {
+            "id": 4882,
+            "slug": "lara-croft-gol",
+            "name": "Lara Croft and the Guardian of Light",
+            "added": 4202
+          },
+          {
+            "id": 4869,
+            "slug": "tomb-raider-underworld",
+            "name": "Tomb Raider: Underworld",
+            "added": 3906
+          },
+          {
+            "id": 5298,
+            "slug": "tomb-raider-legend",
+            "name": "Tomb Raider: Legend",
+            "added": 3456
+          }
+        ]
+      },
+      {
+        "id": 9023,
+        "name": "CD PROJEKT RED",
+        "slug": "cd-projekt-red",
+        "games_count": 20,
+        "image_background": "https://media.rawg.io/media/screenshots/602/6029d54b8b920a0c58cb53261acfe3ea.jpg",
+        "games": [
+          {
+            "id": 3328,
+            "slug": "the-witcher-3-wild-hunt",
+            "name": "The Witcher 3: Wild Hunt",
+            "added": 16978
+          },
+          {
+            "id": 41494,
+            "slug": "cyberpunk-2077",
+            "name": "Cyberpunk 2077",
+            "added": 10004
+          },
+          {
+            "id": 16944,
+            "slug": "the-witcher-2-assassins-of-kings-enhanced-edition",
+            "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
+            "added": 9615
+          },
+          {
+            "id": 17822,
+            "slug": "the-witcher-enhanced-edition-directors-cut",
+            "name": "The Witcher: Enhanced Edition Director's Cut",
+            "added": 9361
+          },
+          {
+            "id": 23557,
+            "slug": "gwent-the-witcher-card-game",
+            "name": "Gwent: The Witcher Card Game",
+            "added": 3900
+          },
+          {
+            "id": 244722,
+            "slug": "gwent-thronebreaker",
+            "name": "Thronebreaker: The Witcher Tales",
+            "added": 1673
+          }
+        ]
+      },
+      {
+        "id": 3543,
+        "name": "Codemasters",
+        "slug": "codemasters",
+        "games_count": 98,
+        "image_background": "https://media.rawg.io/media/games/882/8820b0bc5ec9c135aca22389d105b566.jpg",
+        "games": [
+          {
+            "id": 4003,
+            "slug": "grid-2",
+            "name": "GRID 2",
+            "added": 6463
+          },
+          {
+            "id": 2572,
+            "slug": "dirt-rally",
+            "name": "DiRT Rally",
+            "added": 5784
+          },
+          {
+            "id": 5578,
+            "slug": "grid",
+            "name": "Race Driver: Grid",
+            "added": 4748
+          },
+          {
+            "id": 4347,
+            "slug": "dirt-showdown",
+            "name": "DiRT Showdown",
+            "added": 4159
+          },
+          {
+            "id": 3251,
+            "slug": "f1-2015",
+            "name": "F1 2015",
+            "added": 3425
+          },
+          {
+            "id": 244716,
+            "slug": "dirt-rally-20",
+            "name": "DiRT Rally 2.0",
+            "added": 2792
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Rockstar Games",
+        "slug": "rockstar-games",
+        "games_count": 25,
+        "image_background": "https://media.rawg.io/media/games/686/686909717c3aa01518bc42ae2bf4259e.jpg",
+        "games": [
+          {
+            "id": 3498,
+            "slug": "grand-theft-auto-v",
+            "name": "Grand Theft Auto V",
+            "added": 18146
+          },
+          {
+            "id": 28,
+            "slug": "red-dead-redemption-2",
+            "name": "Red Dead Redemption 2",
+            "added": 12810
+          },
+          {
+            "id": 4280,
+            "slug": "max-payne-3",
+            "name": "Max Payne 3",
+            "added": 6902
+          },
+          {
+            "id": 4544,
+            "slug": "red-dead-redemption",
+            "name": "Red Dead Redemption",
+            "added": 6298
+          },
+          {
+            "id": 2518,
+            "slug": "max-payne",
+            "name": "Max Payne",
+            "added": 4540
+          },
+          {
+            "id": 4414,
+            "slug": "grand-theft-auto-episodes-from-liberty-city",
+            "name": "Grand Theft Auto: Episodes from Liberty City",
+            "added": 3634
+          }
+        ]
+      },
+      {
+        "id": 13328,
+        "name": "Team17 Digital",
+        "slug": "team17-digital",
+        "games_count": 104,
+        "image_background": "https://media.rawg.io/media/games/213/2138ba3c97d02b581ca0b50805fcd49c.jpg",
+        "games": [
+          {
+            "id": 2115,
+            "slug": "overcooked",
+            "name": "Overcooked",
+            "added": 5063
+          },
+          {
+            "id": 58827,
+            "slug": "overcooked-2",
+            "name": "Overcooked! 2",
+            "added": 3209
+          },
+          {
+            "id": 20466,
+            "slug": "worms-armageddon",
+            "name": "Worms Armageddon",
+            "added": 2526
+          },
+          {
+            "id": 4240,
+            "slug": "worms-revolution",
+            "name": "Worms Revolution",
+            "added": 2079
+          },
+          {
+            "id": 3679,
+            "slug": "worms-battlegrounds",
+            "name": "Worms Battlegrounds",
+            "added": 2056
+          },
+          {
+            "id": 47,
+            "slug": "yooka-laylee",
+            "name": "Yooka-Laylee",
+            "added": 2043
+          }
+        ]
+      },
+      {
+        "id": 6763,
+        "name": "FromSoftware",
+        "slug": "fromsoftware",
+        "games_count": 67,
+        "image_background": "https://media.rawg.io/media/games/061/061befe7ddaca9f09969bd5e7b7b98ca.jpg",
+        "games": [
+          {
+            "id": 2551,
+            "slug": "dark-souls-iii",
+            "name": "Dark Souls III",
+            "added": 8865
+          },
+          {
+            "id": 3387,
+            "slug": "bloodborne",
+            "name": "Bloodborne",
+            "added": 7699
+          },
+          {
+            "id": 50734,
+            "slug": "shadows-die-twice",
+            "name": "Sekiro: Shadows Die Twice",
+            "added": 6439
+          },
+          {
+            "id": 14962,
+            "slug": "dark-souls-prepare-to-die-edition",
+            "name": "Dark Souls: Prepare To Die Edition",
+            "added": 4969
+          },
+          {
+            "id": 3371,
+            "slug": "dark-souls-ii-scholar-of-the-first-sin",
+            "name": "Dark Souls II: Scholar of the First Sin",
+            "added": 4860
+          },
+          {
+            "id": 326243,
+            "slug": "elden-ring",
+            "name": "Elden Ring",
+            "added": 4634
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Deep Silver",
+        "slug": "deep-silver",
+        "games_count": 35,
+        "image_background": "https://media.rawg.io/media/screenshots/9ab/9ab4630464e41947a2cef77b2b6263dc.jpg",
+        "games": [
+          {
+            "id": 3604,
+            "slug": "metro-last-light-redux",
+            "name": "Metro: Last Light Redux",
+            "added": 7249
+          },
+          {
+            "id": 3603,
+            "slug": "metro-redux",
+            "name": "Metro 2033 Redux",
+            "added": 7163
+          },
+          {
+            "id": 28172,
+            "slug": "kingdom-come-deliverance",
+            "name": "Kingdom Come: Deliverance",
+            "added": 5662
+          },
+          {
+            "id": 3450,
+            "slug": "saints-row-gat-out-of-hell",
+            "name": "Saints Row: Gat Out of Hell",
+            "added": 3422
+          },
+          {
+            "id": 19584,
+            "slug": "risen-2-dark-waters-2",
+            "name": "Risen 2: Dark Waters",
+            "added": 2932
+          },
+          {
+            "id": 4031,
+            "slug": "dead-island-riptide",
+            "name": "Dead Island Riptide",
+            "added": 2589
+          }
+        ]
+      },
+      {
+        "id": 4033,
+        "name": "IO Interactive",
+        "slug": "io-interactive-2",
+        "games_count": 35,
+        "image_background": "https://media.rawg.io/media/screenshots/2fe/2fe6a0050883ba3b7af9294fe700cba6.jpg",
+        "games": [
+          {
+            "id": 10035,
+            "slug": "hitman",
+            "name": "Hitman",
+            "added": 9195
+          },
+          {
+            "id": 5583,
+            "slug": "hitman-absolution",
+            "name": "Hitman: Absolution",
+            "added": 7949
+          },
+          {
+            "id": 58654,
+            "slug": "hitman-2",
+            "name": "Hitman 2",
+            "added": 6499
+          },
+          {
+            "id": 19569,
+            "slug": "hitman-blood-money",
+            "name": "Hitman: Blood Money",
+            "added": 4792
+          },
+          {
+            "id": 19592,
+            "slug": "hitman-2-silent-assassin",
+            "name": "Hitman 2: Silent Assassin",
+            "added": 3789
+          },
+          {
+            "id": 10049,
+            "slug": "hitman-codename-47",
+            "name": "Hitman: Codename 47",
+            "added": 3224
+          }
+        ]
+      },
+      {
+        "id": 8933,
+        "name": "BioWare",
+        "slug": "bioware",
+        "games_count": 64,
+        "image_background": "https://media.rawg.io/media/games/d4c/d4cc887fb00426939d091557e2edf63a.jpg",
+        "games": [
+          {
+            "id": 4806,
+            "slug": "mass-effect-2",
+            "name": "Mass Effect 2",
+            "added": 8046
+          },
+          {
+            "id": 4166,
+            "slug": "mass-effect",
+            "name": "Mass Effect",
+            "added": 7691
+          },
+          {
+            "id": 4639,
+            "slug": "dragon-age-origins",
+            "name": "Dragon Age: Origins",
+            "added": 5880
+          },
+          {
+            "id": 15859,
+            "slug": "star-wars-knights-of-the-old-republic-2",
+            "name": "Star Wars: Knights of the Old Republic",
+            "added": 5663
+          },
+          {
+            "id": 28559,
+            "slug": "dragon-age-inquisition",
+            "name": "Dragon Age: Inquisition",
+            "added": 5258
+          },
+          {
+            "id": 4439,
+            "slug": "mass-effect-3",
+            "name": "Mass Effect 3",
+            "added": 4012
+          }
+        ]
+      },
+      {
+        "id": 18111,
+        "name": "Electronic Arts DICE",
+        "slug": "ea-dice",
+        "games_count": 41,
+        "image_background": "https://media.rawg.io/media/games/998/9980c4296f311d8bcc5b451ca51e4fe1.jpg",
+        "games": [
+          {
+            "id": 4252,
+            "slug": "mirrors-edge",
+            "name": "Mirror's Edge",
+            "added": 9043
+          },
+          {
+            "id": 998,
+            "slug": "battlefield-1",
+            "name": "Battlefield 1",
+            "added": 6329
+          },
+          {
+            "id": 3842,
+            "slug": "battlefield-4",
+            "name": "Battlefield 4",
+            "added": 5391
+          },
+          {
+            "id": 28152,
+            "slug": "star-wars-battlefront-2",
+            "name": "Star Wars: Battlefront II (2017)",
+            "added": 4938
+          },
+          {
+            "id": 3052,
+            "slug": "star-wars-battlefront",
+            "name": "STAR WARS Battlefront",
+            "added": 4358
+          },
+          {
+            "id": 4397,
+            "slug": "battlefield-3",
+            "name": "Battlefield 3",
+            "added": 4228
+          }
+        ]
+      },
+      {
+        "id": 3868,
+        "name": "Firaxis",
+        "slug": "firaxis",
+        "games_count": 35,
+        "image_background": "https://media.rawg.io/media/screenshots/405/405a97dec676c9ba97461560ed2b2e2e_5WhLVe8.jpg",
+        "games": [
+          {
+            "id": 13633,
+            "slug": "civilization-v",
+            "name": "Sid Meier's Civilization V",
+            "added": 8085
+          },
+          {
+            "id": 13910,
+            "slug": "xcom-enemy-unknown",
+            "name": "XCOM: Enemy Unknown",
+            "added": 7245
+          },
+          {
+            "id": 1256,
+            "slug": "xcom-2",
+            "name": "XCOM 2",
+            "added": 6197
+          },
+          {
+            "id": 10297,
+            "slug": "civilization-vi",
+            "name": "Sid Meier’s Civilization VI",
+            "added": 5488
+          },
+          {
+            "id": 17380,
+            "slug": "sid-meiers-civilization-iii-complete",
+            "name": "Sid Meier's Civilization III Complete",
+            "added": 4674
+          },
+          {
+            "id": 13780,
+            "slug": "sid-meiers-civilization-iv",
+            "name": "Sid Meier's Civilization IV",
+            "added": 2454
+          }
+        ]
+      },
+      {
+        "id": 4149,
+        "name": "2K Australia",
+        "slug": "2k-australia",
+        "games_count": 11,
+        "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg",
+        "games": [
+          {
+            "id": 4062,
+            "slug": "bioshock-infinite",
+            "name": "BioShock Infinite",
+            "added": 13200
+          },
+          {
+            "id": 4286,
+            "slug": "bioshock",
+            "name": "BioShock",
+            "added": 12038
+          },
+          {
+            "id": 4427,
+            "slug": "bioshock-2",
+            "name": "BioShock 2",
+            "added": 9243
+          },
+          {
+            "id": 10754,
+            "slug": "bioshock-remastered",
+            "name": "BioShock Remastered",
+            "added": 8626
+          },
+          {
+            "id": 3543,
+            "slug": "borderlands-the-pre-sequel",
+            "name": "Borderlands: The Pre-Sequel",
+            "added": 7618
+          },
+          {
+            "id": 11142,
+            "slug": "bioshock-2-remastered",
+            "name": "BioShock 2 Remastered",
+            "added": 7139
+          }
+        ]
+      }
+    ]
+  }

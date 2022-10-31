@@ -9,6 +9,7 @@ import { clear } from '@testing-library/user-event/dist/clear';
 import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
 import Platforms from './platforms.json';
 import Genres from './genres.json';
+import Developers from './developers.json';
 
 function App() {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
@@ -38,6 +39,7 @@ function App() {
         <GameRecommendationForm 
           platforms={Platforms}
           genres={Genres}
+          developers={Developers}
         />
       </div>
     // <div id="app-container">
