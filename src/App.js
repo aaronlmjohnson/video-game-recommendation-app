@@ -10,9 +10,14 @@ import GameRecommendationForm from './components/GameRecommendationForm/GameReco
 import Platforms from './platforms.json';
 import Genres from './genres.json';
 import Developers from './developers.json';
-
+import useRecommendationData from './components/useRecommendationData/useRecommendationData';
+//example for form query
+//https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045&platforms=4&genres=59&dates=2000-01-01,2009-12-31&metacritic=70,100&developers=16257
 function App() {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
+  const { formData } = useRecommendationData(); 
+  console.log(formData);
+  // console.log(formData)
   // const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   // const [year, setYear] = useState(new Date().getFullYear());
   // const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
