@@ -1,22 +1,22 @@
-const GameRecommendationForm = ({platforms, genres, developers})=>{
+const GameRecommendationForm = ({data, handleSubmit, setGameQuery, handleCheckboxChange})=>{
     const updateRating = (e)=>{
         document.getElementById("textInput").value = e.target.value;
     }
     return(
-        <form>
+        <form onSubmit={(e) => handleSubmit(e)}>
             <div id="form-platforms">
                 <h1>Platforms</h1>
-                {platforms.results.map((platform)=>{
-                    return (<div className="form-platform">
+                {data.platforms.results.map((platform)=>{
+                    return (<div className="form-platform" key={platform.id}>
                         <label htmlFor={platform.name}>{platform.name}</label>
-                        <input type="checkbox" name={platform.name} />
+                        <input type="checkbox" name={platform.name} onChange={(e)=>handleCheckboxChange(e, platform.id)}/>
                     </div>)
                 })}
             </div>
             <br/>
             <div id="form-genres">
                 <h1>Genres</h1>
-                {genres.results.map((genre)=>{
+                {data.genres.results.map((genre)=>{
                     return (<div className="form-genre">
                         <label htmlFor={genre.name}>{genre.name}</label>
                         <input type="checkbox" name={genre.name} />
@@ -38,14 +38,14 @@ const GameRecommendationForm = ({platforms, genres, developers})=>{
             <div id="form-rating"> 
                 <label htmlFor="rating">Rating:</label>
                 <input type="range" name="rating" min="0" max="100" onChange={updateRating}/>
-                <input type="text" id="textInput" value=""></input>
+                <input type="text" id="textInput" value="" ></input>
             </div>
 
             <div id="form-developers">
                 <h1>Developers</h1>
                 <label htmlFor="developer-option">All</label>
                 <input type="radio" name="developer-option"/>
-                {developers.results.map((developer)=>{
+                {data.developers.results.map((developer)=>{
                     return (<div className="form-genre">
                         <label htmlFor="developer-option">{developer.name}</label>
                         <input type="radio" name="developer-option" />

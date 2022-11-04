@@ -23,7 +23,6 @@ const useRecommendationData =  ()=>{
         setFormData((prevState)=>{
             return {...prevState, developers:data}
         });
-        console.log(formData);
     }, [])
     
     
