@@ -39,16 +39,17 @@ function App() {
   //   refetch(url);
   // }
 
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    console.log(gameQuery);
-  }
-
-  const handleCheckboxChange = (e, id)=>{
+  const handleSubmit = (e, queryData)=>{
     //https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045&platforms=4&genres=4&dates=2000-01-01,2009-12-31&metacritic=70,100&developers=405
-    //platforms=4&genres
-    // console.log(e.target.value === "on" ? `platforms=` ); // make it so gameQuery is initiated with platforms genres dates metacritic and developers in query
-    console.log(e.target.name);
+    const formData = new FormData(e.target);
+    let platforms, genres, developers, date, metacritic = '';
+
+
+    for (const [key, value] of formData) {
+      console.log(`${key}: ${value}\n`);
+    }
+    e.preventDefault();
+
   }
 
   return (
@@ -56,8 +57,6 @@ function App() {
          <GameRecommendationForm 
           data={formData}
           handleSubmit={handleSubmit}
-          setGameQuery={setGameQuery}
-          handleCheckboxChange={handleCheckboxChange}
         />
       </div>
     // <div id="app-container">

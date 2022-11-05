@@ -1,25 +1,27 @@
-const GameRecommendationForm = ({data, handleSubmit, setGameQuery, handleCheckboxChange})=>{
+const GameRecommendationForm = ({data, handleSubmit})=>{
     const updateRating = (e)=>{
         document.getElementById("textInput").value = e.target.value;
     }
     return(
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e, {})}>
             <div id="form-platforms">
                 <h1>Platforms</h1>
                 {data.platforms.results.map((platform)=>{
+                    const inputName = `platform-${platform.id}`;
                     return (<div className="form-platform" key={platform.id}>
-                        <label htmlFor={platform.name}>{platform.name}</label>
-                        <input type="checkbox" name={platform.name} onChange={(e)=>handleCheckboxChange(e, platform.id)}/>
-                    </div>)
+                        <label htmlFor={inputName}>{platform.name}</label>
+                        <input type="checkbox" name={inputName}/>
+                    </div>);
                 })}
             </div>
             <br/>
             <div id="form-genres">
                 <h1>Genres</h1>
                 {data.genres.results.map((genre)=>{
-                    return (<div className="form-genre">
-                        <label htmlFor={genre.name}>{genre.name}</label>
-                        <input type="checkbox" name={genre.name} />
+                    const inputName =`genre-${genre.id}`;
+                    return (<div classid="form-genre">
+                        <label htmlFor={inputName}>{genre.name}</label>
+                        <input type="checkbox" name={inputName}/>
                     </div>)
                 })}
             </div>
@@ -43,12 +45,11 @@ const GameRecommendationForm = ({data, handleSubmit, setGameQuery, handleCheckbo
 
             <div id="form-developers">
                 <h1>Developers</h1>
-                <label htmlFor="developer-option">All</label>
-                <input type="radio" name="developer-option"/>
                 {data.developers.results.map((developer)=>{
+                    const inputName= `developer-${developer.id}`;
                     return (<div className="form-genre">
-                        <label htmlFor="developer-option">{developer.name}</label>
-                        <input type="radio" name="developer-option" />
+                        <label htmlFor={inputName}>{developer.name}</label>
+                        <input type="checkbox" name={inputName}/>
                     </div>)
                 })}
             </div>
