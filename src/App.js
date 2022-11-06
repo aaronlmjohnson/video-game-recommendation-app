@@ -44,13 +44,23 @@ function App() {
     const formData = new FormData(e.target);
     let platforms, genres, developers, date, metacritic = '';
 
-
-    for (const [key, value] of formData) {
-      console.log(`${key}: ${value}\n`);
-    }
+    inputParser(formData);
+    
     e.preventDefault();
 
   }
+
+  const inputParser = (formData)=>{
+    for (const [key, value] of formData) {
+      console.log(isPlatDevOrGenre(key))
+        //console.log("Hi");
+        //console.log(key.slice(key.indexOf("-")+1));
+    }
+  }
+
+  const isPlatDevOrGenre = (str)=>{
+    return /^(platform|developer|genre)$/.test(str.slice(0, str.indexOf("-")));
+  }  
 
   return (
       <div>

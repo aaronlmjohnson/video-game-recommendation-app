@@ -19,7 +19,7 @@ const GameRecommendationForm = ({data, handleSubmit})=>{
                 <h1>Genres</h1>
                 {data.genres.results.map((genre)=>{
                     const inputName =`genre-${genre.id}`;
-                    return (<div classid="form-genre">
+                    return (<div className="form-genre">
                         <label htmlFor={inputName}>{genre.name}</label>
                         <input type="checkbox" name={inputName}/>
                     </div>)
