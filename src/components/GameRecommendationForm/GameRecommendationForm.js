@@ -7,7 +7,7 @@ const GameRecommendationForm = ({data, handleSubmit})=>{
             <div id="form-platforms">
                 <h1>Platforms</h1>
                 {data.platforms.results.map((platform)=>{
-                    const inputName = `platform-${platform.id}`;
+                    const inputName = `platforms-${platform.id}`;
                     return (<div className="form-platform" key={platform.id}>
                         <label htmlFor={inputName}>{platform.name}</label>
                         <input type="checkbox" name={inputName}/>
@@ -18,7 +18,7 @@ const GameRecommendationForm = ({data, handleSubmit})=>{
             <div id="form-genres">
                 <h1>Genres</h1>
                 {data.genres.results.map((genre)=>{
-                    const inputName =`genre-${genre.id}`;
+                    const inputName =`genres-${genre.id}`;
                     return (<div className="form-genre">
                         <label htmlFor={inputName}>{genre.name}</label>
                         <input type="checkbox" name={inputName}/>
@@ -46,7 +46,7 @@ const GameRecommendationForm = ({data, handleSubmit})=>{
             <div id="form-developers">
                 <h1>Developers</h1>
                 {data.developers.results.map((developer)=>{
-                    const inputName= `developer-${developer.id}`;
+                    const inputName= `developers-${developer.id}`;
                     return (<div className="form-genre">
                         <label htmlFor={inputName}>{developer.name}</label>
                         <input type="checkbox" name={inputName}/>

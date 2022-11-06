@@ -40,27 +40,35 @@ function App() {
   // }
 
   const handleSubmit = (e, queryData)=>{
+    e.preventDefault();
     //https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045&platforms=4&genres=4&dates=2000-01-01,2009-12-31&metacritic=70,100&developers=405
     const formData = new FormData(e.target);
     let platforms, genres, developers, date, metacritic = '';
 
-    inputParser(formData);
+    console.log(inputParser(formData));
     
-    e.preventDefault();
-
   }
 
   const inputParser = (formData)=>{
+    const formObj = {platforms:[], genres:[], developers:[]};
     for (const [key, value] of formData) {
-      console.log(isPlatDevOrGenre(key))
-        //console.log("Hi");
-        //console.log(key.slice(key.indexOf("-")+1));
+      if(isPlatDevOrGenre(key))
+        formObj[getKeyName(key)].push(getKeyId(key));
+      else
+        formObj[key] = value;
     }
+
+    return formObj;
   }
 
   const isPlatDevOrGenre = (str)=>{
-    return /^(platform|developer|genre)$/.test(str.slice(0, str.indexOf("-")));
-  }  
+    return /^(platforms|developers|genres)$/.test(getKeyName(str));
+  }
+  
+  const getKeyName = (str)=> str.slice(0, str.indexOf("-"));
+  
+
+  const getKeyId = (str)=> str.slice(str.indexOf('-')+1);
 
   return (
       <div>
