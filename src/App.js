@@ -19,9 +19,10 @@ function App() {
   const [formData, setFormData] = useState({platforms, genres, developers}); // for testing purposes only
   const [gameQuery, setGameQuery] = useState(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}`);
 
-  // const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
+  const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   // const [year, setYear] = useState(new Date().getFullYear());
-  // const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
+  const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
+  const [games, setGames] = useState({});
   // const [popularGameData, setPopularGameData] = useState({});
   // const {gameData, getRandomGame, gameDataIsEmpty, clearGameData} = useRandomGame();
 
@@ -46,11 +47,9 @@ function App() {
 
     const parsedData = inputParser(formData);//seperate platforms genres and developers into their own object from rating and dates
     const url = `https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045&${getEndPoints(parsedData)}`;
-    
-    console.log(url);
+    setGames(data);    
   }
   const getEndPoints = (parsedData)=>{
-    
     let endpointStr = "";
 
     for(const key in parsedData){
