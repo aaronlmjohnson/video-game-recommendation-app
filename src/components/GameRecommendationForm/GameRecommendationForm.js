@@ -38,8 +38,8 @@ const GameRecommendationForm = ({data, handleSubmit})=>{
             </div>
 
             <div id="form-rating"> 
-                <label htmlFor="rating">Rating:</label>
-                <input type="range" name="rating" min="0" max="100" onChange={updateRating}/>
+                <label htmlFor="metacritic">Rating:</label>
+                <input type="range" name="metacritic" min="0" max="100" onChange={updateRating}/>
                 <input type="text" id="textInput" value="" ></input>
             </div>
 

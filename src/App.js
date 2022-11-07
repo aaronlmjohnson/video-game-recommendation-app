@@ -43,17 +43,38 @@ function App() {
     e.preventDefault();
     //https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045&platforms=4&genres=4&dates=2000-01-01,2009-12-31&metacritic=70,100&developers=405
     const formData = new FormData(e.target);
-    let platforms, genres, developers, date, metacritic = '';
 
-    console.log(inputParser(formData));
-    
+    const parsedData = inputParser(formData);//seperate platforms genres and developers into their own object from rating and dates
+    console.log(parsedData);
+    const url = `https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045&${getEndPoints(parsedData)}`;
+
+
   }
+  const getEndPoints = (parsedData)=>{
+    let endpointStr = "";
 
+    for(const key in parsedData){
+      endpointStr += key+"=";
+
+      if(key === "metacritic")
+        endpointStr += parsedData[key];
+      else{
+        
+        for(let i = 0; i < parsedData[key].length; i++)
+            endpointStr +=`${parsedData[key][i]}${i === (parsedData[key].length-1) ? '' : ','}`;
+        
+        endpointStr += '&';
+      }
+    }
+    return endpointStr;
+  }
   const inputParser = (formData)=>{
-    const formObj = {platforms:[], genres:[], developers:[]};
+    const formObj = {platforms:[], genres:[], developers:[], dates:[]};
     for (const [key, value] of formData) {
       if(isPlatDevOrGenre(key))
         formObj[getKeyName(key)].push(getKeyId(key));
+      else if(key === "start-date" || key === "end-date")
+        formObj.dates.push(value);
       else
         formObj[key] = value;
     }
