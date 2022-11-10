@@ -1,9 +1,10 @@
-const GameRecommendationForm = ({data, handleSubmit})=>{
+const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
     const updateRating = (e)=>{
         document.getElementById("textInput").value = e.target.value;
     }
     return(
         <form onSubmit={(e) => handleSubmit(e, {})}>
+            <button id="close-form" onClick={(e) => setRenderGameForm(false)}>Close</button>
             <div id="form-platforms">
                 <h1>Platforms</h1>
                 {data.platforms.results.map((platform)=>{
