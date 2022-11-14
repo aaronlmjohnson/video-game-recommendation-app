@@ -14,7 +14,7 @@ const PopularGames = ({data, year, updateYear, changePopularYearData})=>{
                 return <GameInfoCard 
                     name={game.name}
                     releaseDate = {game.released}
-                    rating={game.rating} 
+                    rating={game.metacritic || (Math.floor(game.rating * 20))} 
                     src={game.background_image} 
                     key={game.id}
                 />

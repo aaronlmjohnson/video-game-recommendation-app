@@ -17,7 +17,7 @@ function App() {
   const [formData, setFormData] = useState({platforms, genres, developers}); 
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   const [year, setYear] = useState(new Date().getFullYear());
-  // const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
+  const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
   const {recommendedGames, fetchRecommendedGames} = useRecommendedGames();
   const [popularGameData, setPopularGameData] = useState({});
   const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
@@ -25,25 +25,25 @@ function App() {
   
 
   useEffect(()=>{
-    //setPopularGameData(data);
-    //setRenderGameForm(false);
-  }, []); //data
+    setPopularGameData(data);
+    setRenderGameForm(false);
+  }, [data]); 
 
   const updateYear = (value)=>{
     setYear(value);
   }
 
-  // const changePopularYearData = ()=>{
-  //   const endpoint = `&dates=${year}-01-01,${year}-12-31&page_size=16`;
-  //   const url = `${GAMES_URL}${endpoint}`;
-  //   refetch(url);
-  // }
+  const changePopularYearData = ()=>{
+    const endpoint = `&dates=${year}-01-01,${year}-12-31&page_size=16`;
+    const url = `${GAMES_URL}${endpoint}`;
+    refetch(url);
+  }
 
-  // const handleSubmit = (e, queryData)=>{
-  //   e.preventDefault();
-  //   const formData = new FormData(e.target);
-  //   fetchRecommendedGames(formData);
-  // }
+  const handleSubmit = (e, queryData)=>{
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    fetchRecommendedGames(formData);
+  }
 
   return (
     <div id="app-container">
@@ -61,20 +61,20 @@ function App() {
         gameNotFound ={gameNotFound}
       />
 
-      {/* <PopularGames 
+      <PopularGames 
         data={popularGameData.results}
         year = {year}
         updateYear = {updateYear}
         changePopularYearData = {changePopularYearData}
-      />  */}
-{/* 
+      /> 
+ 
       {renderGameForm && <GameRecommendationForm 
           data={formData}
           handleSubmit={handleSubmit}
           setRenderGameForm={setRenderGameForm}
       />}
 
-      {recommendedGames.length > 0 ? <RecommendedGames data={recommendedGames} /> : <></> }      */}
+      {recommendedGames.length > 0 ? <RecommendedGames data={recommendedGames} /> : <></> }     
       
     </div>
   );

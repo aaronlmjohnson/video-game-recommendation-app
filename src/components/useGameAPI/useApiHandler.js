@@ -25,7 +25,6 @@ const useApiHandler =  (url = "")=>{
             }catch(e){
                 setError(true);
             }finally{
-                console.log("Loaded");
                 setLoading(false);
             }
         }
