@@ -3,13 +3,15 @@ import useApiHandler from "../useGameAPI/useApiHandler";
 
 const useRandomGame = ()=>{
     const [gameData, setGameData ] = useState({});
+    const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
+
     const NUMBER_OF_GAMES = 815664;
     const {data, error, setError, refetch, loading } = useApiHandler('');
 
     const getRandomGame = ()=>{
         setError(false);
         let randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);  
-        refetch(`https://api.rawg.io/api/games/${randomId}?key=9ff2d4cc97c24f959f6e39996f82a045`);
+        refetch(`https://api.rawg.io/api/games/${randomId}?key=${RAWG_API_KEY}`);
         setGameData(data);
     }
 

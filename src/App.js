@@ -14,6 +14,7 @@ import RecommendedGames from './components/RecommendedGames/RecommendedGames';
 
 function App() {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
+
   const [formData, setFormData] = useState({platforms, genres, developers}); 
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   const [year, setYear] = useState(new Date().getFullYear());
