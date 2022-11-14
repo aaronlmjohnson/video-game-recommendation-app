@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-const useApiHandler =  (url)=>{
+const useApiHandler =  (url = "")=>{
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState(false);
 
     useEffect(()=>{ 
-        refetch(url); 
+        if(url) refetch(url);   
+        
     }, [url])
 
     const refetch = (url)=>{
@@ -15,18 +16,23 @@ const useApiHandler =  (url)=>{
             try{
                 setLoading(true);
                 const response = await fetch(url, {mode:'cors'});
+
+                if(!response.ok) 
+                    throw Error(response.status);
                 const apiData = await response.json();
+
                 setData(apiData);
             }catch(e){
-                setError(e);
+                setError(true);
+            }finally{
+                console.log("Loaded");
+                setLoading(false);
             }
-            setLoading(false);
         }
         getData();
     }
-
     
-    return data && {data, loading, error, refetch};
+    return data && {data, loading, error, setError, refetch};
 
 }
 

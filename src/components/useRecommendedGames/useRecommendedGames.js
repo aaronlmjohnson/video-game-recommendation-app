@@ -4,7 +4,7 @@ import useApiHandler from "../useGameAPI/useApiHandler";
 const useRecommendedGames =  ()=>{
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
 
-    const {data, refetch} = useApiHandler(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}`);
+    const {data, refetch} = useApiHandler();
     const [recommendedGames, setRecommendedGames] = useState([]);
 
     const getEndPoints = (parsedData)=>{
@@ -46,7 +46,6 @@ const useRecommendedGames =  ()=>{
       
       const getKeyName = (str)=> str.slice(0, str.indexOf("-"));
       
-    
       const getKeyId = (str)=> str.slice(str.indexOf('-')+1);
 
       const fetchRecommendedGames = (formData)=>{
@@ -55,11 +54,6 @@ const useRecommendedGames =  ()=>{
         refetch(url);
         setRecommendedGames(data.results);
       }
-
-    useEffect(()=>{
-
-
-    }, [])
 
     return {recommendedGames, fetchRecommendedGames};
 }

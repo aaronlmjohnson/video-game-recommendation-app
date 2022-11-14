@@ -4,15 +4,12 @@ import useApiHandler from "../useGameAPI/useApiHandler";
 const useRandomGame = ()=>{
     const [gameData, setGameData ] = useState({});
     const NUMBER_OF_GAMES = 815664;
-    const {data, refetch } = useApiHandler('');
+    const {data, error, setError, refetch, loading } = useApiHandler('');
 
     const getRandomGame = ()=>{
-        const randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);
+        setError(false);
+        let randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);  
         refetch(`https://api.rawg.io/api/games/${randomId}?key=9ff2d4cc97c24f959f6e39996f82a045`);
-        
-        setGameData((prevState)=>{
-
-        })
         setGameData(data);
     }
 
@@ -28,7 +25,10 @@ const useRandomGame = ()=>{
         setGameData({});
     }
 
-    return {gameData, getRandomGame, gameDataIsEmpty, clearGameData}
+    const gameNotFound = ()=> error;
+
+
+    return {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading}
 }
 
 export default useRandomGame;
