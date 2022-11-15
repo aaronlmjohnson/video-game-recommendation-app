@@ -4,8 +4,12 @@ import useApiHandler from "../useGameAPI/useApiHandler";
 const useRecommendedGames =  ()=>{
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
 
-    const {data, refetch} = useApiHandler();
+    const {data, refetch, loading} = useApiHandler({});
     const [recommendedGames, setRecommendedGames] = useState([]);
+
+    useEffect(()=>{
+      if(Object.keys(data).length > 0) setRecommendedGames(data.results);
+    }, [data])
 
     const getEndPoints = (parsedData)=>{
         let endpointStr = "";
@@ -55,7 +59,9 @@ const useRecommendedGames =  ()=>{
         setRecommendedGames(data.results);
       }
 
-    return {recommendedGames, fetchRecommendedGames};
+      const recommendedGamesLoading = ()=> loading;
+
+    return {recommendedGames, fetchRecommendedGames, recommendedGamesLoading};
 }
 
 export default useRecommendedGames;

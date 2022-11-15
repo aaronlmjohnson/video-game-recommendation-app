@@ -19,7 +19,7 @@ function App() {
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   const [year, setYear] = useState(new Date().getFullYear());
   const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
-  const {recommendedGames, fetchRecommendedGames} = useRecommendedGames();
+  const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
   const [popularGameData, setPopularGameData] = useState({});
   const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
   const [renderGameForm, setRenderGameForm] = useState(false);
@@ -54,7 +54,7 @@ function App() {
         getRandomGame={getRandomGame}
         setRenderGameForm={setRenderGameForm}
       />
-      <GamePage 
+      {/* <GamePage 
         data={gameData} 
         loading={loading}
         clearGameData={clearGameData} 
@@ -67,15 +67,16 @@ function App() {
         year = {year}
         updateYear = {updateYear}
         changePopularYearData = {changePopularYearData}
-      /> 
+      />  */}
  
       {renderGameForm && <GameRecommendationForm 
           data={formData}
           handleSubmit={handleSubmit}
           setRenderGameForm={setRenderGameForm}
+          loading={recommendedGamesLoading}
       />}
 
-      {recommendedGames.length > 0 ? <RecommendedGames data={recommendedGames} /> : <></> }     
+      {!recommendedGamesLoading()? <RecommendedGames data={recommendedGames} /> : <>Loading</> }     
       
     </div>
   );
