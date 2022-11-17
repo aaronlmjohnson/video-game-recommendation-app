@@ -16,8 +16,8 @@ const useRandomGame = ()=>{
     }
 
     useEffect(()=>{
-        getRandomGame();
-    },[]);
+        if(Object.keys(data).length > 0) setGameData(data);
+    },[data]);
 
     const gameDataIsEmpty = ()=>{
         return Object.keys(gameData).length < 1;

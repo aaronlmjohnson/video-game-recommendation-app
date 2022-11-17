@@ -54,7 +54,7 @@ function App() {
         getRandomGame={getRandomGame}
         setRenderGameForm={setRenderGameForm}
       />
-      {/* <GamePage 
+      <GamePage 
         data={gameData} 
         loading={loading}
         clearGameData={clearGameData} 
@@ -67,7 +67,7 @@ function App() {
         year = {year}
         updateYear = {updateYear}
         changePopularYearData = {changePopularYearData}
-      />  */}
+      /> 
  
       {renderGameForm && <GameRecommendationForm 
           data={formData}
