@@ -1,4 +1,5 @@
 import GameInfoCard from '../GameInfoCard/GameInfoCard';
+import PopularGames from '../PopularGames/PopularGames';
 import YearSelectionForm from '../YearSelectionForm/YearSelectionForm';
 
 const PopularGamesSection = ({data, year, updateYear, changePopularYearData})=>{
@@ -10,15 +11,7 @@ const PopularGamesSection = ({data, year, updateYear, changePopularYearData})=>{
                 updateYear={updateYear} 
                 changePopularYearData={changePopularYearData}
             />
-            {data && data.map((game)=>{
-                return <GameInfoCard 
-                    name={game.name}
-                    releaseDate = {game.released}
-                    rating={game.metacritic || (Math.floor(game.rating * 20))} 
-                    src={game.background_image} 
-                    key={game.id}
-                />
-            })}
+            <PopularGames data={data}/>
         </div>
     );
 }
