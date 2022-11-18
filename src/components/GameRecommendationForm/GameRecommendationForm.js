@@ -1,3 +1,5 @@
+import PlatformsInput from "../PlatformsInput/PlatformsInput"
+
 const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
     const updateRating = (e)=>{
         document.getElementById("textInput").value = e.target.value;
@@ -5,16 +7,7 @@ const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
     return(
         <form onSubmit={(e) => handleSubmit(e, {})}>
             <button id="close-form" onClick={(e) => setRenderGameForm(false)}>Close</button>
-            <div id="form-platforms">
-                <h1>Platforms</h1>
-                {data.platforms.results.map((platform)=>{
-                    const inputName = `platforms-${platform.id}`;
-                    return (<div className="form-platform" key={platform.id}>
-                        <label htmlFor={inputName}>{platform.name}</label>
-                        <input type="checkbox" name={inputName}/>
-                    </div>);
-                })}
-            </div>
+            <PlatformsInput data={data} />
             <br/>
             <div id="form-genres">
                 <h1>Genres</h1>
