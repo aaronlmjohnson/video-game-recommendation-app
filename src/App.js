@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div id="app-container">
-      <h1>Video Game Recommender</h1>
+      <h1 id="app-title">Video Game Recommender</h1>
 
       <ModeButtons 
         getRandomGame={getRandomGame}
