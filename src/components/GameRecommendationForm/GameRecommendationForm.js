@@ -1,5 +1,6 @@
 import GenresInput from "../GenresInput/GenresInput";
 import PlatformsInput from "../PlatformsInput/PlatformsInput"
+import ReleaseDateInput from "../ReleaseDateInput/ReleaseDateInput";
 
 const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
     const updateRating = (e)=>{
@@ -11,18 +12,10 @@ const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
             <PlatformsInput data={data} />
             <br/>
             <GenresInput data={data} />
-            
+            <br/>
+            <ReleaseDateInput data={data} />
 
-            <div id="form-released">
-                <h1>Release Date</h1>
-                <div id="form-released-start" >
-                    <input type="date" name="start-date"/>
-                </div>
-                to
-                <div id="form-released-end" >
-                    <input type="date" name="end-date"/>
-                </div>
-            </div>
+            
 
             <div id="form-rating"> 
                 <label htmlFor="metacritic">Rating:</label>
