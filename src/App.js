@@ -1,6 +1,6 @@
 import './App.css';
 import ModeButtons from './components/ModeButtons/ModeButtons';
-import PopularGames from './components/PopularGames/PopularGames';
+import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
 import { useEffect, useState } from 'react';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import useRandomGame from './components/useRandomGame/useRandomGame';
@@ -62,7 +62,7 @@ function App() {
         gameNotFound ={gameNotFound}
       />
 
-      <PopularGames 
+      <PopularGamesSection 
         data={popularGameData.results}
         year = {year}
         updateYear = {updateYear}

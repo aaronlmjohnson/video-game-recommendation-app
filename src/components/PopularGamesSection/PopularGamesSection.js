@@ -1,7 +1,7 @@
 import GameInfoCard from '../GameInfoCard/GameInfoCard';
 import YearSelectionForm from '../YearSelectionForm/YearSelectionForm';
 
-const PopularGames = ({data, year, updateYear, changePopularYearData})=>{
+const PopularGamesSection = ({data, year, updateYear, changePopularYearData})=>{
     return (
         <div id="popular-games-for-this-year">
             <h1>Popular Games of {year}</h1>
@@ -23,4 +23,4 @@ const PopularGames = ({data, year, updateYear, changePopularYearData})=>{
     );
 }
 
-export default PopularGames;
+export default PopularGamesSection;
