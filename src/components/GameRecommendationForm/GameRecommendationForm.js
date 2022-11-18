@@ -1,11 +1,10 @@
 import GenresInput from "../GenresInput/GenresInput";
 import PlatformsInput from "../PlatformsInput/PlatformsInput"
+import RatingInput from "../RatingInput/RatingInput";
 import ReleaseDateInput from "../ReleaseDateInput/ReleaseDateInput";
 
 const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
-    const updateRating = (e)=>{
-        document.getElementById("textInput").value = e.target.value;
-    }
+    
     return(
         <form onSubmit={(e) => handleSubmit(e, {})}>
             <button id="close-form" onClick={(e) => setRenderGameForm(false)}>Close</button>
@@ -14,15 +13,9 @@ const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
             <GenresInput data={data} />
             <br/>
             <ReleaseDateInput data={data} />
-
+            <br/>
+            <RatingInput data={data} />
             
-
-            <div id="form-rating"> 
-                <label htmlFor="metacritic">Rating:</label>
-                <input type="range" name="metacritic" min="0" max="100" onChange={updateRating}/>
-                <input type="text" id="textInput" value="" ></input>
-            </div>
-
             <div id="form-developers">
                 <h1>Developers</h1>
                 {data.developers.results.map((developer)=>{
