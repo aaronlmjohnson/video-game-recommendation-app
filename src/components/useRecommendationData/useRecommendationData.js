@@ -25,10 +25,7 @@ const useRecommendationData =  ()=>{
         });
     }, [])
     
-    
-
-    // setFormData({platforms, genres, developers});
-    return formData && {formData};
+        return formData && {formData};
 
 }
 

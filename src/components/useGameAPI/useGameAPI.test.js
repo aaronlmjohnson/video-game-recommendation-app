@@ -19,12 +19,6 @@ describe("Game Info Card API", ()=>{
 
     it('returns the name of the game', async ()=>{
        axios.get.mockResolvedValue(mockData)
-    //    console.log(gameData);
     });
 });
 
-
-//image
-//name
-//release date
-//developer

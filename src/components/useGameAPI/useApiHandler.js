@@ -6,12 +6,12 @@ const useApiHandler =  (url = "")=>{
     const [error, setError] = useState(false);
 
     useEffect(()=>{ 
-        //if(url)refetch(url);   
+        if(url)refetch(url);   
         
     }, [])
 
     const refetch = (url)=>{
-        const getData = async()=>{ //need to set data in the finally block. Was setting too early in try block within getData
+        const getData = async()=>{ 
             
             try{
                 setLoading(true);
