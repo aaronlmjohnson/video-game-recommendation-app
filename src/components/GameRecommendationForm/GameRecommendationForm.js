@@ -10,13 +10,9 @@ const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
         <form onSubmit={(e) => handleSubmit(e, {})}>
             <button id="close-form" onClick={(e) => setRenderGameForm(false)}>Close</button>
             <PlatformsInput data={data} />
-            <br/>
             <GenresInput data={data} />
-            <br/>
             <ReleaseDateInput data={data} />
-            <br/>
             <RatingInput data={data} />
-            <br />
             <DevelopersInput data={data} />
             <input type="submit" />
         </form>

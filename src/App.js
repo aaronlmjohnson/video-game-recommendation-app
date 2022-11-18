@@ -62,12 +62,12 @@ function App() {
         gameNotFound ={gameNotFound}
       />
 
-      {/* <PopularGamesSection 
+      <PopularGamesSection 
         data={popularGameData.results}
         year = {year}
         updateYear = {updateYear}
         changePopularYearData = {changePopularYearData}
-      />  */}
+      /> 
  
       {renderGameForm && <GameRecommendationForm 
           data={formData}
