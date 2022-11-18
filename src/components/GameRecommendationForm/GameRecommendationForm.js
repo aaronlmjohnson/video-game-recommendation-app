@@ -1,3 +1,4 @@
+import GenresInput from "../GenresInput/GenresInput";
 import PlatformsInput from "../PlatformsInput/PlatformsInput"
 
 const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
@@ -9,16 +10,8 @@ const GameRecommendationForm = ({data, handleSubmit, setRenderGameForm})=>{
             <button id="close-form" onClick={(e) => setRenderGameForm(false)}>Close</button>
             <PlatformsInput data={data} />
             <br/>
-            <div id="form-genres">
-                <h1>Genres</h1>
-                {data.genres.results.map((genre)=>{
-                    const inputName =`genres-${genre.id}`;
-                    return (<div className="form-genre">
-                        <label htmlFor={inputName}>{genre.name}</label>
-                        <input type="checkbox" name={inputName}/>
-                    </div>)
-                })}
-            </div>
+            <GenresInput data={data} />
+            
 
             <div id="form-released">
                 <h1>Release Date</h1>
