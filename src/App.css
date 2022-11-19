@@ -1,5 +1,6 @@
 :root{
     --main-bg-color: #0e0e10;
+    --page-font: Arial, Helvetica, sans-serif;
 }
 
 #app-container{
@@ -9,6 +10,7 @@
 
 #app-title {
     font-size: 48px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--page-font);
     font-weight: 700;
+    text-align: center;
 }
