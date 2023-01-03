@@ -1,3 +1,4 @@
+import './PopularGames.css';
 import GameInfoCard from "../GameInfoCard/GameInfoCard";
 
 const PopularGames = ({data})=>{

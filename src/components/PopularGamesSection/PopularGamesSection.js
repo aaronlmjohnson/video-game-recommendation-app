@@ -1,11 +1,10 @@
-import GameInfoCard from '../GameInfoCard/GameInfoCard';
 import PopularGames from '../PopularGames/PopularGames';
 import YearSelectionForm from '../YearSelectionForm/YearSelectionForm';
+import './PopularGamesSection.css';
 
 const PopularGamesSection = ({data, year, updateYear, changePopularYearData})=>{
     return (
-        <div id="popular-games-for-this-year">
-            <h1>Popular Games of {year}</h1>
+        <div id="popular-games-section">
             <YearSelectionForm 
                 year={year} 
                 updateYear={updateYear} 

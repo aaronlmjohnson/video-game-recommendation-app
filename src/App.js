@@ -34,7 +34,9 @@ function App() {
     setYear(value);
   }
 
-  const changePopularYearData = ()=>{
+  const changePopularYearData = (e)=>{
+    e.preventDefault();
+
     const endpoint = `&dates=${year}-01-01,${year}-12-31&page_size=16`;
     const url = `${GAMES_URL}${endpoint}`;
     refetch(url);
@@ -48,7 +50,7 @@ function App() {
 
   return (
     <div id="app-container">
-      <h1 id="app-title">Video Game Recommender</h1>
+      <h1 id="app-title">Find A Game</h1>
 
       <ModeButtons 
         getRandomGame={getRandomGame}
