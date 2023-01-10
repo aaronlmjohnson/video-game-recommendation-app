@@ -18,7 +18,7 @@ function App() {
   const [formData, setFormData] = useState({platforms, genres, developers}); 
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   const [year, setYear] = useState(new Date().getFullYear());
-  const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2022-01-01,2022-12-31&page_size=16`);
+  const { data, refetch} = useApiHandler(`${GAMES_URL}&dates=2023-01-01,2023-12-31&page_size=16`);
   const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
   const [popularGameData, setPopularGameData] = useState({});
   const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
