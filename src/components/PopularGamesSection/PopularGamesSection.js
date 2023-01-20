@@ -9,13 +9,13 @@ import useCarousel from '../useCarousel/useCarousel';
 const PopularGamesSection = ({apiKey,  year, updateYear, changePopularYearData})=>{
     const GAMES_URL = `https://api.rawg.io/api/games?key=${apiKey}`;
     const { data, loading } = useApiHandler(`${GAMES_URL}&dates=2023-01-01,2023-12-31&page_size=16`);
-    const { setGames, generateSubset, subset } = useCarousel();
+    const { setGames, subset, shiftLeft, shiftRight } = useCarousel();
 
     useEffect(()=>{
         if(!loading) setGames(data.results);
     }, [data]);
 
-    if(loading) <div>Loading...</div>
+    if(loading) <p>{"Loading..."}</p>
     else {
         return (
             <div id="popular-games-section">
@@ -25,7 +25,13 @@ const PopularGamesSection = ({apiKey,  year, updateYear, changePopularYearData})
                     changePopularYearData={changePopularYearData}
                     
                 />
-                <PopularGames games={subset}/>
+                
+                <PopularGames 
+                    games={subset} 
+                    shiftRight = { shiftRight }
+                    shiftLeft = { shiftLeft }
+                />
+                
             </div>
         );
     }

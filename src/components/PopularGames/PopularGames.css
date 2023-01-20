@@ -1,4 +1,20 @@
 #popular-games{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+}
+
+#popular-games-carousel {
+    display: flex;
+}
+
+.carousel-button{
+    height: 50px;
+    align-self: center;
+}
+
+.carousel-left{
+    margin-right: 10px;
+}
+
+.carousel-right{
+    margin-left: 10px;
 }

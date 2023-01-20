@@ -9,24 +9,31 @@ const useCarousel = ()=>{
     const SUBSET_SIZE = 5;
 
     useEffect(()=>{
-        if(games) generateSubset();
-    }, [games]);
+        if(games) generateSubset(index);
+    }, [games, index]);
 
-    const generateSubset = ()=>{
+    const generateSubset = (currentIndex)=>{
         const arr = [];
-        for(let i = index; i < 5; i++)
-            arr.push(games[(mod(i-2, games.length))]);  
+        for(let i = currentIndex; i < currentIndex+5; i++){
+            arr.push(games[(mod(i-2, games.length))]);
+        }   
         setSubset(arr);
+    }
+
+    const shiftLeft = ()=>{
+        setIndex((prevIndex)=>mod(prevIndex - 1, games.length));
+    }
+
+    const shiftRight = ()=>{
+        setIndex((prevIndex)=>mod(prevIndex + 1, games.length));
     }
 
     const mod = (value, n)=> ((value % n) + n) % n
     
     return{
-        generateSubset, setGames, subset
+        setGames, subset, shiftLeft, shiftRight
     }
 
 }
 
 export default useCarousel;
-
-// i want this to contain the carouselArray and have access to the rotate method that I can use on any of the carousels I need to make

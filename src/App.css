@@ -2,7 +2,9 @@
     --main-bg-color: #0e0e10;
     --page-font: Arial, Helvetica, sans-serif;
 }
-
+body{
+    background-color: var(--main-bg-color);
+}
 #app-container{
     background-color: var(--main-bg-color);
     color: white;
