@@ -1,10 +1,13 @@
 import './PopularGames.css';
 import GameInfoCard from "../GameInfoCard/GameInfoCard";
+import useCarousel from '../useCarousel/useCarousel';
+import { useEffect } from 'react';
 
-const PopularGames = ({data})=>{
+const PopularGames = ({ games })=>{
+
     return (
         <div id="popular-games">
-            {data && data.map((game)=>{
+            {games.map((game)=>{
                 return <GameInfoCard 
                     name={game.name}
                     releaseDate = {game.released}

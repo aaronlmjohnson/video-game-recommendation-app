@@ -1,24 +1,32 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const useCarousel = (carouselArr, styling = {})=>{
-    const [carousel, setCarousel] = useState(carouselArr)
-    const [activeIndex, setActiveIndex] = 0;
+const useCarousel = ()=>{
 
-    const rotateForward = ()=> {
-        if(activeIndex < carousel.length) setActiveIndex(prevIndex => prevIndex + 1);
-        else if(activeIndex >= carousel.length) setActiveIndex(0);
+    const [games, setGames] = useState(null);
+    const [index, setIndex] = useState(0);
+    const [subset, setSubset] = useState([]);
+
+    const SUBSET_SIZE = 5;
+
+    useEffect(()=>{
+        if(games) generateSubset();
+    }, [games]);
+
+    const generateSubset = ()=>{
+        const arr = [];
+        for(let i = index; i < 5; i++)
+            arr.push(games[(mod(i-2, games.length))]);  
+        setSubset(arr);
     }
+
+    const mod = (value, n)=> ((value % n) + n) % n
     
-    const rotateBack = ()=>{
-        if(activeIndex > 0)  setActiveIndex(prevIndex => prevIndex - 1);
-        else if(activeIndex <= 0) setActiveIndex(carousel.length - 1);
-    }
-
     return{
-        carousel,
-        
+        generateSubset, setGames, subset
     }
 
 }
+
+export default useCarousel;
 
 // i want this to contain the carouselArray and have access to the rotate method that I can use on any of the carousels I need to make

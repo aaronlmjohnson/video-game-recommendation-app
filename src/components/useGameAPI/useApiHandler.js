@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 
 const useApiHandler =  (url = "")=>{
     const [data, setData] = useState({});
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
     useEffect(()=>{ 
         if(url)refetch(url);   
-        
     }, [])
 
     const refetch = (url)=>{
