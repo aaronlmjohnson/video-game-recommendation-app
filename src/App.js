@@ -17,7 +17,6 @@ function App() {
 
   const [formData, setFormData] = useState({platforms, genres, developers}); 
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
-  const [year, setYear] = useState(new Date().getFullYear());
   const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
   const [popularGameData, setPopularGameData] = useState({});
   const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
@@ -29,17 +28,7 @@ function App() {
     //setRenderGameForm(false);
   }, []); 
 
-  const updateYear = (value)=>{
-    setYear(value);
-  }
 
-  const changePopularYearData = (e)=>{
-    e.preventDefault();
-
-    const endpoint = `&dates=${year}-01-01,${year}-12-31&page_size=16`;
-    const url = `${GAMES_URL}${endpoint}`;
-    //refetch(url);
-  }
 
   const handleSubmit = (e, queryData)=>{
     e.preventDefault();
@@ -49,7 +38,6 @@ function App() {
 
   return (
     <div id="app-container">
-      <h1 id="app-title">Find A Game</h1>
 
       {/* <ModeButtons 
         getRandomGame={getRandomGame}
@@ -65,9 +53,6 @@ function App() {
 
        <PopularGamesSection
         apiKey = {RAWG_API_KEY} 
-        year = {year}
-        updateYear = {updateYear}
-        changePopularYearData = {changePopularYearData}
       /> {/*
  
       {renderGameForm && <GameRecommendationForm 

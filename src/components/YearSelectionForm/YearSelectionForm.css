@@ -1,3 +1,16 @@
-#year-selection-title{
-    font-size: 30px;
+
+#year-selection-input{
+    font-size: 60px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    appearance: none;
+    color: white;
+    width: 140px;
+}
+
+#year-selection-input::-webkit-outer-spin-button,
+#year-selection-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

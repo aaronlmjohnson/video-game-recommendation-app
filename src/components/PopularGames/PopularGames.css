@@ -1,20 +1,30 @@
 #popular-games{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    width: 100vw;
+    height: var(--game-card-height);
 }
 
 #popular-games-carousel {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-button{
     height: 50px;
-    align-self: center;
+    align-self: center;  
+    justify-self: center;
 }
 
 .carousel-left{
     margin-right: 10px;
+    z-index: 1000;
+    
 }
 
 .carousel-right{
     margin-left: 10px;
+    z-index: 1000;
+    right: 100px;
 }

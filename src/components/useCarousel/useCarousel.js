@@ -20,18 +20,27 @@ const useCarousel = ()=>{
         setSubset(arr);
     }
 
-    const shiftLeft = ()=>{
+    const shiftRight = ()=>{
         setIndex((prevIndex)=>mod(prevIndex - 1, games.length));
     }
 
-    const shiftRight = ()=>{
+    const shiftLeft = ()=>{
         setIndex((prevIndex)=>mod(prevIndex + 1, games.length));
+    }
+
+    const positionNames = (index) => {
+        const names = ["left-edge", "left-next", "active", "right-next", "right-edge"];
+        return names[index];
     }
 
     const mod = (value, n)=> ((value % n) + n) % n
     
     return{
-        setGames, subset, shiftLeft, shiftRight
+        setGames, 
+        subset, 
+        shiftLeft, 
+        shiftRight,
+        positionNames
     }
 
 }

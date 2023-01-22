@@ -1,7 +1,10 @@
 :root{
     --main-bg-color: #0e0e10;
     --page-font: Arial, Helvetica, sans-serif;
+    --game-card-width: calc(780px * 1.333);
+    --game-card-height: calc(438.76px * 1.333);
 }
+
 body{
     background-color: var(--main-bg-color);
 }
