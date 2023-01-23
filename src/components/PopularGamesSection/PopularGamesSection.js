@@ -19,10 +19,8 @@ const PopularGamesSection = ({apiKey})=>{
     
       const changePopularYearData = (e)=>{
         e.preventDefault();
-    
         const endpoint = `&dates=${year}-01-01,${year}-12-31&page_size=16`;
         const url = `${GAMES_URL}${endpoint}`;
-        console.log(url);
         refetch(url);
     }
 
