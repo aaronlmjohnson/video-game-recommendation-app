@@ -54,18 +54,18 @@ import GameCarousel from '../GameCarousel/GameCarousel';
 import useCarousel from '../useCarousel/useCarousel';
 import { useState, useEffect } from 'react';
 import useApiHandler from '../useGameAPI/useApiHandler';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
 const PopularGamesSection = ({url, year, setYear})=>{
     const { setGames, subset, shiftLeft, shiftRight, positionNames } = useCarousel();
     const { data, refetch, loading } = useApiHandler(`${url}&dates=2023-01-01,2023-12-31&page_size=16`);
 
         useEffect(()=>{
-            console.log(loading);
             if(!loading) setGames(data.results);
         }, [data]);
 
     return (
-        loading ? <>Loading</> :
+        loading ? <LoadingScreen /> :
         <div id="popular-games-section">
             <YearSelectionForm 
                 year={year} 
