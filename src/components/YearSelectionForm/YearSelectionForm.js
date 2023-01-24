@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-const YearSelectionForm = ({year, setYear, changePopularYearData})=>{
+const YearSelectionForm = ({year, setYear, url, refetch})=>{
     const MAX_YEAR = new Date().getFullYear();
     const MIN_YEAR = 1971;
 
@@ -18,20 +18,26 @@ const YearSelectionForm = ({year, setYear, changePopularYearData})=>{
         setYear(prevYear => prevYear -= 1);
     }
 
+    const updateYearData = (e)=>{
+        e.preventDefault();
+        const endpoint = `&dates=${year}-01-01,${year}-12-31&page_size=16`;
+        refetch(url + endpoint);
+    }
+
     return (
         <div id="year-selection">
-            {/* onSubmit={(e)=> changePopularYearData(e)} */}
-            <form > 
-                <button id="year-up" onClick={(e)=>incrementYear(e)}><FontAwesomeIcon icon={faCaretUp} /></button>
+            
+            <form onSubmit={(e)=> updateYearData(e)}> 
+                <button type="button" id="year-up" onClick={(e)=>incrementYear(e)}><FontAwesomeIcon icon={faCaretUp} /></button>
                 <input 
                     id="year-selection-input"
                     type="number" 
                     min="1971" 
                     max="2023"
                     value={year}
-                    onChange={(e)=>setYear(e.target.value)}
+                    onChange={(e)=>setYear(parseInt(e.target.value))}
                 />
-                <button id="year-down" onClick={(e)=>decrementYear(e)}><FontAwesomeIcon icon={faCaretDown}  /></button>
+                <button type="button" id="year-down" onClick={(e)=>decrementYear(e)}><FontAwesomeIcon icon={faCaretDown}  /></button>
             </form> 
         </div> 
     );
