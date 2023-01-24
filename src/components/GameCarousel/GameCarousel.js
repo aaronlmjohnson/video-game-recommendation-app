@@ -1,4 +1,4 @@
-import './PopularGames.css';
+import './GameCarousel.css';
 import GameInfoCard from "../GameInfoCard/GameInfoCard";
 
 const PopularGames = ({ games, shiftLeft, shiftRight, positionNames })=>{

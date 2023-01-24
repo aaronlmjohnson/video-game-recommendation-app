@@ -1,7 +1,6 @@
 import './App.css';
 // import ModeButtons from './components/ModeButtons/ModeButtons';
 // import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
-// import { useEffect, useState } from 'react';
 // import useRandomGame from './components/useRandomGame/useRandomGame';
 // import GamePage from './components/GamePage/GamePage';
 // import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
@@ -70,18 +69,22 @@ import './App.css';
 
 import './App.css';
 import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
+import { useEffect, useState } from 'react';
 
 function App () {
 
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
+  const [year, setYear] = useState(new Date().getFullYear()); //set to current year
+  
 
   return (
     <div id="app-container">
       <PopularGamesSection
-        apiKey = {RAWG_API_KEY} 
+        url = {GAMES_URL}
+        year = {year}
+        setYear = {setYear} 
       /> 
-
     </div>
   );
 
