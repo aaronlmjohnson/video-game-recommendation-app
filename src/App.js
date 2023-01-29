@@ -69,6 +69,8 @@ import './App.css';
 
 import './App.css';
 import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
+import ModeButtons from './components/Navbar/Navbar';
+import useRandomGame from './components/useRandomGame/useRandomGame';
 import { useEffect, useState } from 'react';
 
 function App () {
@@ -76,10 +78,16 @@ function App () {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   const [year, setYear] = useState(new Date().getFullYear()); //set to current year
+  const [renderGameForm, setRenderGameForm] = useState(false);
+  const {getRandomGame, loading} = useRandomGame();
   
 
   return (
     <div id="app-container">
+      <ModeButtons 
+        getRandomGame={getRandomGame}
+        setRenderGameForm={setRenderGameForm}
+      />
       <PopularGamesSection
         url = {GAMES_URL}
         year = {year}

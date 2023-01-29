@@ -1,4 +1,4 @@
-import './ModeButtons.css';
+import './Navbar.css';
 const ModeButtons = ({getRandomGame, setRenderGameForm})=>{
     return(
         <div id="mode-buttons">
