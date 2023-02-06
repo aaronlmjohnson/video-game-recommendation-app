@@ -15,6 +15,8 @@
     height: 50px;
     align-self: center;  
     justify-self: center;
+    border: none;
+    background-color: transparent;
 }
 
 .carousel-left{
@@ -27,4 +29,14 @@
     margin-left: 10px;
     z-index: 1000;
     right: 100px;
+}
+
+.carousel-caret{
+    font-size: 36px;
+    color: white;
+}
+
+.carousel-caret:hover{
+    color: var(--light-purple);
+    transition: color .3s ease;
 }

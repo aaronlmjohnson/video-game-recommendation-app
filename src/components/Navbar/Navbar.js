@@ -4,7 +4,7 @@ const Navbar = ({getRandomGame, setRenderGameForm})=>{
     const [findActive, setFindActive] = useState(false);
     const [randomActive, setRandomActive] = useState(false);
 
-    return(
+    return(// do this with loop
         <div id="nav-bar">
             <div className='button-container'>
                 <button id="find-a-game" className={`nav-button ${findActive ? "active-nav-btn" : ''} ${randomActive ? "inactive-nav-btn" : ''}`} 
@@ -15,7 +15,7 @@ const Navbar = ({getRandomGame, setRenderGameForm})=>{
                     <p className="nav-button-text">Find a Game</p>
                     
                 </button>
-                <div class="hover-highlight"></div>
+                <div className="hover-highlight"></div>
             </div>
             <div className='button-container'>
                 <button id="random-game" className={`nav-button ${randomActive ? "active-nav-btn" : ''} ${findActive ? "inactive-nav-btn" : ''}`}
@@ -26,7 +26,7 @@ const Navbar = ({getRandomGame, setRenderGameForm})=>{
                     <p className="nav-button-text">Random Game</p>
                     
                 </button>
-            <div class="hover-highlight"></div>
+            <div className="hover-highlight"></div>
             </div>
         </div>
     );
