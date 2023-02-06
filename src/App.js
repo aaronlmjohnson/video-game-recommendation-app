@@ -2,7 +2,7 @@ import './App.css';
 // import ModeButtons from './components/ModeButtons/ModeButtons';
 // import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
 // import useRandomGame from './components/useRandomGame/useRandomGame';
-// import GamePage from './components/GamePage/GamePage';
+
 // import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
 // import platforms from './platforms.json';
 // import genres from './genres.json';
@@ -71,6 +71,7 @@ import './App.css';
 import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
 import Navbar from './components/Navbar/Navbar';
 import useRandomGame from './components/useRandomGame/useRandomGame';
+import GamePage from './components/GamePage/GamePage';
 import { useEffect, useState } from 'react';
 
 function App () {
@@ -79,7 +80,8 @@ function App () {
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   const [year, setYear] = useState(new Date().getFullYear()); 
   const [renderGameForm, setRenderGameForm] = useState(false);
-  const {getRandomGame, loading} = useRandomGame();
+  // const {gameData, getRandomGame, loading} = useRandomGame();
+  const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
 
   return (
     <div id="app-container">
@@ -92,6 +94,14 @@ function App () {
         year = {year}
         setYear = {setYear} 
       /> 
+
+      <GamePage 
+         data={gameData} 
+         loading={loading}
+         clearGameData={clearGameData} 
+         gameDataIsEmpty = {gameDataIsEmpty}
+        gameNotFound ={gameNotFound}
+      />
 
     </div>
   );
