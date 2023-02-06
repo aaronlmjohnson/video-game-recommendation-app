@@ -33,10 +33,10 @@
 
 .carousel-caret{
     font-size: 36px;
+    transition: color .3s ease;
     color: white;
 }
 
 .carousel-caret:hover{
     color: var(--light-purple);
-    transition: color .3s ease;
 }
