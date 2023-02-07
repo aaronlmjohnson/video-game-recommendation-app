@@ -1,5 +1,6 @@
 .game-page{
     border: 1px solid var(--light-purple);
+    display: grid;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -7,4 +8,29 @@
     z-index: 1000;
     background: black;
     width: 80%;
+    height: 80%;
+    padding: 0 25px;
+    
+}
+
+#game-page-nav {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+}
+
+#game-page-nav > .game-title{
+    font-family: 'Inter', 'sans-serif';
+    font-size: 24px;
+}
+
+#game-page-exit-button{
+    display: flex;
+    background-color: var(--light-purple);
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
 }

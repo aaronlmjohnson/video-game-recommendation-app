@@ -11,7 +11,8 @@ const useRandomGame = ()=>{
     const getRandomGame = ()=>{
         setError(false);
         let randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);  
-        refetch(`https://api.rawg.io/api/games/${randomId}?key=${RAWG_API_KEY}`);
+        //refetch(`https://api.rawg.io/api/games/${randomId}?key=${RAWG_API_KEY}`);
+        refetch(`https://api.rawg.io/api/games/${"grand-theft-auto-v"}?key=${RAWG_API_KEY}`);
         setGameData(data);
     }
 

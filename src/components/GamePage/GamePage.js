@@ -1,14 +1,23 @@
 import './GamePage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const GamePage = ({data, clearGameData, gameDataIsEmpty, gameNotFound, loading})=>{
-    if(loading) return (<></>);
+    if(loading && !gameDataIsEmpty) return (<div className="game-page">Loading...</div>);
 
     const displayGamePage = ()=>{
         return(
             <div className="game-page">
-                <button onClick={clearGameData}>Delete</button>
+                <div id="game-page-nav">
+                    <h1 className="game-title">{data.name}</h1>
+                    <button id="game-page-exit-button" onClick={clearGameData}>
+                        <FontAwesomeIcon icon={faXmark} />
+                    </button>
+                </div>
+                
+                
                 <img src={data.background_image} alt={data.name} width="500px"/>
-                <h1 className="game-title">{data.name}</h1>
+                
                 <p className="game-released">{data.released}</p>
                 <p className="game-description">{data.description_raw}</p>
                 <p className="game-rating">{data.rating}</p>
