@@ -73,19 +73,21 @@ import Navbar from './components/Navbar/Navbar';
 import useRandomGame from './components/useRandomGame/useRandomGame';
 import GamePage from './components/GamePage/GamePage';
 import { useEffect, useState } from 'react';
+import useGamePageData from './components/CustomHooks/useGamePageData';
 
 function App () {
 
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
-  const [year, setYear] = useState(new Date().getFullYear()); 
-  const [renderGameForm, setRenderGameForm] = useState(false);
-  // const {gameData, getRandomGame, loading} = useRandomGame();
-  const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
+  const {gameData, screenshots, screenshotsLoading, loading} = useGamePageData("3498");
+  // const [year, setYear] = useState(new Date().getFullYear()); 
+  // const [renderGameForm, setRenderGameForm] = useState(false);
+  // // const {gameData, getRandomGame, loading} = useRandomGame();
+  // const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
 
   return (
     <div id="app-container">
-      <Navbar 
+      {/* <Navbar 
         getRandomGame={getRandomGame}
         setRenderGameForm={setRenderGameForm}
       />
@@ -101,7 +103,7 @@ function App () {
          clearGameData={clearGameData} 
          gameDataIsEmpty = {gameDataIsEmpty}
         gameNotFound ={gameNotFound}
-      />
+      /> */}
 
     </div>
   );
