@@ -6,7 +6,7 @@ const useApiHandler =  (url = "")=>{
     const [error, setError] = useState(false);
 
     useEffect(()=>{ 
-        if(url)refetch(url);   
+        if(url)refetch(url);  
     }, [])
 
     const refetch = (url)=>{

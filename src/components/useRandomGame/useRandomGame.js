@@ -5,7 +5,7 @@ const useRandomGame = ()=>{
     const [gameData, setGameData ] = useState({});
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
 
-    const NUMBER_OF_GAMES = 815664;
+    
     const {data, error, setError, refetch, loading } = useApiHandler('');
 
     const getRandomGame = ()=>{

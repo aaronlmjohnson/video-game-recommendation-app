@@ -70,7 +70,7 @@ import './App.css';
 import './App.css';
 import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
 import Navbar from './components/Navbar/Navbar';
-import useRandomGame from './components/useRandomGame/useRandomGame';
+// import useRandomGame from './components/useRandomGame/useRandomGame';
 import GamePage from './components/GamePage/GamePage';
 import { useEffect, useState } from 'react';
 import useGamePageData from './components/CustomHooks/useGamePageData';
@@ -79,16 +79,18 @@ function App () {
 
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
-  const {gameData, screenshots, screenshotsLoading, loading} = useGamePageData("3498");
-  // const [year, setYear] = useState(new Date().getFullYear()); 
-  // const [renderGameForm, setRenderGameForm] = useState(false);
-  // // const {gameData, getRandomGame, loading} = useRandomGame();
+  //const {gameData, screenshots, screenshotsLoading, loading} = useGamePageData("3498");
+  //GTAV ID 3498
+  const [year, setYear] = useState(new Date().getFullYear()); 
+  const [renderGameForm, setRenderGameForm] = useState(false);
+  const game = useGamePageData(3498);
+ //const {gameData, getRandomGame, loading} = useRandomGame();
   // const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
 
   return (
     <div id="app-container">
-      {/* <Navbar 
-        getRandomGame={getRandomGame}
+      <Navbar 
+        getRandomGame={game.fetchRandom}
         setRenderGameForm={setRenderGameForm}
       />
       <PopularGamesSection
@@ -96,14 +98,14 @@ function App () {
         year = {year}
         setYear = {setYear} 
       /> 
-
+      
       <GamePage 
-         data={gameData} 
-         loading={loading}
-         clearGameData={clearGameData} 
-         gameDataIsEmpty = {gameDataIsEmpty}
-        gameNotFound ={gameNotFound}
-      /> */}
+         data={game.data} 
+         dataExists = {game.dataExists}
+         loading={game.loading}
+         clear = {game.clear}
+         exists = {game.exists}
+      />
 
     </div>
   );

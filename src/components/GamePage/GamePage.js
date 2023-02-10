@@ -2,15 +2,15 @@ import './GamePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
-const GamePage = ({data, clearGameData, gameDataIsEmpty, gameNotFound, loading})=>{
-    if(loading && !gameDataIsEmpty) return (<div className="game-page">Loading...</div>);
-
+const GamePage = ({data, loading, clear, exists, dataExists})=>{
+    if(loading) return (<div className="game-page">Loading...</div>);
+    if(!dataExists) return null;
     const displayGamePage = ()=>{
         return(
             <div className="game-page">
                 <div id="game-page-nav">
                     <h1 className="game-title">{data.name}</h1>
-                    <button id="game-page-exit-button" onClick={clearGameData}>
+                    <button id="game-page-exit-button" onClick={clear}>
                         <FontAwesomeIcon icon={faXmark} />
                     </button>
                 </div>
@@ -63,9 +63,9 @@ const GamePage = ({data, clearGameData, gameDataIsEmpty, gameNotFound, loading})
         )
     }
 
-    const displayPageNotFound = ()=> (gameNotFound()) ? <>Game Not Found!</> : <></>;
+    const displayPageNotFound = ()=> <>Game Not Found!</>;
 
-    return (gameNotFound() || gameDataIsEmpty() ) ? displayPageNotFound() : displayGamePage();
+    return !exists ? displayPageNotFound() : displayGamePage();
 }
 
 export default GamePage;
