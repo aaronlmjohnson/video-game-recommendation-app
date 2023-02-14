@@ -83,10 +83,10 @@ function App () {
   //GTAV ID 3498
   const [year, setYear] = useState(new Date().getFullYear()); 
   const [renderGameForm, setRenderGameForm] = useState(false);
-  const game = useGamePageData(3498);
+  const game = useGamePageData();
  //const {gameData, getRandomGame, loading} = useRandomGame();
   // const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
-
+  
   return (
     <div id="app-container">
       <Navbar 
@@ -99,13 +99,13 @@ function App () {
         setYear = {setYear} 
       /> 
       
-      <GamePage 
+      { game.dataExists && <GamePage 
          data={game.data} 
          dataExists = {game.dataExists}
          loading={game.loading}
          clear = {game.clear}
          exists = {game.exists}
-      />
+      />}
 
     </div>
   );
