@@ -99,12 +99,14 @@ function App () {
         setYear = {setYear} 
       /> 
       
-      { game.dataExists && <GamePage 
+      { game.dataExists && 
+        <GamePage 
          data={game.data} 
          dataExists = {game.dataExists}
          loading={game.loading}
          clear = {game.clear}
          exists = {game.exists}
+         screenshots = {game.screenshots}
       />}
 
     </div>

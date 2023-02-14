@@ -8,7 +8,7 @@ const useGamePageData = (id)=>{
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
     const gameApi = useApiHandler();
     //`https://api.rawg.io/api/games/${id}?key=${RAWG_API_KEY}`
-    const NUMBER_OF_GAMES = 1000; //hard coded but can use api call
+    const NUMBER_OF_GAMES = 50000; //hard coded but can use api call
     useEffect(()=>{
         //GTAV ID 3498
         

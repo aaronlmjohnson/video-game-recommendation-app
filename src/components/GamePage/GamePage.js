@@ -2,7 +2,7 @@ import './GamePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
-const GamePage = ({data, loading, clear, exists, dataExists})=>{
+const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
     if(loading) return (<div className="game-page">Loading...</div>);
     if(!dataExists) return null;
     const displayGamePage = ()=>{
@@ -58,6 +58,13 @@ const GamePage = ({data, loading, clear, exists, dataExists})=>{
                             </li>
                         })
                     }
+                </ul>
+                <ul className="screenshots">
+                    {screenshots.results.map((screenshot)=>{
+                        return <li key={screenshot.id} >
+                            <img className="screenshot" src={screenshot.image}></img>
+                        </li>
+                    })}
                 </ul>
             </div>
         )
