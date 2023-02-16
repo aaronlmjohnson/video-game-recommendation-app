@@ -13,8 +13,6 @@ const useGamePageData = (id)=>{
         //GTAV ID 3498
         
         setData(gameApi.data);
-        console.log(screenshots);
-
         //`https://api.rawg.io/api/games/${id}/screenshots?key=${RAWG_API_KEY}`
     },[gameApi.data, screenshots]);
 

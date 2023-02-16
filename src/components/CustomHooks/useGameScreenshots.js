@@ -7,9 +7,9 @@ const useGameScreenshots = ()=>{
     const {data, error, setError, refetch, loading } = useApiHandler();
 
     useEffect(()=>{
-        console.log(data);
         setScreenshots(data);
-    },[]);
+        
+    },[data]);
 
     const fetchScreenshots = (id)=>{
         refetch(`https://api.rawg.io/api/games/${id}/screenshots?key=${RAWG_API_KEY}`)
