@@ -5,6 +5,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
     if(loading) return (<div className="game-page">Loading...</div>);
     if(!dataExists) return null;
+    const needsComma = (i, length) => i+1 === length ? '' : ',';
 
     const displayGamePage = ()=>{
         return(
@@ -37,16 +38,18 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                         
                             <p>Genres:</p>
                             <ul className="genres">
-                            {data.genres.slice(0, 4).map((genre)=>{
-                                return <li key={genre.id} className="genre">{genre.name}</li>
+                            {data.genres.slice(0, 4).map((genre, i)=>{
+                                return <li key={genre.id} className="genre">
+                                            {genre.name} {needsComma(i, data.genres.length)}
+                                        </li>
                             })}
                             </ul>
 
                             <h1>Developers:</h1>
                             <ul className="developers">
-                                {data.developers.map((developer)=>{
+                                {data.developers.map((developer, i)=>{
                                     return <li key={developer.id} className="developer">
-                                        {developer.name}
+                                        {developer.name} {needsComma(i, data.developers.length)}
                                     </li>
                                 })}
                             </ul>
@@ -54,9 +57,9 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                             <h1>Publisher:</h1>
                             <ul className="publishers">
                                 {
-                                    data.publishers.map((publisher)=>{
+                                    data.publishers.map((publisher, i)=>{
                                         return <li key={publisher.id} className="publisher">
-                                            {publisher.name}
+                                            {publisher.name}{needsComma(i, data.publishers.length)}
                                         </li>
                                     })
                                 }
@@ -65,9 +68,9 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                             <h1>Platforms:</h1>
                             <ul className="game-platforms">
                                 {
-                                    data.platforms.map((platform)=>{
+                                    data.platforms.map((platform, i)=>{
                                         return <li key={platform.id} className="platform">
-                                            {platform.platform.name}
+                                            {platform.platform.name}{needsComma(i, data.platforms.length)}
                                         </li>
                                     })
                                 }

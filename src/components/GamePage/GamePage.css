@@ -6,7 +6,7 @@
     z-index: 1000;
     background: black;
     width: 80vw;
-    height: 75vh;
+    height: 730px;
     padding: 0 25px;
 }
 
@@ -59,15 +59,21 @@
 /****game-page-right ****/
 
 #game-page-right {
-    
+    height: 600px;
+    overflow: hidden;
 }
 #game-page-image-right {
     width: 100%;
 }
 
 #game-info {
-    height: 100%;
-    overflow: hidden;
+    font-family: 'Inter', 'sans-serif';
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#game-info > ul{
+    display: flex;
 }
 
 
