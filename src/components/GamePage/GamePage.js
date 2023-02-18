@@ -18,7 +18,7 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
 
                 <div id="game-page-main">  
                     <div id="game-page-left">
-                        <img id="game-page-image-left" src={data.background_image} alt={data.name}/>
+                        <img id="game-page-image-left" src={screenshots.results[0].image} alt={data.name}/>
                         <ul className="screenshots">
                         {screenshots.results.map((screenshot)=>{
                             return <li key={screenshot.id} >
@@ -28,47 +28,51 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                     </ul>
                     </div>
                     <div id="game-page-right">
-                        <p className="game-released">{data.released}</p>
-                        <p className="game-description">{data.description_raw}</p>
-                        <p className="game-rating">{data.rating}</p>
-
-                        <p>Genres:</p>
-                        <ul className="game-genres">
-                        {data.genres.slice(0, 4).map((genre)=>{
-                            return <li key={genre.id} className="genre">{genre.name}</li>
-                        })}
-                        </ul>
-
-                        <h1>Developers:</h1>
-                        <ul className="game-developers">
-                            {data.developers.map((developer)=>{
-                                return <li key={developer.id} className="developer">
-                                    {developer.name}
-                                </li>
+                        <img id="game-page-image-right" src={data.background_image} alt={data.name}/>
+                        <div id="game-info">
+                            <p className="description">{data.description_raw}</p>
+                            <p className="released">{data.released}</p>
+                            
+                            <p className="rating">{data.rating}</p>
+                        
+                            <p>Genres:</p>
+                            <ul className="genres">
+                            {data.genres.slice(0, 4).map((genre)=>{
+                                return <li key={genre.id} className="genre">{genre.name}</li>
                             })}
-                        </ul>
+                            </ul>
 
-                        <h1>Publisher:</h1>
-                        <ul className="game-publishers">
-                            {
-                                data.publishers.map((publisher)=>{
-                                    return <li key={publisher.id} className="publisher">
-                                        {publisher.name}
+                            <h1>Developers:</h1>
+                            <ul className="developers">
+                                {data.developers.map((developer)=>{
+                                    return <li key={developer.id} className="developer">
+                                        {developer.name}
                                     </li>
-                                })
-                            }
-                        </ul>
+                                })}
+                            </ul>
 
-                        <h1>Platforms:</h1>
-                        <ul className="game-platforms">
-                            {
-                                data.platforms.map((platform)=>{
-                                    return <li key={platform.id} className="platform">
-                                        {platform.platform.name}
-                                    </li>
-                                })
-                            }
-                        </ul>
+                            <h1>Publisher:</h1>
+                            <ul className="publishers">
+                                {
+                                    data.publishers.map((publisher)=>{
+                                        return <li key={publisher.id} className="publisher">
+                                            {publisher.name}
+                                        </li>
+                                    })
+                                }
+                            </ul>
+
+                            <h1>Platforms:</h1>
+                            <ul className="game-platforms">
+                                {
+                                    data.platforms.map((platform)=>{
+                                        return <li key={platform.id} className="platform">
+                                            {platform.platform.name}
+                                        </li>
+                                    })
+                                }
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
