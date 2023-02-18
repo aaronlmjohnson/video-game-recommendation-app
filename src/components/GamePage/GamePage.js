@@ -1,7 +1,7 @@
 import './GamePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
-
+import GameInfoList from '../GameInfoList/GameInfoList';
 const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
     if(loading) return (<div className="game-page">Loading...</div>);
     if(!dataExists) return null;
@@ -65,8 +65,13 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                                 }
                             </ul>
 
-                            <h1>Platforms:</h1>
-                            <ul className="game-platforms">
+                            <GameInfoList 
+                                data={data.platforms}
+                                header={"Platforms: "}
+                                name={"platform"}
+                            />
+                    
+                            {/* <ul className="game-platforms">
                                 {
                                     data.platforms.map((platform, i)=>{
                                         return <li key={platform.id} className="platform">
@@ -74,7 +79,7 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                                         </li>
                                     })
                                 }
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
