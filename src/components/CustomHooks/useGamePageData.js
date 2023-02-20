@@ -4,7 +4,7 @@ import useGameScreenshots from "./useGameScreenshots";
 
 const useGamePageData = (id)=>{
     const [data, setData ] = useState({});
-    const {screenshots, fetchScreenshots} = useGameScreenshots();
+    const {screenshots, fetchScreenshots, mainScreenshot, setMainScreenshot} = useGameScreenshots();
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
     const gameApi = useApiHandler();
     //`https://api.rawg.io/api/games/${id}?key=${RAWG_API_KEY}`
@@ -24,8 +24,6 @@ const useGamePageData = (id)=>{
     const fetchRandom = ()=>{
         let randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);  
         fetchGame(randomId);
-        //fetchScreenshots(randomId);
-        console.log(data);
     }
 
     const fetchGame = (id)=>{
@@ -46,7 +44,9 @@ const useGamePageData = (id)=>{
         dataExists,
         fetchRandom,
         fetchGame,
-        screenshots
+        screenshots,
+        mainScreenshot, 
+        setMainScreenshot
     } 
 }
 

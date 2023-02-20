@@ -2,8 +2,9 @@ import './GamePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
+import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 
-const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
+const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainScreenshot, setMainScreenshot})=>{
     const limitDescription = (description)=>{
         //Some Rawg api game descriptions are far too long. Need this to limit word count
         const MAX_COUNT = 150;
@@ -26,16 +27,12 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                 </div>
 
                 <div id="game-page-main">  
-                    <div id="game-page-left">
-                        <img id="game-page-image-left" src={screenshots.results[0].image} alt={data.name}/>
-                        <ul className="screenshots">
-                        {screenshots.results.map((screenshot)=>{
-                            return <li key={screenshot.id} >
-                                <img className="screenshot" src={screenshot.image}></img>
-                            </li>
-                        })}
-                    </ul>
-                    </div>
+                    <ScreenshotCarousel 
+                        screenshots = {screenshots} 
+                        mainScreenshot = {mainScreenshot}
+                        setMainScreenshot = {setMainScreenshot}
+                        name = {data.name}
+                    />
                     <div id="game-page-right">
                         <img id="game-page-image-right" src={data.background_image} alt={data.name}/>
                         <div id="game-info">

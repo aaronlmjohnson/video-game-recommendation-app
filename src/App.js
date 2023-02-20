@@ -107,6 +107,8 @@ function App () {
          clear = {game.clear}
          exists = {game.exists}
          screenshots = {game.screenshots}
+         mainScreenshot = {game.mainScreenshot}
+         setMainScreenshot = {game.setMainScreenshot}
       />}
 
     </div>

@@ -42,12 +42,12 @@
     
     
 }
-/****game-page-left ****/
+/****screenshot-carousel****/
 
-#game-page-left{
+#screenshot-carousel{
 }
 
-#game-page-image-left {
+#screenshot-carousel-main-image {
     width: 100%;
     height: 500px;
     object-fit: contain;
