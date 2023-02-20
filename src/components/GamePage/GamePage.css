@@ -59,7 +59,6 @@
 /****game-page-right ****/
 
 #game-page-right {
-    height: 600px;
     overflow: hidden;
 }
 #game-page-image-right {
@@ -72,8 +71,36 @@
     font-weight: 100;
 }
 
-#game-info > ul{
-    display: flex;
+.game-info-list {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
 }
+
+.game-info-list > ul {
+    display: grid;
+    grid-template-columns: repeat(5, fit-content(40%));
+    margin-bottom: 10px;
+}
+
+#game-overview > .description {
+    line-height: 110%;
+    margin-bottom: 10px;
+}
+
+#game-info .highlight {
+    color: var(--light-purple);
+}
+
+.released, .rating{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    margin-bottom: 10px;
+}
+
+#game-platforms {
+    line-height: 120%;
+}
+
+
 
 

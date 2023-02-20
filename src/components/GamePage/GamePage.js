@@ -2,10 +2,10 @@ import './GamePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
+
 const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
     if(loading) return (<div className="game-page">Loading...</div>);
     if(!dataExists) return null;
-    const needsComma = (i, length) => i+1 === length ? '' : ',';
 
     const displayGamePage = ()=>{
         return(
@@ -31,59 +31,44 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                     <div id="game-page-right">
                         <img id="game-page-image-right" src={data.background_image} alt={data.name}/>
                         <div id="game-info">
-                            <p className="description">{data.description_raw}</p>
-                            <p className="released">{data.released}</p>
-                            
-                            <p className="rating">{data.rating}</p>
-                        
-                            <p>Genres:</p>
-                            <ul className="genres">
-                            {data.genres.slice(0, 4).map((genre, i)=>{
-                                return <li key={genre.id} className="genre">
-                                            {genre.name} {needsComma(i, data.genres.length)}
-                                        </li>
-                            })}
+                            <ul id="game-overview">
+                                <li className="description">
+                                    <p>{data.description_raw}</p>
+                                </li>
+                                <li className="released">
+                                        <p>Release Date:</p>
+                                        <span className="highlight">
+                                            <p>{data.released}</p>
+                                        </span>
+                                </li>
+                                <li className="rating">
+                                    <p>Reviews: </p>
+                                    <span className="highlight"><p>{data.rating}</p></span>
+                                </li>
                             </ul>
-
-                            <h1>Developers:</h1>
-                            <ul className="developers">
-                                {data.developers.map((developer, i)=>{
-                                    return <li key={developer.id} className="developer">
-                                        {developer.name} {needsComma(i, data.developers.length)}
-                                    </li>
-                                })}
-                            </ul>
-
-                            <h1>Publisher:</h1>
-                            <ul className="publishers">
-                                {
-                                    data.publishers.map((publisher, i)=>{
-                                        return <li key={publisher.id} className="publisher">
-                                            {publisher.name}{needsComma(i, data.publishers.length)}
-                                        </li>
-                                    })
-                                }
-                            </ul>
-
+                            <GameInfoList 
+                                data={data.genres.slice(0, 4)}
+                                header={"Genres: "}
+                                name={"genre"}
+                            />
+                            <GameInfoList 
+                                data={data.developers}
+                                header={"Developers: "}
+                                name={"developer"}
+                            />
+                            <GameInfoList 
+                                data={data.publishers}
+                                header={"Publishers: "}
+                                name={"publisher"}
+                            />
                             <GameInfoList 
                                 data={data.platforms}
                                 header={"Platforms: "}
                                 name={"platform"}
                             />
-                    
-                            {/* <ul className="game-platforms">
-                                {
-                                    data.platforms.map((platform, i)=>{
-                                        return <li key={platform.id} className="platform">
-                                            {platform.platform.name}{needsComma(i, data.platforms.length)}
-                                        </li>
-                                    })
-                                }
-                            </ul> */}
                         </div>
                     </div>
                 </div>
-
             </div>
         )
     }
