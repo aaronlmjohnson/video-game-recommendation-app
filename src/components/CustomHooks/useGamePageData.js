@@ -24,7 +24,8 @@ const useGamePageData = (id)=>{
     const fetchRandom = ()=>{
         let randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);  
         fetchGame(randomId);
-        fetchScreenshots(randomId);
+        //fetchScreenshots(randomId);
+        console.log(data);
     }
 
     const fetchGame = (id)=>{

@@ -4,6 +4,15 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 
 const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
+    const limitDescription = (description)=>{
+        //Some Rawg api game descriptions are far too long. Need this to limit word count
+        const MAX_COUNT = 150;
+        const splitDesc = description.split(' ');
+        const ellipsis = splitDesc.length > MAX_COUNT ? "..." : "";
+        const filtered = `${splitDesc.slice(0, MAX_COUNT-2).join(' ')}${ellipsis}`;
+        return filtered;
+    }
+    
     if(loading) return (<div className="game-page">Loading...</div>);
     if(!dataExists) return null;
     const displayGamePage = ()=>{
@@ -32,7 +41,7 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
                         <div id="game-info">
                             <ul id="game-overview">
                                 <li className="description">
-                                    <p>{data.description_raw}</p>
+                                    <p>{limitDescription(data.description_raw)}</p>
                                 </li>
                                 <li className="released">
                                         <p>Release Date:</p>
