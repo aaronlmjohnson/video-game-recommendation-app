@@ -1,4 +1,6 @@
 .game-page{
+    display: grid;
+    grid-template-rows: 1fr 8fr;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,13 +44,18 @@
 }
 /****game-page-left ****/
 
+#game-page-left{
+}
+
 #game-page-image-left {
     width: 100%;
-    margin-bottom: 25px;
+    height: 500px;
+    object-fit: contain;
 }
 
 .screenshots {
     display: flex;
+    justify-content: space-evenly;
     gap: 10px;
 }
 .screenshot {
@@ -63,6 +70,8 @@
 }
 #game-page-image-right {
     width: 100%;
+    height: 300px;
+    object-fit:contain;
 }
 
 #game-info {

@@ -1,4 +1,3 @@
-//import './GameInfoList.css';
 
 const GameInfoList = ({data, name, header})=>{
     const needsComma = (i, length) => i+1 === length ? '' : ',';

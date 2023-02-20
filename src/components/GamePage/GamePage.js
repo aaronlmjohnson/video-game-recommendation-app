@@ -6,7 +6,6 @@ import GameInfoList from '../GameInfoList/GameInfoList';
 const GamePage = ({data, loading, clear, exists, dataExists, screenshots})=>{
     if(loading) return (<div className="game-page">Loading...</div>);
     if(!dataExists) return null;
-
     const displayGamePage = ()=>{
         return(
             <div className="game-page">
