@@ -9,7 +9,7 @@ const useGameScreenshots = ()=>{
     const dataExists = Object.keys(data).length > 0;
     useEffect(()=>{
         setScreenshots(data);
-        if(dataExists) setMainScreenshot(data.results[0].image);
+        if(dataExists) setMainScreenshot(data.results[0]);
         
             
     },[data]);
