@@ -83,6 +83,7 @@ function App () {
   //GTAV ID 3498
   const [year, setYear] = useState(new Date().getFullYear()); 
   const [renderGameForm, setRenderGameForm] = useState(false);
+  const [gamePageOpen, setGamePageOpen] = useState(false);
   const game = useGamePageData();
  //const {gameData, getRandomGame, loading} = useRandomGame();
   // const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
