@@ -8,7 +8,7 @@
     z-index: 1000;
     background: black;
     width: 80vw;
-    height: 730px;
+    height: 800px;
     padding: 0 25px;
 }
 
@@ -44,8 +44,7 @@
 }
 /****screenshot-carousel****/
 
-#screenshot-carousel{
-}
+
 
 #screenshot-carousel-main-image {
     width: 100%;
@@ -124,6 +123,24 @@
 #game-platforms {
     line-height: 120%;
 }
+
+/* Tablets */
+@media screen and (max-width: 1250px) {
+
+    #game-page-main {
+        grid-template-columns: 1fr;
+    }
+    #screenshot-carousel {
+        display: none;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 767px) {
+    .game-page{
+        width: 100%;
+    }
+  }
 
 
 
