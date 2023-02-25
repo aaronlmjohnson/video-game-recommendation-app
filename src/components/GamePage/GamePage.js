@@ -1,6 +1,6 @@
 import './GamePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 
@@ -21,9 +21,14 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainSc
             <div className="game-page">
                 <div id="game-page-nav">
                     <h1 className="game-title">{data.name}</h1>
-                    <button id="game-page-exit-button" onClick={clear}>
-                        <FontAwesomeIcon icon={faXmark} />
-                    </button>
+                    <div id="game-page-nav-buttons">
+                        <button id="game-page-random-button" onClick={clear}>
+                            <FontAwesomeIcon icon={faDice} />
+                        </button>
+                        <button id="game-page-exit-button" onClick={console.log("random page")}>
+                            <FontAwesomeIcon icon={faXmark} />
+                        </button>
+                    </div>                    
                 </div>
 
                 <div id="game-page-main">  

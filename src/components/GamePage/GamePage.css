@@ -19,6 +19,22 @@
   height: 85px;
 }
 
+#game-page-nav-buttons {
+    display: flex;
+    width: 20%;
+    justify-content: end;
+    align-items: center;
+}
+
+#game-page-random-button {
+    height: 100%;
+    width: 30px;
+    font-size: 30px;
+    color: var(--light-purple);
+    background: none;
+    padding-right: 100px;
+}
+
 #game-page-nav > .game-title{
     font-family: 'Inter', 'sans-serif';
     font-size: 24px;
@@ -28,8 +44,9 @@
     display: flex;
     background-color: var(--light-purple);
     font-size: 20px;
-    height: 30px;
+    height: 100%;
     width: 30px;
+    padding: 3px 0;
     align-items: center;
     justify-content: center;
 }
