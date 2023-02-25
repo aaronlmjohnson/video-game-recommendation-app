@@ -23,7 +23,7 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainSc
                     <h1 className="game-title">{data.name}</h1>
                     <div id="game-page-nav-buttons">
                         <button id="game-page-random-button" >
-                            <FontAwesomeIcon icon={faDice} onClick={getRandomGame}/>
+                            <FontAwesomeIcon id="game-page-nav-random-icon" icon={faDice} onClick={getRandomGame}/>
                         </button>
                         <button id="game-page-exit-button" onClick={clear}>
                             <FontAwesomeIcon icon={faXmark} />

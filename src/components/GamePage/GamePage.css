@@ -35,6 +35,12 @@
     padding-right: 100px;
 }
 
+#game-page-nav-random-icon:hover{
+    color: white;
+    font-size: 35px;
+    transform: rotate(15deg);
+}
+
 #game-page-nav > .game-title{
     font-family: 'Inter', 'sans-serif';
     font-size: 24px;
