@@ -102,6 +102,7 @@ function App () {
       {game.dataExists ? <div id="overlay"></div> : null}
       { game.dataExists && 
         <GamePage 
+         getRandomGame ={game.fetchRandom}
          data={game.data} 
          dataExists = {game.dataExists}
          loading={game.loading}
