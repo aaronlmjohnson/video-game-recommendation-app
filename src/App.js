@@ -90,16 +90,16 @@ function App () {
   
   return (
     <div id="app-container">
-      <Navbar 
-        getRandomGame={game.fetchRandom}
-        setRenderGameForm={setRenderGameForm}
-      />
-      <PopularGamesSection
-        url = {GAMES_URL}
-        year = {year}
-        setYear = {setYear} 
-      /> 
-      
+        <Navbar 
+          getRandomGame={game.fetchRandom}
+          setRenderGameForm={setRenderGameForm}
+        />
+        <PopularGamesSection
+          url = {GAMES_URL}
+          year = {year}
+          setYear = {setYear} 
+        />
+      {game.dataExists ? <div id="overlay"></div> : null}
       { game.dataExists && 
         <GamePage 
          data={game.data} 
