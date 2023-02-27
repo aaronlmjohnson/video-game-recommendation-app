@@ -4,7 +4,7 @@ import useGameScreenshots from "./useGameScreenshots";
 
 const useGamePageData = (id)=>{
     const [data, setData ] = useState({});
-    const {screenshots, fetchScreenshots, mainScreenshot, setMainScreenshot} = useGameScreenshots();
+    const {screenshots, fetchScreenshots, mainScreenshot, setMainScreenshot, screenshotsExist} = useGameScreenshots();
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
     const gameApi = useApiHandler();
     //`https://api.rawg.io/api/games/${id}?key=${RAWG_API_KEY}`
@@ -22,14 +22,17 @@ const useGamePageData = (id)=>{
     }
 
     const fetchRandom = ()=>{
-        let randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);  
+        let randomId = Math.ceil(Math.random() * NUMBER_OF_GAMES);
+        console.log("random error:" + gameApi.error);
         fetchGame(randomId);
+        //game not found: 14250
+        //17203 and 49410 42463 cause the Screenshot carousel error. When I put console.log in ScreenshotCarousel somehow it fixes the issue?
     }
 
     const fetchGame = (id)=>{
+        if(gameApi.error) gameApi.setError(false);
         gameApi.refetch(`https://api.rawg.io/api/games/${id}?key=${RAWG_API_KEY}`);
-        fetchScreenshots(id);
-        
+        fetchScreenshots(id); 
     }
 
     const exists = !gameApi.error;
@@ -46,7 +49,8 @@ const useGamePageData = (id)=>{
         fetchGame,
         screenshots,
         mainScreenshot, 
-        setMainScreenshot
+        setMainScreenshot,
+        screenshotsExist
     } 
 }
 

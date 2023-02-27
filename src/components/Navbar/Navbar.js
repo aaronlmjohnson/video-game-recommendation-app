@@ -1,4 +1,5 @@
 import './Navbar.css';
+
 import { useState } from 'react';
 const Navbar = ({getRandomGame, setRenderGameForm})=>{
     const [findActive, setFindActive] = useState(false);

@@ -57,7 +57,7 @@
     justify-content: center;
 }
 
-#game-page-main {
+.game-page-main {
     display: grid;
     width: 100%;
     grid-template-columns: 3fr 2fr;

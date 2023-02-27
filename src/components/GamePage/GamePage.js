@@ -4,7 +4,7 @@ import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 
-const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainScreenshot, setMainScreenshot, getRandomGame})=>{
+const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainScreenshot, setMainScreenshot, getRandomGame, screenshotsExist})=>{
     const limitDescription = (description)=>{
         //Some Rawg api game descriptions are far too long. Need this to limit word count
         const MAX_COUNT = 150;
@@ -31,7 +31,7 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainSc
                     </div>                    
                 </div>
 
-                <div id="game-page-main">  
+                <div className="game-page-main">  
                     <ScreenshotCarousel 
                         screenshots = {screenshots} 
                         mainScreenshot = {mainScreenshot}

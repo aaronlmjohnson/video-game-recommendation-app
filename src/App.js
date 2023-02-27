@@ -74,6 +74,7 @@ import Navbar from './components/Navbar/Navbar';
 import GamePage from './components/GamePage/GamePage';
 import { useEffect, useState } from 'react';
 import useGamePageData from './components/CustomHooks/useGamePageData';
+import GameNotFound from './components/GamePage/GameNotFound';
 
 function App () {
 
@@ -83,7 +84,6 @@ function App () {
   //GTAV ID 3498
   const [year, setYear] = useState(new Date().getFullYear()); 
   const [renderGameForm, setRenderGameForm] = useState(false);
-  const [gamePageOpen, setGamePageOpen] = useState(false);
   const game = useGamePageData();
  //const {gameData, getRandomGame, loading} = useRandomGame();
   // const {gameData, getRandomGame, gameDataIsEmpty, clearGameData, gameNotFound, loading} = useRandomGame();
@@ -99,9 +99,9 @@ function App () {
           year = {year}
           setYear = {setYear} 
         />
-      {game.dataExists ? <div id="overlay"></div> : null}
-      { game.dataExists && 
-        <GamePage 
+      {game.dataExists && game.exists ? <div id="overlay"></div> : null}
+       
+        {game.dataExists && game.exists && <GamePage 
          getRandomGame ={game.fetchRandom}
          data={game.data} 
          dataExists = {game.dataExists}
@@ -111,7 +111,9 @@ function App () {
          screenshots = {game.screenshots}
          mainScreenshot = {game.mainScreenshot}
          setMainScreenshot = {game.setMainScreenshot}
-      />}
+         screenshotsExist = {game.screenshotsExist}
+      /> }
+    
 
     </div>
   );

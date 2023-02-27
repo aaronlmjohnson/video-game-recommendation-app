@@ -15,10 +15,10 @@ const useGameScreenshots = ()=>{
     },[data]);
 
     const fetchScreenshots = (id)=>{
-        refetch(`https://api.rawg.io/api/games/${id}/screenshots?key=${RAWG_API_KEY}`)
+        refetch(`https://api.rawg.io/api/games/${id}/screenshots?key=${RAWG_API_KEY}`);
     }
 
-    return {screenshots, mainScreenshot, setMainScreenshot, fetchScreenshots, screenshotsLoading:loading}
+    return {screenshots, mainScreenshot, setMainScreenshot, fetchScreenshots, screenshotsLoading:loading, screenshotsExists:dataExists}
 }
 
 export default useGameScreenshots;
