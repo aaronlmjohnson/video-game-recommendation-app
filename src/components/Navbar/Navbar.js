@@ -1,7 +1,7 @@
 import './Navbar.css';
 
 import { useState } from 'react';
-const Navbar = ({getRandomGame, setRenderGameForm})=>{
+const Navbar = ({getRandomGame, setRenderGameForm, setGamePageOpen})=>{
     const [findActive, setFindActive] = useState(false);
     const [randomActive, setRandomActive] = useState(false);
 
@@ -20,7 +20,10 @@ const Navbar = ({getRandomGame, setRenderGameForm})=>{
             </div>
             <div className='button-container'>
                 <button id="random-game" className={`nav-button ${randomActive ? "active-nav-btn" : ''} ${findActive ? "inactive-nav-btn" : ''}`}
-                    onClick={getRandomGame}
+                    onClick={()=>{
+                        setGamePageOpen(true);
+                        getRandomGame();
+                    }}
                     onMouseEnter={()=> setRandomActive(true)}
                     onMouseLeave={()=> setRandomActive(false)}
                 >

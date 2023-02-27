@@ -1,10 +1,15 @@
 
 const ScreenshotCarousel = ({screenshots, mainScreenshot, setMainScreenshot, name})=>{
+    
     const isMainScreenshot = (screenshot)=>{
         return mainScreenshot.id === screenshot.id ? "active" : "";
     }
-
-    return( 
+    if(mainScreenshot === undefined){
+        console.log("Screenshots failed to load");
+        //game page not found
+        return (<>Nothing here!</>);
+    }
+    return(
         <div id="screenshot-carousel">
             <img id="screenshot-carousel-main-image" src={mainScreenshot.image} alt={name}/>
             <ul className="screenshots">

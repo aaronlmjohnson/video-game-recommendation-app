@@ -4,7 +4,7 @@ import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 
-const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainScreenshot, setMainScreenshot, getRandomGame, screenshotsExist})=>{
+const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainScreenshot, setMainScreenshot, getRandomGame, setGamePageOpen})=>{
     const limitDescription = (description)=>{
         //Some Rawg api game descriptions are far too long. Need this to limit word count
         const MAX_COUNT = 150;
@@ -13,9 +13,9 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainSc
         const filtered = `${splitDesc.slice(0, MAX_COUNT-2).join(' ')}${ellipsis}`;
         return filtered;
     }
-    
-    if(loading) return (<div className="game-page">Loading...</div>);
-    if(!dataExists) return null;
+
+    if(loading || !dataExists) return (<div className="game-page">Loading...</div>);
+
     const displayGamePage = ()=>{
         return(
             <div className="game-page">
@@ -25,7 +25,10 @@ const GamePage = ({data, loading, clear, exists, dataExists, screenshots, mainSc
                         <button id="game-page-random-button" >
                             <FontAwesomeIcon id="game-page-nav-random-icon" icon={faDice} onClick={getRandomGame}/>
                         </button>
-                        <button id="game-page-exit-button" onClick={clear}>
+                        <button id="game-page-exit-button" onClick={()=>{
+                            setGamePageOpen(false)
+                            clear()
+                        }}>
                             <FontAwesomeIcon icon={faXmark} />
                         </button>
                     </div>                    

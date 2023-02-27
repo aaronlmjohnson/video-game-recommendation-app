@@ -7,7 +7,8 @@ const useApiHandler =  (url = "")=>{
 
     useEffect(()=>{ 
         if(url)refetch(url);  
-    }, [])
+
+    }, []);
 
     const refetch = (url)=>{
         const getData = async()=>{ 
