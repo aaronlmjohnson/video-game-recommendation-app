@@ -100,6 +100,8 @@ function App () {
           url = {GAMES_URL}
           year = {year}
           setYear = {setYear} 
+          game={game}
+          setGamePageOpen={setGamePageOpen}
         />
       {gamePageOpen ? <div id="overlay"></div> : null}
        

@@ -6,7 +6,7 @@ import useApiHandler from '../useGameAPI/useApiHandler';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import './PopularGamesSection.css';
 
-const PopularGamesSection = ({url, year, setYear})=>{
+const PopularGamesSection = ({url, year, setYear, game, setGamePageOpen})=>{
     const { setGames, subset, shiftLeft, shiftRight, positionNames } = useCarousel();
     const { data, refetch, loading } = useApiHandler(`${url}&dates=2023-01-01,2023-12-31&page_size=16`);
 
@@ -29,6 +29,8 @@ const PopularGamesSection = ({url, year, setYear})=>{
                 shiftRight = { shiftRight }
                 shiftLeft = { shiftLeft }
                 positionNames = { positionNames }
+                fetchGame= {game.fetchGame}
+                setGamePageOpen={setGamePageOpen}
             />
             
         </div>
