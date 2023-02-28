@@ -31,7 +31,6 @@ const useGamePageData = (id)=>{
     const fetchGame = (id)=>{
         if(gameApi.error) gameApi.setError(false);
         gameApi.refetch(`https://api.rawg.io/api/games/${id}?key=${RAWG_API_KEY}`);
-        console.log(gameApi.loading);
         fetchScreenshots(id); 
     }
 
@@ -50,7 +49,8 @@ const useGamePageData = (id)=>{
         screenshots,
         mainScreenshot, 
         setMainScreenshot,
-        screenshotsExist
+        screenshotsExist,
+        error: gameApi.error
     } 
 }
 

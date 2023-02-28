@@ -29,15 +29,33 @@
 #game-page-random-button {
     height: 100%;
     width: 30px;
+    
+    padding-right: 100px;
+}
+
+.random-button-styling {
     font-size: 30px;
     color: var(--light-purple);
     background: none;
-    padding-right: 100px;
+}
+
+.random-button-large{
+    font-size: 15vw;
 }
 
 #game-page-nav-random-icon:hover{
     color: white;
     font-size: 35px;
+    transform: rotate(15deg);
+}
+
+#large-random-icon {
+    font-size: 10vw;
+}
+
+#large-random-icon:hover{
+    color: white;
+    font-size: 10vw;
     transform: rotate(15deg);
 }
 
@@ -61,9 +79,20 @@
     display: grid;
     width: 100%;
     grid-template-columns: 3fr 2fr;
-    gap: 20px;
-    
-    
+    gap: 20px;   
+}
+
+.game-not-found{
+    display: grid;
+    justify-content: center;
+    grid-column: span 2;
+}
+
+#game-not-found-prompt {
+    color: var(--light-purple);
+    font-family: 'Inter', 'sans-serif';
+    font-size: 32px;
+    justify-self: center;
 }
 /****screenshot-carousel****/
 

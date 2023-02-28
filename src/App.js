@@ -101,7 +101,7 @@ function App () {
           year = {year}
           setYear = {setYear} 
         />
-      {game.dataExists && game.exists ? <div id="overlay"></div> : null}
+      {gamePageOpen ? <div id="overlay"></div> : null}
        
         {gamePageOpen && <GamePage 
          getRandomGame ={game.fetchRandom}
@@ -115,6 +115,7 @@ function App () {
          setMainScreenshot = {game.setMainScreenshot}
          screenshotsExist = {game.screenshotsExist}
          setGamePageOpen= {setGamePageOpen}
+         game={game}
       /> }
     
 

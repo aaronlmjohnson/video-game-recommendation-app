@@ -7,15 +7,12 @@ import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 const GameNotFound = ({getRandomGame, clear})=>{
     return(
         <div className="game-not-found">
-            <div className="game-page-main">
-                <div id="game-page-nav">
-                    <button id="game-page-exit-button" onClick={clear}>
-                        <FontAwesomeIcon icon={faXmark} />
-                    </button>
-                </div> 
-                <button id="game-not-found-random-button"></button>
-                Game Not Found!
-            </div>
+            
+            <button className="random-button-styling random-button-large" >
+                4<FontAwesomeIcon id="large-random-icon" icon={faDice} onClick={getRandomGame}/>4
+            </button>
+            
+            <h1 id="game-not-found-prompt">Game Not Found! Roll again!</h1>
         </div>
     )
 }
