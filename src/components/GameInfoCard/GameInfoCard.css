@@ -53,28 +53,25 @@
     height: calc(var(--game-card-height) * .75);
     z-index: 2;
 }
+/*left button clicked  animations */
 @keyframes left-next-to-edge{
     0%{
         left: 15%;
         z-index: 3;
-        height: calc(var(--game-card-height) * .9);
     }
     25%{
         left: 13.75%;
         z-index: 3;
-        height: calc(var(--game-card-height) * .925);
     }
 
     50%{
         left: 12.5%;
         z-index: 3;
-        height: calc(var(--game-card-height) * .95);
     }
 
     75%{
         left: 11.25%;
         z-index: 2;
-        height: calc(var(--game-card-height) * .975);
     }
 
     100%{
@@ -83,6 +80,103 @@
     }
 }
 
+@keyframes active-to-left-next{
+
+    0%{
+        left: 23%;
+        z-index: 4;
+        
+    }
+    25%{
+        left: 20%;
+        z-index: 4;
+    }
+
+    50%{
+        left: 17.5%;
+        z-index: 4;
+    }
+
+    75%{
+        left: 16.25%;
+        z-index: 3;
+    }
+
+    100%{
+        left: 15%;
+        z-index: 3;
+        height: calc(var(--game-card-height) * .9);
+    }
+}
+
+@keyframes right-next-to-active{
+
+    0%{
+        right: 15%;
+        z-index: 4;
+        height: calc(var(--game-card-height) * .9);
+    }
+    25%{
+        right: 17%;
+        z-index: 4;
+    }
+
+    50%{
+        right: 19%;
+        z-index: 4;
+    }
+
+    75%{
+        right: 21%;
+        z-index: 4;
+    }
+
+    100%{
+        z-index: 4;
+    }
+}
+
+@keyframes right-edge-to-next{
+
+    0%{
+        right: 10%;
+        height: calc(var(--game-card-height) * .75);
+
+    }
+    25%{
+        right: 11.25%;
+
+    }
+
+    50%{
+        right: 12.5%;
+    }
+
+    75%{
+        right: 13.75%;
+
+    }
+
+    100%{
+        height: calc(var(--game-card-height) * .9);
+    }
+}
+@keyframes fade-in-right-edge{
+
+    0%{
+        right: 10%;
+        height: calc(var(--game-card-height) * .5);
+
+    }
+
+    100%{
+        height: calc(var(--game-card-height) * .75);
+    }
+}
+
+
+
+/*right button clicked  animations */
 @keyframes left-next-to-active{
     0%{
         left: 15%;
