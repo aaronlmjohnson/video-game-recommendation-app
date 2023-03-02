@@ -3,7 +3,8 @@ import GameInfoCard from "../GameInfoCard/GameInfoCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
-const PopularGames = ({ games, shiftLeft, shiftRight, positionNames, fetchGame, setGamePageOpen })=>{
+const PopularGames = ({ games, shiftLeft, shiftRight, positionNames, fetchGame, setGamePageOpen, animationNames })=>{
+    
     return (
         <div id="popular-games">
             <button className="carousel-button carousel-left" onClick={shiftLeft}>
@@ -19,6 +20,7 @@ const PopularGames = ({ games, shiftLeft, shiftRight, positionNames, fetchGame, 
                         id={game.id}
                         fetchGame = {fetchGame}
                         setGamePageOpen={setGamePageOpen}
+                        animationName={animationNames(i)}
                     />
                 })}
             </div>

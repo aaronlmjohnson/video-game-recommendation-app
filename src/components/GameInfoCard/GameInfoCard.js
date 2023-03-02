@@ -1,12 +1,15 @@
 import "./GameInfoCard.css";
 
 
-const GameInfoCard = ({name, releaseDate, rating, src, carouselPosition, fetchGame, id, setGamePageOpen})=>{
-    
+const GameInfoCard = ({name, releaseDate, rating, src, carouselPosition, fetchGame, id, setGamePageOpen, animationName})=>{
+    const animationStyle = `${animationName} .3s ease-in`
+
     return(
-        <div className={`game-info-card ${carouselPosition}`} onClick={()=>{
-            if(carouselPosition === "active") setGamePageOpen(true);
-            if(carouselPosition === "active")  fetchGame(id)}
+        <div className={`game-info-card ${carouselPosition}`} 
+                style={{animation: animationStyle}}
+            onClick={()=>{
+                if(carouselPosition === "active") setGamePageOpen(true);
+                if(carouselPosition === "active")  fetchGame(id)}
         }>
             <img className="game-image" src={src} alt={'#'} />
             {carouselPosition === "active" 
