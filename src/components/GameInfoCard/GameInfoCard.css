@@ -2,8 +2,6 @@
     position: absolute;
     width: var(--game-card-width);
     height: var(--game-card-height);
-    
-    
 }
 
 .game-image {
@@ -174,10 +172,7 @@
     }
 }
 
-
-
 /*right button clicked  animations */
-/*left button clicked  animations */
 @keyframes right-next-to-edge{
     0%{
         right: 15%;
@@ -297,18 +292,3 @@
         height: calc(var(--game-card-height) * .75);
     }
 }
-
-
-/* [
-            "left-next-to-edge",
-            "active-to-left-next",
-            "right-next-to-active",
-            "right-edge-to-next",
-            "fade-in-right-edge"
-        ] : direction === "right" ? [
-            "fade-in-left-edge",
-            "left-edge-to-next",
-            "left-next-to-active",
-            "active-to-right-next",
-            "right-next-to-edge"
-        ] : []; */
