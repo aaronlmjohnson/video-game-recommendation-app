@@ -1,7 +1,12 @@
+:root {
+    --game-card-width-half: calc(var(--game-card-width) * 0.5);
+    --game-card-width-three-fourths: calc(var(--game-card-width) * 0.75);
+}
+
 .game-info-card {
     position: absolute;
-    width: var(--game-card-width);
-    height: var(--game-card-height);
+    max-width: var(--game-card-width);
+    height: auto;
 }
 
 .game-image {
@@ -21,34 +26,39 @@
     font-size: 20px;
 }
 .left-edge {
-    left: 10%;
-    height: calc(var(--game-card-height) * .75);
-    z-index: 2;
-
-    
+    left: 0;
+    width: var(--game-card-width-half);
+    left: 25%;
+    transform: translateX(calc((-1 * var(--game-card-width-half) / 2)));
+    z-index: 2; 
 }
 
 .left-next {
-    left: 15%;
-    height: calc(var(--game-card-height) * .9);
+    left: 37.5%;
+    width: var(--game-card-width-three-fourths);
+    transform: translateX(calc((-1 * calc(var(--game-card-width-three-fourths)) / 2)));
     z-index: 3;
 }
 
 .game-info-card.active {
     z-index: 4;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
 
 }
 
 .right-next{
-    right: 15%;
-    height: calc(var(--game-card-height) * .9);
+    right: 37.5%;
+    width: var(--game-card-width-three-fourths);
+    transform: translateX(calc((calc(var(--game-card-width-three-fourths)) / 2)));
     z-index: 3;
 }
 
 .right-edge {
-    right: 10%;
-    height: calc(var(--game-card-height) * .75);
+    width: var(--game-card-width-half);
+    right: 25%;
+    transform: translateX(calc((var(--game-card-width-half) / 2)));
     z-index: 2;
 }
 /*left button clicked  animations */
@@ -171,6 +181,8 @@
         height: calc(var(--game-card-height) * .75);
     }
 }
+
+
 
 /*right button clicked  animations */
 @keyframes right-next-to-edge{
