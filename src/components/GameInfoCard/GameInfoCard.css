@@ -5,7 +5,7 @@
 
 .game-info-card {
     position: absolute;
-    max-width: var(--game-card-width);
+    width: var(--game-card-width);
     height: auto;
 }
 
@@ -62,84 +62,46 @@
     z-index: 2;
 }
 /*left button clicked  animations */
+/*right button clicked  animations */
+
 @keyframes left-next-to-edge{
     0%{
-        left: 15%;
-        z-index: 3;
+        left: 37.5%;
+        transform: translateX(calc((-1 * calc(var(--game-card-width-three-fourths)) / 2)));
+        width: var(--game-card-width-three-fourths);
     }
-    25%{
-        left: 13.75%;
-        z-index: 3;
-    }
-
-    50%{
-        left: 12.5%;
-        z-index: 3;
-    }
-
     75%{
-        left: 11.25%;
-        z-index: 2;
-    }
-
-    100%{
-        left: 10%;
         z-index: 2;
     }
 }
-
+ 
 @keyframes active-to-left-next{
 
     0%{
-        left: 23%;
+        max-width: var(--game-card-width);
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 4;
         
     }
-    25%{
-        left: 20%;
-        z-index: 4;
-    }
-
-    50%{
-        left: 17.5%;
-        z-index: 4;
-    }
 
     75%{
-        left: 16.25%;
         z-index: 3;
     }
 
-    100%{
-        left: 15%;
-        z-index: 3;
-        height: calc(var(--game-card-height) * .9);
-    }
+
 }
 
 @keyframes right-next-to-active{
 
     0%{
-        right: 15%;
-        z-index: 4;
-        height: calc(var(--game-card-height) * .9);
-    }
-    25%{
-        right: 17%;
-        z-index: 4;
-    }
-
-    50%{
-        right: 19%;
-        z-index: 4;
+        left: 62.5%;
+        z-index: 3;
+        width: var(--game-card-width-three-fourths);
+        transform: translateX( calc(( -1 * calc(var(--game-card-width-three-fourths)) / 2)));
     }
 
     75%{
-        right: 21%;
-        z-index: 4;
-    }
-
-    100%{
         z-index: 4;
     }
 }
@@ -147,44 +109,38 @@
 @keyframes right-edge-to-next{
 
     0%{
-        right: 10%;
-        height: calc(var(--game-card-height) * .75);
+        width: var(--game-card-width-half);
+        right: 25%;
+        transform: translateX(calc((var(--game-card-width-half) / 2)));
+        z-index: 2;
 
     }
-    25%{
-        right: 11.25%;
-
-    }
-
-    50%{
-        right: 12.5%;
-    }
-
     75%{
-        right: 13.75%;
+       z-index: 3;
 
-    }
-
-    100%{
-        height: calc(var(--game-card-height) * .9);
     }
 }
+
+
+
 @keyframes fade-in-right-edge{
 
     0%{
-        right: 10%;
-        height: calc(var(--game-card-height) * .5);
+        width: 0;
+        right: 25%;
+        transform: translateX(calc((var(--game-card-width-half) / 2)));
+        z-index: 1;
 
     }
 
-    100%{
-        height: calc(var(--game-card-height) * .75);
+    75%{
+        z-index: 2;
     }
 }
+/*
 
 
 
-/*right button clicked  animations */
 @keyframes right-next-to-edge{
     0%{
         right: 15%;
@@ -303,4 +259,4 @@
     100%{
         height: calc(var(--game-card-height) * .75);
     }
-}
+} */
