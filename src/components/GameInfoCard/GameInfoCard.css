@@ -1,12 +1,14 @@
 :root {
     --game-card-width-half: calc(var(--game-card-width) * 0.5);
     --game-card-width-three-fourths: calc(var(--game-card-width) * 0.75);
+    --game-card-height-half: calc(var(--game-card-height) * 0.5);
+    --game-card-height-three-fourths: calc(var(--game-card-height) * 0.75);
 }
 
 .game-info-card {
     position: absolute;
     width: var(--game-card-width);
-    height: auto;
+    height: var(--game-card-height);
 }
 
 .game-image {
@@ -28,6 +30,7 @@
 .left-edge {
     left: 0;
     width: var(--game-card-width-half);
+    height: var(--game-card-height-half);
     left: 25%;
     transform: translateX(calc((-1 * var(--game-card-width-half) / 2)));
     z-index: 2; 
@@ -36,6 +39,7 @@
 .left-next {
     left: 37.5%;
     width: var(--game-card-width-three-fourths);
+    height: var(--game-card-height-three-fourths);
     transform: translateX(calc((-1 * calc(var(--game-card-width-three-fourths)) / 2)));
     z-index: 3;
 }
@@ -51,12 +55,14 @@
 .right-next{
     right: 37.5%;
     width: var(--game-card-width-three-fourths);
+    height: var(--game-card-height-three-fourths);
     transform: translateX(calc((calc(var(--game-card-width-three-fourths)) / 2)));
     z-index: 3;
 }
 
 .right-edge {
     width: var(--game-card-width-half);
+    height: var(--game-card-height-half);
     right: 25%;
     transform: translateX(calc((var(--game-card-width-half) / 2)));
     z-index: 2;
@@ -74,7 +80,7 @@
         z-index: 2;
     }
 }
- 
+ /*
 @keyframes active-to-left-next{
 
     0%{
@@ -121,8 +127,6 @@
     }
 }
 
-
-
 @keyframes fade-in-right-edge{
 
     0%{
@@ -137,7 +141,7 @@
         z-index: 2;
     }
 }
-/*
+
 
 
 
