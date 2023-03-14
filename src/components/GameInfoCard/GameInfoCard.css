@@ -6,9 +6,13 @@
 }
 
 .game-info-card {
-    position: absolute;
+    position: absolute; 
     width: var(--game-card-width);
     height: var(--game-card-height);
+}
+
+.game-info-card.inactive{
+    opacity: 0;
 }
 
 .game-image {
@@ -28,119 +32,115 @@
     font-size: 20px;
 }
 .left-edge {
-    left: 0;
     width: var(--game-card-width-half);
     height: var(--game-card-height-half);
-    left: 25%;
-    transform: translateX(calc((-1 * var(--game-card-width-half) / 2)));
+    transform: translateX(-90%);
     z-index: 2; 
 }
 
 .left-next {
-    left: 37.5%;
     width: var(--game-card-width-three-fourths);
     height: var(--game-card-height-three-fourths);
-    transform: translateX(calc((-1 * calc(var(--game-card-width-three-fourths)) / 2)));
+    transform: translateX(-30%);
     z-index: 3;
 }
 
 .game-info-card.active {
     z-index: 4;
-    left: 50%;
-    transform: translateX(-50%);
     cursor: pointer;
-
 }
 
 .right-next{
-    right: 37.5%;
     width: var(--game-card-width-three-fourths);
     height: var(--game-card-height-three-fourths);
-    transform: translateX(calc((calc(var(--game-card-width-three-fourths)) / 2)));
+    transform: translateX(30%);
     z-index: 3;
 }
 
 .right-edge {
+
     width: var(--game-card-width-half);
     height: var(--game-card-height-half);
-    right: 25%;
-    transform: translateX(calc((var(--game-card-width-half) / 2)));
+
+    transform: translateX(90%);
     z-index: 2;
 }
-/*left button clicked  animations */
-/*right button clicked  animations */
-
+/* 
 @keyframes left-next-to-edge{
     0%{
-        left: 37.5%;
-        transform: translateX(calc((-1 * calc(var(--game-card-width-three-fourths)) / 2)));
-        width: var(--game-card-width-three-fourths);
+        transform: scale(1.5) translateX(-30%);
     }
-    75%{
-        z-index: 2;
+
+    100%{
+        transform: scale(1) translateX(-90%);
     }
 }
- /*
-@keyframes active-to-left-next{
+
+ @keyframes active-to-left-next{
 
     0%{
-        max-width: var(--game-card-width);
-        left: 50%;
-        transform: translateX(-50%);
+        transform: scale(1.33) translateX(0);
         z-index: 4;
-        
     }
 
     75%{
         z-index: 3;
     }
 
-
+    100%{
+        transform: scale(1) translateX(-30%);
+    }
 }
 
 @keyframes right-next-to-active{
 
     0%{
-        left: 62.5%;
+        transform: scale(.75) translateX(30%);
         z-index: 3;
-        width: var(--game-card-width-three-fourths);
-        transform: translateX( calc(( -1 * calc(var(--game-card-width-three-fourths)) / 2)));
     }
 
     75%{
         z-index: 4;
+    }
+
+    100%{
+        transform: scale(1) translateX(0);
+        
     }
 }
 
 @keyframes right-edge-to-next{
 
     0%{
-        width: var(--game-card-width-half);
-        right: 25%;
-        transform: translateX(calc((var(--game-card-width-half) / 2)));
+        transform: scale(.5) translateX(90%);
         z-index: 2;
-
     }
+
     75%{
-       z-index: 3;
-
+        z-index: 3;
     }
-}
 
+    100%{
+        transform: scale(.75) translateX(30%);
+        
+    }
+} 
 @keyframes fade-in-right-edge{
 
     0%{
-        width: 0;
-        right: 25%;
-        transform: translateX(calc((var(--game-card-width-half) / 2)));
         z-index: 1;
+        transform: scale(0);
 
     }
-
     75%{
         z-index: 2;
     }
+
+    100%{
+        transform: scale(1);
+    }
 }
+
 
 
 
@@ -263,4 +263,5 @@
     100%{
         height: calc(var(--game-card-height) * .75);
     }
-} */
+} 
+*/
