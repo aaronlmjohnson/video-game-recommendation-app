@@ -7,7 +7,7 @@ import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import './PopularGamesSection.css';
 
 const PopularGamesSection = ({url, year, setYear, game, setGamePageOpen})=>{
-    const { setGames, games, subset, shiftLeft, shiftRight, positionNames, animationNames, gamesExist } = useCarousel();
+    const { setGames, games, shiftLeft, shiftRight, positionNames, animationNames, gamesExist, onDisplay } = useCarousel();
     const { data, refetch, loading } = useApiHandler(`${url}&dates=2023-01-01,2023-12-31&page_size=16`);
 
     useEffect(()=>{
@@ -26,7 +26,7 @@ const PopularGamesSection = ({url, year, setYear, game, setGamePageOpen})=>{
             
             <GameCarousel 
                 games={games}
-                subset={subset}
+                onDisplay={onDisplay}
                 gamesExist={gamesExist} 
                 shiftRight = { shiftRight }
                 shiftLeft = { shiftLeft }

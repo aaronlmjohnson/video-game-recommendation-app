@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react'
 const useCarousel = ()=>{
 
     const [games, setGames] = useState({});
+    //get rid of subset not needed most likely use a 
+    // leftIndex = mod(index - 2, games.length)
+    // rightIndex = mod(index + 2, games.length)
     const [index, setIndex] = useState(0);
-    const [subset, setSubset] = useState([]);
+    // const [subset, setSubset] = useState([0, 1, 2, 3, 4]);
     const [direction, setDirection] = useState('');
 
     const SUBSET_SIZE = 5;
@@ -13,32 +16,40 @@ const useCarousel = ()=>{
     //     if(games) setSubset(games);
     // }, [games]);
 
-    const generateSubset = (currentIndex)=>{
-        //This is not necessary. We want to get all 16 games 
-        const arr = [];
-        for(let i = currentIndex; i < currentIndex+5; i++){
-            arr.push((mod(i-2, games.length)));
-        } 
-        setSubset(arr);
-    }
+    // const generateSubset = (currentIndex)=>{
+    //     //This is not necessary. We want to get all 16 games 
+    //     const arr = [];
+    //     for(let i = currentIndex; i < currentIndex+5; i++){
+    //         arr.push((mod(i-2, games.length)));
+    //     } 
+    //     console.log(arr);
+    //     setSubset(arr);
+    // }
 
     const shiftRight = ()=>{
         setDirection('right');
         setIndex((prevIndex)=>mod(prevIndex - 1, games.length));
-        generateSubset(index);
+        // generateSubset(index);
+        // console.log(index);
 
     }
 
     const shiftLeft = ()=>{
         setDirection('left');
         setIndex((prevIndex)=>mod(prevIndex + 1, games.length));
-        generateSubset(index);
-    }
+        // generateSubset(index);
+        // console.log(index);
 
-    const positionNames = (index) => {
-        //if i is in subset so i = 12 subset [12, 13, 14, 15, 0] then do subset.indexOf(i); in position names
-        const names = ["left-edge", "left-next", "active", "right-next", "right-edge"];
-        return names[index] || "inactive";
+    }
+    
+    const onDisplay = (i) => {
+        if(i === index) return "active";
+        if(mod(i, games.length) === mod(index - 2, games.length)) return "left-edge";
+        if(mod(i, games.length) === mod(index - 1, games.length)) return "left-next";
+        if(mod(i, games.length) === mod(index + 1, games.length)) return "right-next";
+        if(mod(i, games.length) === mod(index + 2, games.length)) return "right-edge";
+        return 'inactive';
+            
     }
 
     const gamesExist = Object.keys(games).length > 0;
@@ -68,11 +79,10 @@ const useCarousel = ()=>{
     
     return{
         setGames, 
-        subset,
-        games, 
+        games,
+        onDisplay, 
         shiftLeft, 
         shiftRight,
-        positionNames,
         animationNames,
         gamesExist
     }
