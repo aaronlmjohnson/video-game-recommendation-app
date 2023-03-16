@@ -43,36 +43,51 @@ const useCarousel = ()=>{
     }
     
     const onDisplay = (i) => {
-        if(i === index) return "active";
-        if(mod(i, games.length) === mod(index - 2, games.length)) return "left-edge";
-        if(mod(i, games.length) === mod(index - 1, games.length)) return "left-next";
-        if(mod(i, games.length) === mod(index + 1, games.length)) return "right-next";
-        if(mod(i, games.length) === mod(index + 2, games.length)) return "right-edge";
-        return 'inactive';
-            
+        if(mod(i, games.length) === mod(index - 2, games.length)) 
+            return `left-edge`;
+        if(mod(i, games.length) === mod(index - 1, games.length)) 
+            return `left-next`;
+        if(i === index) 
+            return `active`;
+        if(mod(i, games.length) === mod(index + 1, games.length)) 
+            return `right-next`;
+        if(mod(i, games.length) === mod(index + 2, games.length)) 
+            return `right-edge`;
+        return 'inactive'; 
     }
 
     const gamesExist = Object.keys(games).length > 0;
 
 
     const animationNames = (i)=>{
-    
-        let animations = direction === "left" ? 
-        [
-            "left-next-to-edge",
-            "active-to-left-next",
-            "right-next-to-active",
-            "right-edge-to-next",
-            "fade-in-right-edge"
-        ] : direction === "right" ? [
-            "fade-in-left-edge",
-            "left-edge-to-next",
-            "left-next-to-active",
-            "active-to-right-next",
-            "right-next-to-edge"
-        ] : [];
-        
-        return animations[i];
+        if(mod(i, games.length) === mod(index - 2, games.length)) 
+            return `${direction === "left" ? "left-next-to-edge" : "fade-in-left-edge"}`;
+        if(mod(i, games.length) === mod(index - 1, games.length)) 
+            return `${direction === "left" ? "active-to-left-next" : "left-edge-to-next"}`;
+        if(i === index) 
+            return `${direction === "left" ? "right-next-to-active" : "left-next-to-active"}`;
+        if(mod(i, games.length) === mod(index + 1, games.length)) 
+            return `${direction === "left" ? "right-edge-to-next" : "active-to-right-next"}`;
+        if(mod(i, games.length) === mod(index + 2, games.length)) 
+            return `${direction === "left" ? "fade-in-right-edge" : "right-next-to-edge"}`;
+        return '';
+        // could make it work like onDisplay does4
+        // let animations = direction === "left" ? 
+        // [
+        //     "left-next-to-edge",
+        //     "active-to-left-next",
+        //     "right-next-to-active",
+        //     "right-edge-to-next",
+        //     "fade-in-right-edge"
+        // ] : direction === "right" ? [
+        //     "fade-in-left-edge",
+        //     "left-edge-to-next",
+        //     "left-next-to-active",
+        //     "active-to-right-next",
+        //     "right-next-to-edge"
+        // ] : [];
+
+        // return animations[i] || '';
     }
 
     const mod = (value, n)=> ((value % n) + n) % n

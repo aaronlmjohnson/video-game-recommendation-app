@@ -117,7 +117,7 @@
     }
 
     75%{
-        /* z-index: 3; */
+        z-index: 3;
     }
 
     100%{
@@ -128,12 +128,12 @@
 @keyframes fade-in-right-edge{
 
     0%{
-        /* z-index: 1; */
+        z-index: 1;
         transform: scale(0);
 
     }
     75%{
-        /* z-index: 2; */
+        z-index: 2;
     }
 
     100%{

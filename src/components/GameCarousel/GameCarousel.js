@@ -20,7 +20,7 @@ const PopularGames = ({ games, shiftLeft, shiftRight, positionNames, fetchGame, 
                         id={game.id}
                         fetchGame = {fetchGame}
                         setGamePageOpen={setGamePageOpen}
-                        animationName={''}
+                        animationName={animationNames(i)}
                     />
                 })}
             </div>
