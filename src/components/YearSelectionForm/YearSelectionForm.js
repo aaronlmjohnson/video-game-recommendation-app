@@ -27,9 +27,9 @@ const YearSelectionForm = ({year, setYear, url, refetch})=>{
         <div id="year-selection">
             
             <form onSubmit={(e)=> updateYearData(e)}> 
-                <button type="button" className= "year-button" onClick={(e)=>incrementYear(e)}>
+                <span type="button" className= "year-button" onClick={(e)=>incrementYear(e)}>
                     <FontAwesomeIcon className="year-select-caret" icon={faCaretUp} />
-                </button>
+                </span>
                 <input 
                     id="year-selection-input"
                     type="number" 
@@ -38,9 +38,9 @@ const YearSelectionForm = ({year, setYear, url, refetch})=>{
                     value={year}
                     onChange={(e)=>setYear(parseInt(e.target.value))}
                 />
-                <button type="button" className= "year-button" onClick={(e)=>decrementYear(e)}>
+                <span type="button" className= "year-button" onClick={(e)=>decrementYear(e)}>
                     <FontAwesomeIcon className="year-select-caret" icon={faCaretDown}  />
-                </button>
+                </span>
             </form> 
         </div> 
     );

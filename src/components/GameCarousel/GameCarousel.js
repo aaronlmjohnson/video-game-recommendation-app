@@ -12,16 +12,22 @@ const PopularGames = ({ games, shiftLeft, shiftRight, positionNames, fetchGame, 
             <div id="popular-games-carousel">
                 {gamesExist && games.map((game, i)=>{
                     onDisplay(i);
-                    return <GameInfoCard
-                        carouselPosition = {onDisplay(i)}
-                        name={game.name} 
-                        src={game.background_image} 
-                        key={game.id}
-                        id={game.id}
-                        fetchGame = {fetchGame}
-                        setGamePageOpen={setGamePageOpen}
-                        animationName={animationNames(i)}
-                    />
+                    return (<>
+                        <GameInfoCard
+                            carouselPosition = {onDisplay(i)}
+                            name={game.name} 
+                            src={game.background_image} 
+                            key={game.id}
+                            id={game.id}
+                            fetchGame = {fetchGame}
+                            setGamePageOpen={setGamePageOpen}
+                            animationName={animationNames(i)}
+                        />
+                        {onDisplay(i) === "active" 
+                            &&  <div className="game-name-resize">
+                                    <h1>{game.name}</h1>
+                                </div>}
+                    </>)
                 })}
             </div>
             <button className="carousel-button carousel-right" onClick={shiftRight}>
