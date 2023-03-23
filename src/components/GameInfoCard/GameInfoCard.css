@@ -76,6 +76,12 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .game-info-card {
+        animation: none !important;
+    }
+}
+
 /*cycle left */
 @keyframes left-next-to-edge{
     0%{

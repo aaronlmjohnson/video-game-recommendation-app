@@ -33,7 +33,7 @@
 }
 
 .nav-button-text{
-    font-size: 30px;
+    font-size: clamp(1rem, 2.5vw, 2rem);
     transition: all 0.5s ease;
     color: white;
     font-weight: 700;
