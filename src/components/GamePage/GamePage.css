@@ -59,9 +59,10 @@
     transform: rotate(15deg);
 }
 
+
 #game-page-nav > .game-title{
     font-family: 'Inter', 'sans-serif';
-    font-size: 24px;
+    font-size: clamp(.75rem, 3vw, 3rem);
 }
 
 #game-page-exit-button{
@@ -96,8 +97,6 @@
     justify-self: center;
 }
 /****screenshot-carousel****/
-
-
 
 #screenshot-carousel-main-image {
     width: 100%;
@@ -143,7 +142,7 @@
 
 #game-info {
     font-family: 'Inter', 'sans-serif';
-    font-size: 12px;
+    font-size: clamp(.6rem, 1.5vw, 70%);
     font-weight: 100;
 }
 
@@ -179,8 +178,7 @@
 
 /* Tablets */
 @media screen and (max-width: 1250px) {
-
-    #game-page-main {
+    .game-page-main {
         grid-template-columns: 1fr;
     }
     #screenshot-carousel {
@@ -193,7 +191,8 @@
     .game-page{
         width: 100%;
     }
-  }
+}
+
 
 
 
