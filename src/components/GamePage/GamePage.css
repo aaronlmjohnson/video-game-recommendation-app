@@ -21,22 +21,22 @@
 
 #game-page-nav-buttons {
     display: flex;
-    width: 20%;
-    justify-content: end;
+    width: 15%;
+    justify-content: space-between;
     align-items: center;
 }
 
 #game-page-random-button {
     height: 100%;
-    width: 30px;
-    
-    padding-right: 100px;
+    width: 50px;
+    border: none;
 }
 
 .random-button-styling {
     font-size: 30px;
     color: var(--light-purple);
     background: none;
+    
 }
 
 .random-button-large{
@@ -73,6 +73,7 @@
     padding: 3px 0;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
 .game-page-main {
