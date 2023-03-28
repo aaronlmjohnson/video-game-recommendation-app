@@ -62,7 +62,14 @@ function App () {
          game={game}
       /> }
 
-      {renderGameForm && <FindAGame setRenderGameForm = {setRenderGameForm}/>}
+      {renderGameForm && 
+        <FindAGame 
+          setRenderGameForm = {setRenderGameForm}
+          data={formData}
+          handleSubmit={handleSubmit}
+          loading={recommendedGamesLoading}
+        />
+      }
 
       {/* <GameRecommendationForm 
         data={formData}
