@@ -21,10 +21,6 @@
     grid-template-columns: 1fr 3fr;
 }
 
-
-
-
-
 #recommended-games{
 
 }
@@ -45,6 +41,22 @@
 #recommendation-form h1{
     color: var(--light-purple);
     font-size: 1rem;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    background-color: transparent;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--light-purple);
 }
 
 .form-section{
