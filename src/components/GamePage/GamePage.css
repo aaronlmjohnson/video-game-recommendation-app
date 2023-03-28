@@ -65,13 +65,13 @@
     font-size: clamp(.75rem, 3vw, 3rem);
 }
 
-#game-page-exit-button{
+.exit-button{
     background-color: var(--light-purple);
     font-size: clamp(2vw, 2rem, 5vw);
     border: none;
 }
 
-#game-page-exit-button:hover{
+.exit-button:hover{
     background-color: white;
 }
 

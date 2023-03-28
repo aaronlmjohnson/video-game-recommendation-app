@@ -79,7 +79,7 @@ const GamePage = ({game, data, loading, clear, exists, dataExists, screenshots, 
                                 <FontAwesomeIcon id="game-page-nav-random-icon" icon={faDice} onClick={getRandomGame}/>: null
                             }
                         </button>
-                        <button id="game-page-exit-button" onClick={()=>{
+                        <button className="exit-button" onClick={()=>{
                             setGamePageOpen(false)
                             clear();
                         }}>

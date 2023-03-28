@@ -2,15 +2,16 @@ import './App.css';
 import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
 import Navbar from './components/Navbar/Navbar';
 import GamePage from './components/GamePage/GamePage';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useGamePageData from './components/CustomHooks/useGamePageData';
-import GameNotFound from './components/GamePage/GameNotFound';
 import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
 import platforms from './platforms.json';
 import genres from './genres.json';
 import developers from './developers.json';
 import useRecommendedGames from './components/useRecommendedGames/useRecommendedGames';
 import RecommendedGames from './components/RecommendedGames/RecommendedGames';
+import FindAGame from './components/FindAGame/FindAGame';
+
 
 function App () {
 
@@ -44,7 +45,7 @@ function App () {
           game={game}
           setGamePageOpen={setGamePageOpen}
         />
-      {gamePageOpen ? <div id="overlay"></div> : null}
+      {gamePageOpen || renderGameForm ? <div id="overlay"></div> : null}
        
         {gamePageOpen && <GamePage 
          getRandomGame ={game.fetchRandom}
@@ -61,12 +62,14 @@ function App () {
          game={game}
       /> }
 
-      {renderGameForm && <GameRecommendationForm 
+      {renderGameForm && <FindAGame setRenderGameForm = {setRenderGameForm}/>}
+
+      {/* <GameRecommendationForm 
         data={formData}
         handleSubmit={handleSubmit}
         setRenderGameForm={setRenderGameForm}
         loading={recommendedGamesLoading}
-      />}
+      /> */}
 
     {!recommendedGamesLoading()? <RecommendedGames data={recommendedGames} /> : <>Loading</> }
     
