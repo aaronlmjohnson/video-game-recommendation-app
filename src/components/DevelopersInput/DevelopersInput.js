@@ -1,6 +1,6 @@
 const DevelopersInput = ({data, seeMore})=>{
     return (
-        <div id="form-developers" className="form-section">
+        <div id="form-developers">
             <h1>Developers</h1>
             {data.developers.results.map((developer, i)=>{
                 if(i >= 6 && !seeMore) return;

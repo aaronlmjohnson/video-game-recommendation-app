@@ -51,6 +51,17 @@
     margin-bottom: 14px;
 }
 
+.see-more{
+    color: var(--light-purple);
+    border: none;
+    background: none;
+    font-size: 12px;
+}
+.see-more-caret{
+    font-size: 16px;
+    margin-right: 5px;
+}
+
 #recommendation-form label{
     font-size: 12px;
 }
