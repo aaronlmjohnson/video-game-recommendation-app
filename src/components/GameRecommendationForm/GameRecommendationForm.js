@@ -1,20 +1,21 @@
-import DevelopersInput from "../DevelopersInput/DevelopersInput";
-import GenresInput from "../GenresInput/GenresInput";
-import PlatformsInput from "../PlatformsInput/PlatformsInput"
+import FormSection from "./FormSection";
 import RatingInput from "../RatingInput/RatingInput";
 import ReleaseDateInput from "../ReleaseDateInput/ReleaseDateInput";
 import './GameRecommendationForm.css';
 
 const GameRecommendationForm = ({data, handleSubmit})=>{
+
+    
+
     
     return(
         <div id="recommendation-form-container">
             <form id="recommendation-form" onSubmit={(e) => handleSubmit(e, {})} >
-                <PlatformsInput data={data} />
-                <GenresInput data={data} />
+                <FormSection data={data} type={"platforms"}/>
+                <FormSection data={data} type={"genres"}/>
                 <ReleaseDateInput data={data} />
                 <RatingInput data={data} />
-                <DevelopersInput data={data} />
+                <FormSection data={data} type={"developers"}/>
                 <input type="submit" />
             </form>
         </div>
