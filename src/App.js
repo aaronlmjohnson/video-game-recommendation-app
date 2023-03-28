@@ -64,6 +64,7 @@ function App () {
 
       {renderGameForm && 
         <FindAGame 
+          recommendedGames = {recommendedGames}
           setRenderGameForm = {setRenderGameForm}
           data={formData}
           handleSubmit={handleSubmit}
@@ -78,7 +79,7 @@ function App () {
         loading={recommendedGamesLoading}
       /> */}
 
-    {!recommendedGamesLoading()? <RecommendedGames data={recommendedGames} /> : <>Loading</> }
+    
     
     </div>
   );
