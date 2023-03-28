@@ -8,8 +8,8 @@ import './GameRecommendationForm.css';
 const GameRecommendationForm = ({data, handleSubmit})=>{
     
     return(
-        <div id="recommendation-form">
-            <form onSubmit={(e) => handleSubmit(e, {})} >
+        <div id="recommendation-form-container">
+            <form id="recommendation-form" onSubmit={(e) => handleSubmit(e, {})} >
                 <PlatformsInput data={data} />
                 <GenresInput data={data} />
                 <ReleaseDateInput data={data} />

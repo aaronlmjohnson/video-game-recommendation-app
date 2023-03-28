@@ -9,19 +9,22 @@ const FindAGame = ({setRenderGameForm, recommendedGames, data, handleSubmit, loa
 
     return (
         <div id="find-a-game-form">
-            <button className="exit-button" onClick={()=>{setRenderGameForm(false)}}>
-                <FontAwesomeIcon icon={faXmark} />
-            </button>
-
-            <GameRecommendationForm 
-                data={data}
-                handleSubmit={handleSubmit}
-                setRenderGameForm={null}
-                loading={loading}
-            />
-            {!loading() ? 
-                <RecommendedGames data={recommendedGames} /> : <>Loading</> 
-            }
+            <div id="find-a-game-nav">
+                <button className="exit-button" onClick={()=>{setRenderGameForm(false)}}>
+                    <FontAwesomeIcon icon={faXmark} />
+                </button>
+            </div>
+            <div id="find-a-game-main">
+                <GameRecommendationForm 
+                    data={data}
+                    handleSubmit={handleSubmit}
+                    setRenderGameForm={null}
+                    loading={loading}
+                />
+                {!loading() ? 
+                    <RecommendedGames data={recommendedGames} /> : <>Loading</> 
+                }
+            </div>
         </div>
     )
 }

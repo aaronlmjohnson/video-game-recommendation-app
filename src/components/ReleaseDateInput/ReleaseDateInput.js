@@ -1,6 +1,6 @@
 const ReleaseDateInput = ({data})=>{
     return (
-        <div id="form-released">
+        <div id="form-released" className="form-section">
             <h1>Release Date</h1>
             <div id="form-released-start" >
                 <input type="date" name="start-date"/>

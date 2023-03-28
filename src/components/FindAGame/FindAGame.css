@@ -10,3 +10,47 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+#find-a-game-nav{
+    display: flex;
+    justify-content: end;
+}
+
+#find-a-game-main{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+
+
+
+#recommended-games{
+
+}
+
+#recommendation-form-container{
+    display: flex;
+    justify-content: center;
+    border: 1px solid green;
+}
+/*recommendation-form*/
+
+#recommendation-form {
+    width: fit-content;
+    border: 1px solid green;
+    font-family: 'Inter', 'sans-serif';
+}
+
+#recommendation-form h1{
+    color: var(--light-purple);
+    font-size: 1rem;
+}
+
+.form-section{
+    margin-bottom: 14px;
+}
+
+#recommendation-form label{
+    font-size: 12px;
+}

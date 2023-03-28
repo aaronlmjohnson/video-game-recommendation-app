@@ -1,7 +1,7 @@
 
 const RecommendedGames = ({data, loading})=>{
     return (
-        <div>
+        <div id="recommended-games">
             {data && data.length > 0 ? <h1>You might like these games:</h1> : <></>}
 
             {data && data.map((game)=>{
