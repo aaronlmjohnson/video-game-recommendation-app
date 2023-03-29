@@ -6,7 +6,6 @@ import RecommendedGames from '../RecommendedGames/RecommendedGames';
 
 const FindAGame = ({setRenderGameForm, recommendedGames, data, handleSubmit, loading, setGamePageOpen, fetchGame})=>{
     
-
     return (
         <div id="find-a-game-form">
             <div id="find-a-game-nav">

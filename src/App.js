@@ -2,7 +2,7 @@ import './App.css';
 import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
 import Navbar from './components/Navbar/Navbar';
 import GamePage from './components/GamePage/GamePage';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useGamePageData from './components/CustomHooks/useGamePageData';
 import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
 import platforms from './platforms.json';
@@ -23,6 +23,10 @@ function App () {
   const [formData, setFormData] = useState({platforms, genres, developers}); 
   const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
   const game = useGamePageData();
+
+  useEffect(()=>{
+    setRenderGameForm(gamePageOpen ? false : null);
+  }, [gamePageOpen]);
 
   const handleSubmit = (e, queryData)=>{
     e.preventDefault();
@@ -46,6 +50,7 @@ function App () {
           setGamePageOpen={setGamePageOpen}
         />
       {gamePageOpen || renderGameForm ? <div id="overlay"></div> : null}
+      
        
         {gamePageOpen && <GamePage 
          getRandomGame ={game.fetchRandom}
