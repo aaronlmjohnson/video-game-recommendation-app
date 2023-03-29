@@ -18,7 +18,7 @@ const FormSection = ({type, data}) => {
             type === "genres" ? <GenresInput data={data} seeMore={seeMore} />  :
             type === "developers" ? <DevelopersInput data={data} seeMore={seeMore} /> : null}
             <button className="see-more" onClick={(e)=>{setSeeMore(toggleSeeMore(seeMore, e));}}>
-                <FontAwesomeIcon className="see-more-caret" icon={seeMore ? faCaretDown : faCaretUp} />
+                <FontAwesomeIcon className="see-more-caret" icon={seeMore ? faCaretUp : faCaretDown} />
                 {`See ${seeMore ? 'less' : 'more'}`}
             </button>
         </div>

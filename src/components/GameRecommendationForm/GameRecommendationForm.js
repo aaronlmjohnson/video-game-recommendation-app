@@ -4,10 +4,6 @@ import ReleaseDateInput from "../ReleaseDateInput/ReleaseDateInput";
 import './GameRecommendationForm.css';
 
 const GameRecommendationForm = ({data, handleSubmit})=>{
-
-    
-
-    
     return(
         <div id="recommendation-form-container">
             <form id="recommendation-form" onSubmit={(e) => handleSubmit(e, {})} >

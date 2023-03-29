@@ -14,7 +14,6 @@ const RecommendedGames = ({data, loading, setGamePageOpen, fetchGame})=>{
                     fetchGame={fetchGame}
                     id={game.id}
                     name={game.name}
-                    
                 />)
             })}
         </div>
