@@ -11,9 +11,12 @@ const RecommendedGames = ({data, loading, setGamePageOpen, fetchGame})=>{
                 <GameInfoCard 
                     src={game.background_image}
                     carouselPosition={'active'}
+                    recommendation = {true}
                     setGamePageOpen={setGamePageOpen}
                     fetchGame={fetchGame}
                     id={game.id}
+                    name={game.name}
+                    
                 />)
             })}
         </div>

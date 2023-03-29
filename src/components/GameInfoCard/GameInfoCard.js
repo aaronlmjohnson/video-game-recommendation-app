@@ -1,11 +1,11 @@
 import "./GameInfoCard.css";
 
 
-const GameInfoCard = ({name, releaseDate, rating, src, carouselPosition, fetchGame, id, setGamePageOpen, animationName})=>{
+const GameInfoCard = ({name, releaseDate, rating, src, carouselPosition, fetchGame, id, setGamePageOpen, animationName, recommendation})=>{
     const animationStyle = `${animationName} .3s ease-in`
 
     return(
-        <div className={`game-info-card ${carouselPosition}`} 
+        <div className={`game-info-card ${carouselPosition} ${recommendation ? 'recommendation' : ''}`} 
                 style={{animation: animationStyle}}
             onClick={()=>{
                 if(carouselPosition === "active") setGamePageOpen(true);

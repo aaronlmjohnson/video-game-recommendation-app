@@ -11,6 +11,11 @@
     height: var(--game-card-height);
 }
 
+.game-info-card.recommendation{
+    position: relative;
+    margin-bottom: 20px;
+}
+
 .game-info-card.inactive{
     opacity: 0;
 }
