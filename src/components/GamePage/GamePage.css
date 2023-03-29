@@ -70,6 +70,8 @@
     font-size: clamp(2vw, 2rem, 5vw);
     color: var(--light-purple);
     border: none;
+    z-index: 2000;
+    
 }
 
 .exit-button:hover{
