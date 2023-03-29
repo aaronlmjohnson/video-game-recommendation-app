@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/video-game-recommendation-app/static/css/main.a7935294.css",
+    "main.js": "/video-game-recommendation-app/static/js/main.e5284c59.js",
+    "static/js/787.fc6b79ec.chunk.js": "/video-game-recommendation-app/static/js/787.fc6b79ec.chunk.js",
+    "index.html": "/video-game-recommendation-app/index.html",
+    "main.a7935294.css.map": "/video-game-recommendation-app/static/css/main.a7935294.css.map",
+    "main.e5284c59.js.map": "/video-game-recommendation-app/static/js/main.e5284c59.js.map",
+    "787.fc6b79ec.chunk.js.map": "/video-game-recommendation-app/static/js/787.fc6b79ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7935294.css",
+    "static/js/main.e5284c59.js"
+  ]
+}
