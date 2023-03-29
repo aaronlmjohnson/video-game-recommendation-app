@@ -23,14 +23,12 @@
     grid-template-columns: 1fr 3fr;
 }
 
-
-
 #recommendation-form-container{
     display: flex;
     height: 85vh;
     justify-content: center;
     position: sticky;
-    min-width: 200px;
+    min-width: 140px;
     top: 0;
     overflow-y: scroll;
 }
@@ -65,7 +63,7 @@
     color: var(--light-purple);
     font-size: 1rem;
 }
-
+/* checkbox */
 input[type="checkbox"]{
     appearance: none;
     width: 14px;
