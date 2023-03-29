@@ -6,6 +6,9 @@ import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 import GameNotFound from './GameNotFound';
 
 const GamePage = ({game, data, loading, clear, exists, dataExists, screenshots, mainScreenshot, setMainScreenshot, getRandomGame, setGamePageOpen})=>{
+    const screenshotsExist = Object.keys(screenshots).length > 0;
+    
+    console.log(screenshotsExist);
     const limitDescription = (description)=>{
         //Some Rawg api game descriptions are far too long. Need this to limit word count
         const MAX_COUNT = 150;
@@ -18,7 +21,8 @@ const GamePage = ({game, data, loading, clear, exists, dataExists, screenshots, 
     const displayGamePage = ()=>{
         return(<>
             <ScreenshotCarousel 
-                        screenshots = {screenshots} 
+                        screenshots = {screenshots}
+                        screenshotsExist = {screenshotsExist} 
                         mainScreenshot = {mainScreenshot}
                         setMainScreenshot = {setMainScreenshot}
                         name = {data.name}

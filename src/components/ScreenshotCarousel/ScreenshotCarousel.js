@@ -1,5 +1,5 @@
 
-const ScreenshotCarousel = ({screenshots, mainScreenshot, setMainScreenshot, name})=>{
+const ScreenshotCarousel = ({screenshots, mainScreenshot, setMainScreenshot, name, screenshotsExist})=>{
     
     const isMainScreenshot = (screenshot)=>{
         return mainScreenshot.id === screenshot.id ? "active" : "";
@@ -13,7 +13,7 @@ const ScreenshotCarousel = ({screenshots, mainScreenshot, setMainScreenshot, nam
         <div id="screenshot-carousel">
             <img id="screenshot-carousel-main-image" src={mainScreenshot.image} alt={name}/>
             <ul className="screenshots">
-                {screenshots.results.map((screenshot)=>{//make sure these exist before mapping sometimes causes error
+                {screenshotsExist && screenshots.results.map((screenshot)=>{
                     return <li key={screenshot.id} >
                         <img 
                             className={`screenshot ${isMainScreenshot(screenshot)}`} 
