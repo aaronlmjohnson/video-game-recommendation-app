@@ -4,7 +4,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import GameRecommendationForm from '../GameRecommendationForm/GameRecommendationForm';
 import RecommendedGames from '../RecommendedGames/RecommendedGames';
 
-const FindAGame = ({setRenderGameForm, recommendedGames, data, handleSubmit, loading})=>{
+const FindAGame = ({setRenderGameForm, recommendedGames, data, handleSubmit, loading, setGamePageOpen, fetchGame})=>{
     
 
     return (
@@ -22,7 +22,7 @@ const FindAGame = ({setRenderGameForm, recommendedGames, data, handleSubmit, loa
                     loading={loading}
                 />
                 {!loading() ? 
-                    <RecommendedGames data={recommendedGames} /> : <>Loading</> 
+                    <RecommendedGames data={recommendedGames} setGamePageOpen={setGamePageOpen} fetchGame={fetchGame} /> : <>Loading</> 
                 }
             </div>
         </div>

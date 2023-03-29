@@ -1,0 +1,13 @@
+#recommended-games{
+
+}
+
+.recommended-game{
+    
+}
+
+.recommended-game > .game-info-card{
+    width: 1000px;
+    position: static;
+    animation: none;
+}

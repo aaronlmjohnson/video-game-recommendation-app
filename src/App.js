@@ -69,6 +69,8 @@ function App () {
           data={formData}
           handleSubmit={handleSubmit}
           loading={recommendedGamesLoading}
+          setGamePageOpen={setGamePageOpen}
+          fetchGame = {game.fetchGame}
         />
       }
 
