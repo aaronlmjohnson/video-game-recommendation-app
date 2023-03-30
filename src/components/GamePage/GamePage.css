@@ -189,9 +189,17 @@
 }
 
 /* Smartphones */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     .game-page{
         width: 100%;
+        margin-top: 15%;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .game-page{
+        margin-top: 0;
     }
 }
 
