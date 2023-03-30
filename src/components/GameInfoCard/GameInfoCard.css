@@ -28,17 +28,20 @@
 }
 
 .game-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background-color: #0B0B0D88;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1000;
-    padding: 50px 50px;
 }
 
 .game-name > h1{
     text-transform: uppercase;
-    font-size: clamp(2.5vw, 20%, 10vw)
+    font-size: clamp(1rem, 2.5vw, 2rem);
 }
 .left-edge {
     width: var(--game-card-width-half);
@@ -78,10 +81,6 @@
 }
 
 @media screen and (max-width: 1247px) {
-    .game-name {
-        display: none;
-    }
-
     .game-info-card.recommendation .game-name{
         display: flex;
         width: 100%;

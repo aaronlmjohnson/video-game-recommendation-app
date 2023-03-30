@@ -53,13 +53,3 @@
     color: var(--light-purple);
 }
 
-@media screen and (max-width: 1247px) {
-    .game-name-resize {
-        display: block;
-    }
-
-    .game-name-resize >h1 {
-        text-transform: uppercase;
-        font-size: 20px;
-    }
-}
