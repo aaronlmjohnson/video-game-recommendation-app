@@ -3,10 +3,12 @@
 }
 
 .game-carousel {
-    width: 50%;
+    width: 100%;
     height: 100%;
     position: relative;
-    margin: 6rem 0;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
 }
 
 .hidden {
@@ -15,22 +17,22 @@
 
 .carousel-button{
     height: 50px;
-    align-self: center;  
-    justify-self: center;
     border: none;
+    position: absolute;
+    top: 50%;
     background-color: transparent;
 }
 
 .carousel-left{
+    left: 0;
     margin-right: 10px;
     z-index: 1000;
-    
 }
 
 .carousel-right{
     margin-left: 10px;
     z-index: 1000;
-    right: 100px;
+    right: 0;
 }
 
 .carousel-caret{

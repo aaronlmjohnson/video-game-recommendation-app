@@ -9,7 +9,9 @@ const GamesCarousel = ({url})=>{
     const {data:games, loading:gamesLoading, error} = useApiHandler(`${url}&dates=2024-01-01,2024-12-31&page_size=16`);
     const [shift, setShift] = useState(0);
     const [shiftClass, setShiftClass] = useState('');
+
     const mod = (n, d)=> ((n % d) + d) % d;
+    
     
     return (
         <div className="game-carousel">
