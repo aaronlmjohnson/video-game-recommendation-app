@@ -1,43 +1,42 @@
 import './App.css';
-import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
-import Navbar from './components/Navbar/Navbar';
-import GamePage from './components/GamePage/GamePage';
+// import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
+// import Navbar from './components/Navbar/Navbar';
+// import GamePage from './components/GamePage/GamePage';
 import { useEffect, useState } from 'react';
-import useGamePageData from './components/CustomHooks/useGamePageData';
-import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
-import platforms from './platforms.json';
-import genres from './genres.json';
-import developers from './developers.json';
-import useRecommendedGames from './components/useRecommendedGames/useRecommendedGames';
-import RecommendedGames from './components/RecommendedGames/RecommendedGames';
-import FindAGame from './components/FindAGame/FindAGame';
+// import useGamePageData from './components/CustomHooks/useGamePageData';
+// import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
+// import platforms from './platforms.json';
+// import genres from './genres.json';
+// import developers from './developers.json';
+// import useRecommendedGames from './components/useRecommendedGames/useRecommendedGames';
+// import RecommendedGames from './components/RecommendedGames/RecommendedGames';
+// import FindAGame from './components/FindAGame/FindAGame';
+import useApiHandler from './components/useGameAPI/useApiHandler';
 
 
 function App () {
 
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
-  const [year, setYear] = useState(new Date().getFullYear()); 
-  const [renderGameForm, setRenderGameForm] = useState(false);
-  const [gamePageOpen, setGamePageOpen] = useState(false);
-  const [formData, setFormData] = useState({platforms, genres, developers}); 
-  const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
-  const game = useGamePageData();
+  // const [year, setYear] = useState(new Date().getFullYear()); 
+  // const [renderGameForm, setRenderGameForm] = useState(false);
+  // const [gamePageOpen, setGamePageOpen] = useState(false);
+  // const [formData, setFormData] = useState({platforms, genres, developers}); 
+  // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
 
-  useEffect(()=>{
-    setRenderGameForm(gamePageOpen ? false : null);
-  }, [gamePageOpen]);
+  const {data:games, loading:gamesLoading, error} = useApiHandler(`${GAMES_URL}&dates=2024-01-01,2024-12-31&page_size=16`);
 
   const handleSubmit = (e, queryData)=>{
     e.preventDefault();
     
     const formData = new FormData(e.target);
-    fetchRecommendedGames(formData);
+    // fetchRecommendedGames(formData);
   }
   
   return (
     <div id="app-container">
-        <Navbar 
+
+        {/* <Navbar 
           getRandomGame={game.fetchRandom}
           setRenderGameForm={setRenderGameForm}
           setGamePageOpen={setGamePageOpen}
@@ -86,7 +85,6 @@ function App () {
         loading={recommendedGamesLoading}
       /> */}
 
-    
     
     </div>
   );

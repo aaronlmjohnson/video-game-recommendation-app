@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
 
-const useApiHandler =  (url = "")=>{
-    const [data, setData] = useState({});
-    const [loading, setLoading] = useState(true);
+const useApiHandler =  (url)=>{
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
     useEffect(()=>{ 
-        if(url)refetch(url);  
-
+        refetch(url);
     }, []);
 
-    const refetch = (url)=>{
-        const getData = async()=>{ 
+        async function refetch(url){ 
             try{
                 setLoading(true);
-                const response = await fetch(url, {mode:'cors'});
-
+                const response = await fetch(url, {
+                    method: "GET", 
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
                 if(!response.ok) 
                     throw Error(response.status);
                 const apiData = await response.json();
@@ -23,13 +25,12 @@ const useApiHandler =  (url = "")=>{
             }catch(e){
                 setError(true);
             }finally{
+
                 setLoading(false);
             }
         }
-        getData();
-    }
     
-    return data && {data, loading, error, setError, refetch};
+    return {data, loading, error, setError, refetch};
 
 }
 
