@@ -6,31 +6,14 @@ import useApiHandler from '../useGameAPI/useApiHandler';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import './PopularGamesSection.css';
 
-const PopularGamesSection = ({url, year, setYear, game, setGamePageOpen})=>{
+const PopularGamesSection = ({ url })=>{
     //const { setGames, games, shiftLeft, shiftRight, positionNames, animationNames, gamesExist, onDisplay } = useCarousel();
-    const { data, refetch, loading } = useApiHandler(`${url}&dates=2024-01-01,2024-12-31&page_size=16`);
-
-    useEffect(()=>{
-        if(!loading) console.log(data);
-        else console.log("loading...");
-    }, [data]);
 
     return (
-        loading ? <LoadingScreen /> :
-        <div id="popular-games-section">
-            <YearSelectionForm 
-                year={year} 
-                setYear={setYear}
-                url={url} 
-                refetch={refetch}                
-            />
+        <main>
+            <GameCarousel url={url} />
             
-            <GameCarousel 
-                fetchGame= {game.fetchGame}
-                setGamePageOpen={setGamePageOpen}
-            />
-            
-        </div>
+        </main>
     );
 }
     

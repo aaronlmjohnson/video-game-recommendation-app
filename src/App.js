@@ -1,6 +1,6 @@
 import './App.css';
-// import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
-// import Navbar from './components/Navbar/Navbar';
+import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
+import Navbar from './components/Navbar/Navbar';
 // import GamePage from './components/GamePage/GamePage';
 import { useEffect, useState } from 'react';
 // import useGamePageData from './components/CustomHooks/useGamePageData';
@@ -24,7 +24,6 @@ function App () {
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
 
-  const {data:games, loading:gamesLoading, error} = useApiHandler(`${GAMES_URL}&dates=2024-01-01,2024-12-31&page_size=16`);
 
   const handleSubmit = (e, queryData)=>{
     e.preventDefault();
@@ -34,20 +33,17 @@ function App () {
   }
   
   return (
-    <div id="app-container">
-
-        {/* <Navbar 
-          getRandomGame={game.fetchRandom}
-          setRenderGameForm={setRenderGameForm}
-          setGamePageOpen={setGamePageOpen}
+    <div className="wrapper">
+      <Navbar 
+          // getRandomGame={game.fetchRandom}
+          // setRenderGameForm={setRenderGameForm}
+          // setGamePageOpen={setGamePageOpen}
         />
-        <PopularGamesSection
-          url = {GAMES_URL}
-          year = {year}
-          setYear = {setYear} 
-          game={game}
-          setGamePageOpen={setGamePageOpen}
-        />
+      <PopularGamesSection 
+        url = {GAMES_URL}
+      />
+        {/* 
+        
       {gamePageOpen || renderGameForm ? <div id="overlay"></div> : null}
       
        

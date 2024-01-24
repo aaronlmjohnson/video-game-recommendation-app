@@ -9,15 +9,19 @@
     --game-card-height-three-fourths: calc(var(--game-card-height) * 0.75);
 }
 
-.game-info-card {
+.game-info-card{
     /* aspect-ratio: auto; */
     /* add background image property */
-    position: absolute; 
-    width: var(--game-card-width);
-    height: var(--game-card-height);
+    position: absolute;
+    max-width: 100%;
 }
 
-.game-info-card.recommendation{
+.game-info-card > img{
+    max-width: 100%;
+    height: 100%;
+}
+
+/* .game-info-card.recommendation{
     position: relative;
     margin-bottom: 20px;
     width: 100%;
@@ -103,7 +107,6 @@
     }
 }
 
-/*cycle left */
 @keyframes left-next-to-edge{
     0%{
         transform: scale(1.5) translateX(-30%);
@@ -164,9 +167,6 @@
         transform: translateX(90%) scale(1) ;
     }
 }
-/*cycle left */
-
-/*cycle right */
 
  @keyframes right-next-to-edge{
     0%{
@@ -223,5 +223,4 @@
     100%{
         transform: translateX(-90%) scale(1) ;
     }
-}
-/*cycle right */
+} */
