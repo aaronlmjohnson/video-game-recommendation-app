@@ -7,11 +7,12 @@ import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import './PopularGamesSection.css';
 
 const PopularGamesSection = ({url, year, setYear, game, setGamePageOpen})=>{
-    const { setGames, games, shiftLeft, shiftRight, positionNames, animationNames, gamesExist, onDisplay } = useCarousel();
-    const { data, refetch, loading } = useApiHandler(`${url}&dates=2023-01-01,2023-12-31&page_size=16`);
+    //const { setGames, games, shiftLeft, shiftRight, positionNames, animationNames, gamesExist, onDisplay } = useCarousel();
+    const { data, refetch, loading } = useApiHandler(`${url}&dates=2024-01-01,2024-12-31&page_size=16`);
 
     useEffect(()=>{
-        if(!loading) setGames(data.results);
+        if(!loading) console.log(data);
+        else console.log("loading...");
     }, [data]);
 
     return (
@@ -25,15 +26,8 @@ const PopularGamesSection = ({url, year, setYear, game, setGamePageOpen})=>{
             />
             
             <GameCarousel 
-                games={games}
-                onDisplay={onDisplay}
-                gamesExist={gamesExist} 
-                shiftRight = { shiftRight }
-                shiftLeft = { shiftLeft }
-                positionNames = { positionNames }
                 fetchGame= {game.fetchGame}
                 setGamePageOpen={setGamePageOpen}
-                animationNames={animationNames}
             />
             
         </div>

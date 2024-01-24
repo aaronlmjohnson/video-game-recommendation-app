@@ -1,4 +1,8 @@
 :root {
+    /* --game-card-width: calc(780px * 1.333);
+    --game-card-height: calc(438.76px * 1.333); */
+    --game-card-width: 100%;
+    --game-card-height: auto;
     --game-card-width-half: calc(var(--game-card-width) * 0.5);
     --game-card-width-three-fourths: calc(var(--game-card-width) * 0.75);
     --game-card-height-half: calc(var(--game-card-height) * 0.5);
@@ -6,6 +10,8 @@
 }
 
 .game-info-card {
+    /* aspect-ratio: auto; */
+    /* add background image property */
     position: absolute; 
     width: var(--game-card-width);
     height: var(--game-card-height);

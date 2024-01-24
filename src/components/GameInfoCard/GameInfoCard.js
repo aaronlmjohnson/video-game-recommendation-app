@@ -5,12 +5,8 @@ const GameInfoCard = ({name, src, carouselPosition, fetchGame, id, setGamePageOp
     const animationStyle = `${animationName} .3s ease-in`
 
     return(
-        <div className={`game-info-card ${carouselPosition} ${recommendation ? 'recommendation' : ''}`} 
-                style={{animation: animationStyle}}
-            onClick={()=>{
-                if(carouselPosition === "active") setGamePageOpen(true);
-                if(carouselPosition === "active")  fetchGame(id)}
-        }>
+        //get rid of img and set div's background image instead
+        <div className={`game-info-card `} >
             <img className="game-image" src={src} alt={'#'} />
             {
                 carouselPosition === "active" &&  

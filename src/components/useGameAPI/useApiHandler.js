@@ -12,7 +12,6 @@ const useApiHandler =  (url = "")=>{
 
     const refetch = (url)=>{
         const getData = async()=>{ 
-            
             try{
                 setLoading(true);
                 const response = await fetch(url, {mode:'cors'});
