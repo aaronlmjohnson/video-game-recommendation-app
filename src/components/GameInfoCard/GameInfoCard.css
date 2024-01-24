@@ -1,13 +1,20 @@
 .game-info-card {
     position: absolute;
     top: 50%;
-    max-width: 50%;
+    width: 50%;
+    min-height: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
   }
   
   .game-info-card > img {
     max-width: 100%;
     height: 100%;
   }
+
+
   
   .game-info-card-0 {
     z-index: 1;
