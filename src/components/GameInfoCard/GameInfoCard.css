@@ -21,6 +21,30 @@
     height: 100%;
 }
 
+.game-info-card-0{
+    z-index: 1;
+    transform: translate(-50%, 0) scale(.6);
+}
+
+.game-info-card-1{
+    z-index: 2;
+    transform: translate(-30%, 0) scale(.75);
+}
+
+.game-info-card-2{
+    z-index: 4;
+}
+
+.game-info-card-3{
+    z-index: 2;
+    transform: translate(30%, 0) scale(.75);
+}
+
+.game-info-card-4{
+    z-index: 1;
+    transform: translate(50%, 0) scale(.6);
+  }
+
 /* .game-info-card.recommendation{
     position: relative;
     margin-bottom: 20px;

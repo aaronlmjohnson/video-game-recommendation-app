@@ -20,7 +20,7 @@ const GamesCarousel = ({url})=>{
                         src={game.background_image} 
                         key={game.id}
                         id={game.id}
-
+                        carouselClass = {i > 4 ? "hidden" : `game-info-card-${i}`}
                     />)
             })}
             {/* <button className="carousel-button carousel-right" onClick={shiftRight}>

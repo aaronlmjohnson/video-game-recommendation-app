@@ -9,6 +9,10 @@
     margin: 6rem 0;
 }
 
+.hidden {
+    display: none;
+}
+
 .carousel-button{
     height: 50px;
     align-self: center;  
