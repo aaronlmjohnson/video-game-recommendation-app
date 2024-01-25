@@ -2,11 +2,24 @@
     position: absolute;
     top: 50%;
     width: 50%;
-    min-height: 70%;
+    height: 70%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     transform: translate(-50%, -50%);
+  }
+
+  .game-name{
+    width: 100%;
+    background: var(--main-bg-color-op-50);
+    height: 100%;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    bottom: 0;
   }
   
   .game-info-card > img {
