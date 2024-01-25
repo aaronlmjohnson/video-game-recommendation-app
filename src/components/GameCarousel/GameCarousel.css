@@ -62,3 +62,19 @@
     color: var(--button-color-hover);
 }
 
+@media (max-width: 767px) {
+    .game-carousel{
+     overflow: hidden;
+    }
+
+    .carousel-button{
+        min-height: 99%;
+        margin-top: 4px;
+        position: absolute;
+        top: 0;
+        border: none;
+        background-color: transparent;
+        filter: drop-shadow(0 0 0.75rem black);
+        transition:  .3s ease;
+    }
+  }
