@@ -11,11 +11,13 @@
 
   .game-name{
     width: 100%;
+    border: none;
+    color: white;
+    cursor: pointer;
     background: var(--main-bg-color-op-50);
     height: 100%;
     padding-top: 2rem;
     text-transform: uppercase;
-    text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 2rem;
