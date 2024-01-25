@@ -6,13 +6,15 @@ import useApiHandler from '../useGameAPI/useApiHandler';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import './PopularGamesSection.css';
 
-const PopularGamesSection = ({ url })=>{
+const PopularGamesSection = ({ url, setGamePageOpen })=>{
     //const { setGames, games, shiftLeft, shiftRight, positionNames, animationNames, gamesExist, onDisplay } = useCarousel();
 
     return (
         <main>
-            <GameCarousel url={url} />
-            
+            <GameCarousel 
+                url={url} 
+                setGamePageOpen = {setGamePageOpen}
+            />
         </main>
     );
 }

@@ -20,11 +20,14 @@ function App () {
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   // const [year, setYear] = useState(new Date().getFullYear()); 
   // const [renderGameForm, setRenderGameForm] = useState(false);
-  // const [gamePageOpen, setGamePageOpen] = useState(false);
+  const [gamePageOpen, setGamePageOpen] = useState(false);
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
 
 
+  useEffect(()=>{
+    console.log(gamePageOpen);
+  }, [gamePageOpen])
   const handleSubmit = (e, queryData)=>{
     e.preventDefault();
     
@@ -41,6 +44,7 @@ function App () {
         />
       <PopularGamesSection 
         url = {GAMES_URL}
+        setGamePageOpen = {setGamePageOpen}
       />
         {/* 
         
