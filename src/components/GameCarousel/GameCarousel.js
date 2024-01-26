@@ -4,7 +4,7 @@ import useApiHandler from '../useGameAPI/useApiHandler';
 import { useState } from 'react';
 import CarouselButton from './CarouselButton';
 
-const GamesCarousel = ({url, setGamePageOpen})=>{
+const GamesCarousel = ({url, setGamePageOpen, setGame})=>{
     const {data:games, loading:gamesLoading, error} = useApiHandler(`${url}&dates=2024-01-01,2024-12-31&page_size=16`);
     const [shift, setShift] = useState(0);
     const [shiftClass, setShiftClass] = useState('');
@@ -20,7 +20,9 @@ const GamesCarousel = ({url, setGamePageOpen})=>{
                 let shiftedI = mod(i + shift, games.results.length);
                 return (
                     <GameInfoCard
+                        game={game}
                         setGamePageOpen={ setGamePageOpen }
+                        setGame={setGame}
                         name={game.name} 
                         src={game.background_image} 
                         key={game.id}

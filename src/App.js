@@ -1,7 +1,7 @@
 import './App.css';
 import PopularGamesSection from './components/PopularGamesSection/PopularGamesSection';
 import Navbar from './components/Navbar/Navbar';
-// import GamePage from './components/GamePage/GamePage';
+import GameDetail from './components/GamePage/GameDetail';
 import { useEffect, useState } from 'react';
 // import useGamePageData from './components/CustomHooks/useGamePageData';
 // import GameRecommendationForm from './components/GameRecommendationForm/GameRecommendationForm';
@@ -21,13 +21,10 @@ function App () {
   // const [year, setYear] = useState(new Date().getFullYear()); 
   // const [renderGameForm, setRenderGameForm] = useState(false);
   const [gamePageOpen, setGamePageOpen] = useState(false);
+  const [game, setGame] = useState(null);
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
 
-
-  useEffect(()=>{
-    console.log(gamePageOpen);
-  }, [gamePageOpen])
   const handleSubmit = (e, queryData)=>{
     e.preventDefault();
     
@@ -45,26 +42,27 @@ function App () {
       <PopularGamesSection 
         url = {GAMES_URL}
         setGamePageOpen = {setGamePageOpen}
+        setGame = {setGame}
       />
+       {gamePageOpen && <GameDetail 
+        //  getRandomGame ={game.fetchRandom}
+         gameId={game} 
+        //  dataExists = {game.dataExists}
+        //  loading={game.loading}
+        //  clear = {game.clear}
+        //  exists = {game.exists}
+        //  screenshots = {game.screenshots}
+        //  mainScreenshot = {game.mainScreenshot}
+        //  setMainScreenshot = {game.setMainScreenshot}
+        //  screenshotsExist = {game.screenshotsExist}
+         setGamePageOpen= {setGamePageOpen}
+      /> }
         {/* 
         
       {gamePageOpen || renderGameForm ? <div id="overlay"></div> : null}
       
        
-        {gamePageOpen && <GamePage 
-         getRandomGame ={game.fetchRandom}
-         data={game.data} 
-         dataExists = {game.dataExists}
-         loading={game.loading}
-         clear = {game.clear}
-         exists = {game.exists}
-         screenshots = {game.screenshots}
-         mainScreenshot = {game.mainScreenshot}
-         setMainScreenshot = {game.setMainScreenshot}
-         screenshotsExist = {game.screenshotsExist}
-         setGamePageOpen= {setGamePageOpen}
-         game={game}
-      /> }
+       
 
       {renderGameForm && 
         <FindAGame 

@@ -6,7 +6,7 @@ const CarouselButton = (props)=>{
     return(
         <button className={`carousel-button carousel-${direction}`} onClick={()=> {
             setShiftClass(`shift-${direction}`);
-            setShift(prev => prev -= 1);
+            setShift(prev => prev += direction === "left" ? -1 : 1);
         }}>
             <FontAwesomeIcon className="carousel-caret" icon={direction === "left" ? faCaretLeft : faCaretRight} />
         </button>

@@ -1,4 +1,4 @@
-import './GamePage.css';
+import './GameDetail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';

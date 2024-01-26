@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-const useApiHandler =  (url)=>{
+const useApiHandler =  (url = "")=>{
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
     useEffect(()=>{ 
-        refetch(url);
+        if(url) refetch(url);
     }, []);
 
         async function refetch(url){ 
