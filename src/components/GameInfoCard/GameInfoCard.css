@@ -195,6 +195,14 @@
     .game-info-card{
       width: 100%;
       height: 100%;
+
+    }
+
+    .game-name {
+      text-align: center;
+    }
+    .game-name-text{
+      padding: 0 16px;
     }
   }
   

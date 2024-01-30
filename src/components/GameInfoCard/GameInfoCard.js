@@ -15,10 +15,10 @@ const GameInfoCard = (props)=>{
                 className={`game-name ${carouselClass.split(" ")[0] !== "game-info-card-2" ? "hidden" : ""}`}
                 onClick={handleClick}
             >
-                <p>{name}</p>
+                <p className="game-name-text">{name}</p>
             </button>  
         </div>
-    );
+    )
 }
 
 export default GameInfoCard;
