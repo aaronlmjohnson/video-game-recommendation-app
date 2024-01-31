@@ -21,6 +21,7 @@ const GamePage = ({ setGamePageOpen, gameId })=>{
     }
 
         return(
+            
             gameData && <section className="game-detail">
                 <nav>
                     <h1 >{gameData.name}</h1>

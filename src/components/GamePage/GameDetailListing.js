@@ -7,7 +7,7 @@ const GameDetailListing = ({objKey, value})=>{
     return(
         <li className="game-detail-listing">
             <p>{capitalizeFirst(objKey)}</p>
-            <p>{value}</p>
+            <p className="game-detail-listing-value">{value}</p>
         </li>
     );
 }

@@ -23,12 +23,14 @@
 
     .game-detail-content{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: minmax(300px, 2fr) minmax(150px, 1fr);
         gap: 2rem;
     }
 
     .game-detail-content > .screenshot-section {
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .screenshot-section > img {
@@ -39,27 +41,52 @@
         display: flex;
     }
 
-    .game-detail-carousel > button {
+    .game-detail-carousel-button {
         width: 100%;
+        border: none;
+        background: none;
+        padding: 0;
     }
     .game-detail-carousel > button > img {
         width: 100%;
     }
 
-    .game-detail > aside {
+    .game-details-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .game-details-section > p {
+        font-size: clamp(.75rem, 1vw, 1rem);
     }
 
     .game-details-section-img {
         width: 100%;
     }
 
-    .game-detail-ul {
-
+    .game-detail-list {
+        display: flex;
+        flex-direction: column;
     }
 
-    .game-detail-li {
-
+    .game-detail-listing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: .5rem 0;
+        font-size: clamp(.5rem, .8vw, .75rem);
     }
+
+    .game-detail-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-detail-listing-value{
+        color: var(--light-purple);
+    }
+
+   
 
     .game-detail-li > .property {
 
@@ -68,9 +95,35 @@
     .game-detail-li > .value {
 
     }
-    @media (max-width: 1119px) {
+    @media (max-width: 1024px) {
+
+        .game-detail-content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+            gap: 2rem;
+        }
+
         .game-details-section-img {
             display: none;
+        }
+
+        .game-details-section > p {
+            font-size: clamp(1rem, 2vw, 2rem);
+        }
+
+        .game-detail-listing {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: .5rem 0;
+            font-size: clamp(1rem, 2vw, 2rem);
+        }
+    }
+
+    @media (max-width: 767px) {
+        .game-detail-content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
         }
     }
 

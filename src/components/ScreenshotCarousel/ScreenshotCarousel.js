@@ -17,7 +17,7 @@ const ScreenshotCarousel = ({ id, mainScreenshot, setMainScreenshot})=>{
                         setMainScreenshot(screenshot.image);
                     };
                     return(
-                        <button onClick={()=>handleClick(screenshot.image)}>
+                        <button className="game-detail-carousel-button" onClick={()=>handleClick(screenshot.image)}>
                             <img className="" key={screenshot.id} alt="#" src={screenshot.image} width="300px"/>
                         </button>
                     )

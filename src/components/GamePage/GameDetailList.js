@@ -17,26 +17,21 @@ const GameDetailList = ({properties})=>{
         }).join(", ");
     }
 
-
     return(
-        <ul className="game-detail-list">
+        <ul className="game-detail-li">
             {keys.map((objKey) =>{
-                if(objKey === "released" || objKey === "rating"){
                     return(
                         <GameDetailListing 
                             objKey={objKey}
-                            value={properties[objKey]}
+                            value={
+                                objKey === "released" || objKey === "rating" ?
+                                properties[objKey]:
+                                getAllProperties(properties[objKey], objKey)
+                            }
                         />
                     )
-                }else{
-                return (
-                    <GameDetailListing 
-                        objKey={objKey}
-                        value={getAllProperties(properties[objKey], objKey)}
-                    />
-                )
-            }
-            })}
+                }
+            )}
         </ul>
     );
 }
