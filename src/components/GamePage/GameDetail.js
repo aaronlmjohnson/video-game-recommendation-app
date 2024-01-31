@@ -56,26 +56,3 @@ const GamePage = ({ setGamePageOpen, gameId })=>{
 }
 
 export default GamePage;
-
- {/* <div id="game-page-nav">
-                    <h1 className="game-title">{exists && data.name}</h1>
-                    <div id="game-page-nav-buttons">
-                        <button id="game-page-random-button" className="random-button-styling" >
-                            {!game.error ? 
-                                <FontAwesomeIcon id="game-page-nav-random-icon" icon={faDice} onClick={getRandomGame}/>: null
-                            }
-                        </button>
-                        <button className="exit-button" onClick={()=>{
-                            setGamePageOpen(false)
-                            clear();
-                        }}>
-                            <FontAwesomeIcon icon={faXmark} />
-                        </button>
-                    </div>                    
-                </div>
-
-                <div className="game-page-main">  
-                    {!exists ? <GameNotFound getRandomGame={getRandomGame}/> : displayGamePage()}
-                </div> */}
-
-               
