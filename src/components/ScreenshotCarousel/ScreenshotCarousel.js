@@ -9,7 +9,7 @@ const ScreenshotCarousel = ({ id, mainScreenshot, setMainScreenshot})=>{
     return (
        screenshotsLoading ?
        <>Loading screenshots...</> :
-       <div >
+       <div className="game-detail-carousel">
             {
                 screenshotData?.results.map((screenshot, i)=>{
                     if(!mainScreenshot) {

@@ -23,23 +23,24 @@ const GamePage = ({ setGamePageOpen, gameId })=>{
         return(
             gameData && <section className="game-detail">
                 <nav>
+                    <h1 >{gameData.name}</h1>
                     <button onClick={()=> setGamePageOpen(false)}>Close</button>
-                    <h1>{gameData.name}</h1>
                 </nav>
-                <div className="screenshot-section">
-                    <img src={mainScreenshot} alt="#" width="500px"/> 
-                    <ScreenshotCarousel 
-                            id = {gameData.id}
-                            mainScreenshot={mainScreenshot}
-                            setMainScreenshot = {setMainScreenshot}
-                    /> 
-                </div>
-                <aside className="game-details-section">
-                    <img src={gameData.background_image} alt={gameData.name} width="400px"/>
-                    <p>{limitDescription(gameData.description_raw)}</p>
-                    <GameDetailList properties={gameData}/>
-                </aside>
-                
+                <section className="game-detail-content">
+                    <section className="screenshot-section">
+                        <img src={mainScreenshot} alt="#" /> 
+                        <ScreenshotCarousel 
+                                id = {gameData.id}
+                                mainScreenshot={mainScreenshot}
+                                setMainScreenshot = {setMainScreenshot}
+                        /> 
+                    </section>
+                    <aside className="game-details-section">
+                        <img className="game-details-section-img" src={gameData.background_image} alt={gameData.name} />
+                        <p>{limitDescription(gameData.description_raw)}</p>
+                        <GameDetailList properties={gameData}/>
+                    </aside>
+                </section>
             </section>
         )
 }
