@@ -5,7 +5,16 @@ const ScreenshotCarousel = ({ id, mainScreenshot, setMainScreenshot})=>{
     const url = `https://api.rawg.io/api/games/${id}/screenshots?key=${RAWG_API_KEY}&page_size=5`;
 
     const { data:screenshotData, loading:screenshotsLoading } = useApiHandler(url);
-    const handleClick = (src)=> setMainScreenshot(src);
+
+    const handleClick = (src)=> {
+        console.log(mainScreenshot);
+        setMainScreenshot(src)
+    };
+
+    const highlight = (src)=>{
+        if(src === mainScreenshot) return "highlight";
+    }
+
     return (
        screenshotsLoading ?
        <>Loading screenshots...</> :
@@ -17,7 +26,7 @@ const ScreenshotCarousel = ({ id, mainScreenshot, setMainScreenshot})=>{
                         setMainScreenshot(screenshot.image);
                     };
                     return(
-                        <button className="game-detail-carousel-button" onClick={()=>handleClick(screenshot.image)}>
+                        <button className={`game-detail-carousel-button ${highlight(screenshot.image)}`} onClick={()=>handleClick(screenshot.image)}>
                             <img className="" key={screenshot.id} alt="#" src={screenshot.image} width="300px"/>
                         </button>
                     )
