@@ -1,7 +1,6 @@
     .game-detail{
         padding: 2rem;
         position: absolute;
-
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -90,25 +89,13 @@
         color: var(--light-purple);
     }
 
-   
 
-    .game-detail-li > .property {
-
-    }
-
-    .game-detail-li > .value {
-
-    }
     @media (max-width: 1024px) {
-
-        .game-detail{}
-
         .game-detail-content{
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-
 
         .screenshot-section > img {
             width: 100%;   
@@ -118,7 +105,6 @@
             display: none;
         }
         
-
         .game-details-section > p {
             font-size: clamp(1rem, 2vw, 2rem);
         }
@@ -134,11 +120,8 @@
     @media (max-width: 767px) {
         .game-detail-content{
             display: block;
-            /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
             gap: 2rem;
         }
-
-        
 
         .game-details-section > p {
             padding: 1rem 0 0 0;
@@ -151,194 +134,4 @@
             padding: .5rem 0;
             font-size: clamp(.5rem, 1vw, 1rem);
         }
-    }
-
-
-    /* #game-page-nav {
-    display: flex;  
-    justify-content: space-between;
-    align-items: center;
-    height: 85px;
-    }
-
-    #game-page-nav-buttons {
-        display: flex;
-        width: 15%;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #game-page-random-button {
-        height: 50px;
-        width: 50px;
-        border: none;
-        font-size: clamp(2vw, 2rem, 5vw);
-    }
-
-    .random-button-styling {
-        color: var(--light-purple);
-        background: none;
-        border: none;
-    }
-
-    .random-button-large{
-        font-size: 15vw;
-    }
-
-    #game-page-nav-random-icon:hover{
-        color: white;
-        font-size: clamp(2.5vw, 2.25rem, 5.5vw);
-        transform: rotate(15deg);
-    }
-
-    #large-random-icon {
-        font-size: 10vw;
-    }
-
-    #large-random-icon:hover{
-        color: white;
-        font-size: 10vw;
-        transform: rotate(15deg);
-    }
-
-
-    #game-page-nav > .game-title{
-        font-family: 'Inter', 'sans-serif';
-        font-size: clamp(.75rem, 3vw, 3rem);
-    }
-
-    .exit-button{
-        background-color: transparent;
-        font-size: clamp(2vw, 2rem, 5vw);
-        color: var(--light-purple);
-        border: none;
-        z-index: 2000;
-        
-    }
-
-    .exit-button:hover{
-        color: white;
-    }
-
-    .game-page-main {
-        display: grid;
-        width: 100%;
-        grid-template-columns: 3fr 2fr;
-        gap: 20px;   
-    }
-
-    .game-not-found{
-        display: grid;
-        justify-content: center;
-        grid-column: span 2;
-        text-align: center;
-    }
-
-    #game-not-found-prompt {
-        color: var(--light-purple);
-        font-family: 'Inter', 'sans-serif';
-        font-size: 32px;
-        justify-self: center;
-    }
-
-    #screenshot-carousel-main-image {
-        width: 100%;
-        height: 500px;
-        object-fit: contain;
-    }
-
-    .screenshots {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 10px;
-    }
-    .screenshot {
-        width: 100%;
-        height: 80px;
-    }
-
-    .screenshot:hover {
-        cursor: pointer;
-        opacity: 50%;
-    }
-    .screenshot.active {
-        border: 1px solid var(--light-purple);
-        cursor: default;
-        height: 90px;
-    }
-
-    .screenshot.active:hover {
-        opacity: 100%;
-    }
-
-
-    #game-page-right {
-        overflow: hidden;
-    }
-    #game-page-image-right {
-        width: 100%;
-        height: 300px;
-        object-fit:contain;
-    }
-
-    #game-info {
-        font-family: 'Inter', 'sans-serif';
-        font-size: clamp(.6rem, 1.5vw, 70%);
-        font-weight: 100;
-    }
-
-    .game-info-list {
-        display: grid;
-        grid-template-columns: 2fr 5fr;
-    }
-
-    .game-info-list > ul {
-        display: grid;
-        grid-template-columns: repeat(5, fit-content(40%));
-        margin-bottom: 10px;
-    }
-
-    #game-overview > .description {
-        line-height: 110%;
-        margin-bottom: 10px;
-    }
-
-    #game-info .highlight {
-        color: var(--light-purple);
-    }
-
-    .released, .rating{
-        display: grid;
-        grid-template-columns: 2fr 5fr;
-        margin-bottom: 10px;
-    }
-
-    #game-platforms {
-        line-height: 120%;
-    }
-
-    @media screen and (max-width: 1250px) {
-        .game-page-main {
-            grid-template-columns: 1fr;
-        }
-        #screenshot-carousel {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 1000px) {
-        .game-page{
-            width: 100%;
-            margin-top: 15%;
-            height: fit-content;
-        }
-    }
-
-    @media screen and (max-width: 767px) {
-        .game-page{
-            margin-top: 0;
-        }
-    }*/
-
-
+    } 

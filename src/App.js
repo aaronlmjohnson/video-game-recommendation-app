@@ -22,6 +22,7 @@ function App () {
   // const [renderGameForm, setRenderGameForm] = useState(false);
   const [gamePageOpen, setGamePageOpen] = useState(false);
   const [game, setGame] = useState(null);
+  
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
 
@@ -45,16 +46,7 @@ function App () {
         setGame = {setGame}
       />
        {gamePageOpen && <GameDetail 
-        //  getRandomGame ={game.fetchRandom}
          gameId={game} 
-        //  dataExists = {game.dataExists}
-        //  loading={game.loading}
-        //  clear = {game.clear}
-        //  exists = {game.exists}
-        //  screenshots = {game.screenshots}
-        //  mainScreenshot = {game.mainScreenshot}
-        //  setMainScreenshot = {game.setMainScreenshot}
-        //  screenshotsExist = {game.screenshotsExist}
          setGamePageOpen= {setGamePageOpen}
       /> }
         {/* 
