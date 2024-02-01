@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 // import RecommendedGames from './components/RecommendedGames/RecommendedGames';
 // import FindAGame from './components/FindAGame/FindAGame';
 import useApiHandler from './components/useGameAPI/useApiHandler';
+import BentoContainer from './components/BentoContainer';
 
 
 function App () {
@@ -35,11 +36,7 @@ function App () {
   
   return (
     <div className="wrapper">
-      <PopularGamesSection 
-        url = {GAMES_URL}
-        setGamePageOpen = {setGamePageOpen}
-        setGame = {setGame}
-      />
+      <BentoContainer />
        {/* {gamePageOpen && <GameDetail 
          gameId={game} 
          setGamePageOpen= {setGamePageOpen}
