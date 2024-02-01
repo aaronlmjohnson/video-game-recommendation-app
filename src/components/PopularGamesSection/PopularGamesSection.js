@@ -8,14 +8,10 @@ import './PopularGamesSection.css';
 
 const PopularGamesSection = ({ url, setGamePageOpen, setGame })=>{
     //const { setGames, games, shiftLeft, shiftRight, positionNames, animationNames, gamesExist, onDisplay } = useCarousel();
-
+    const {data:games, loading:gamesLoading, error} = useApiHandler(`${url}&dates=2024-01-01,2024-12-31&page_size=16`);
     return (
         <main>
-            <GameCarousel 
-                url={url} 
-                setGamePageOpen = {setGamePageOpen}
-                setGame={setGame}
-            />
+            
         </main>
     );
 }

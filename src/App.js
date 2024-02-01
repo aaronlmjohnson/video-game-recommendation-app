@@ -35,20 +35,15 @@ function App () {
   
   return (
     <div className="wrapper">
-      <Navbar 
-          // getRandomGame={game.fetchRandom}
-          // setRenderGameForm={setRenderGameForm}
-          // setGamePageOpen={setGamePageOpen}
-        />
       <PopularGamesSection 
         url = {GAMES_URL}
         setGamePageOpen = {setGamePageOpen}
         setGame = {setGame}
       />
-       {gamePageOpen && <GameDetail 
+       {/* {gamePageOpen && <GameDetail 
          gameId={game} 
          setGamePageOpen= {setGamePageOpen}
-      /> }
+      /> } */}
         {/* 
         
       {gamePageOpen || renderGameForm ? <div id="overlay"></div> : null}
