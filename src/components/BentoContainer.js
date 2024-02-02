@@ -10,9 +10,9 @@ const BentoContainer = (props)=>{
                 depth={1}
                 maxDepth={maxDepth}
             />
-            <section className={`bento-sub-container depth-${1} vertical small`}>
-                <BentoNode />
-                <BentoNode />
+            <section className={`bento-sub-container depth-${1}`}>
+                <BentoNode position={"first"}/>
+                <BentoNode position={"second"}/>
             </section>
         </main>
     );

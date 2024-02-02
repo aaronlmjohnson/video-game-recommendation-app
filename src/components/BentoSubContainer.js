@@ -7,13 +7,12 @@ const BentoSubContainer = ({ depth, maxDepth }) => {
     const terminalBlock = () => {
         return (
             <>
-                <section className={`bento-sub-container depth-${depth + 1} ${direction[(depth + 1) % 2]} ${size[1]}`}>
-                    <BentoNode />
-                    <BentoNode />
+                <section className={`bento-sub-container terminal depth-${depth + 1} ${direction[(depth + 1) % 2]} ${size[1]}`}>
+                    <BentoNode position={"first"}/>
+                    <BentoNode position={"second"}/>
                 </section>
                 {(depth + 1 === maxDepth) ? <BentoNode main={true} /> : null}
             </>
-
         )
     }
 

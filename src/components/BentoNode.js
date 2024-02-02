@@ -1,4 +1,4 @@
-const BentoNode = ({main})=>{
+const BentoNode = ({main, position})=>{
     const hsl = [
         Math.ceil(Math.random() * 360),
         Math.ceil(Math.random() * 100),
@@ -6,7 +6,7 @@ const BentoNode = ({main})=>{
     ];
 
     return (
-        <div style={{background: `hsl(${hsl[0]} ${hsl[1]} ${hsl[2]})`}}className={`bento-node ${(main && "main-node") || ""}`}>
+        <div style={{background: `hsl(${hsl[0]} ${hsl[1]} ${hsl[2]})`}}className={`bento-node ${(main && "main-node") || position}`}>
 
         </div>
     );
