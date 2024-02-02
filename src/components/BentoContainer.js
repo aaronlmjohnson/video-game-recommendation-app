@@ -1,7 +1,7 @@
 import BentoSubContainer from "./BentoSubContainer";
 import BentoNode from "./BentoNode";
 
-const BentoContainer = (props)=>{
+const BentoContainer = ({ data })=>{
     const maxDepth = 4;
     console.log("terminal depth:", 1);
     return (

@@ -50,6 +50,5 @@ const BentoSubContainer = ({ depth, maxDepth }) => {
     );
 }
 
-
 export default BentoSubContainer;
 

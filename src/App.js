@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 // import FindAGame from './components/FindAGame/FindAGame';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import BentoContainer from './components/BentoContainer';
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 
 
 function App () {
@@ -21,9 +22,10 @@ function App () {
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
   // const [year, setYear] = useState(new Date().getFullYear()); 
   // const [renderGameForm, setRenderGameForm] = useState(false);
+
   const [gamePageOpen, setGamePageOpen] = useState(false);
   const [game, setGame] = useState(null);
-  
+  const {data:frontPageData, loading:frontPageLoading } = useApiHandler(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=2024-01-01,2024-12-31&page_size=8`)
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
 
@@ -36,38 +38,9 @@ function App () {
   
   return (
     <div className="wrapper">
-      <BentoContainer />
-       {/* {gamePageOpen && <GameDetail 
-         gameId={game} 
-         setGamePageOpen= {setGamePageOpen}
-      /> } */}
-        {/* 
-        
-      {gamePageOpen || renderGameForm ? <div id="overlay"></div> : null}
-      
-       
-       
-
-      {renderGameForm && 
-        <FindAGame 
-          recommendedGames = {recommendedGames}
-          setRenderGameForm = {setRenderGameForm}
-          data={formData}
-          handleSubmit={handleSubmit}
-          loading={recommendedGamesLoading}
-          setGamePageOpen={setGamePageOpen}
-          fetchGame = {game.fetchGame}
-        />
-      }
-
-      {/* <GameRecommendationForm 
-        data={formData}
-        handleSubmit={handleSubmit}
-        setRenderGameForm={setRenderGameForm}
-        loading={recommendedGamesLoading}
-      /> */}
-
-    
+      {frontPageLoading ? 
+      <LoadingScreen /> :
+      <BentoContainer />}
     </div>
   );
 }

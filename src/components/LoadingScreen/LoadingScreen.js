@@ -1,5 +1,5 @@
 const LoadingScreen = ()=>{
-    return(<div id="loading-screen">
+    return(<div className="loading-screen">
         <h1>Loading...</h1>
     </div>);
 }
