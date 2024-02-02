@@ -8,6 +8,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .wrapper{
     background: linear-gradient(135deg, var(--gradient-tl), var(--gradient-br));
     display: flex;
@@ -16,14 +17,49 @@ body{
     color: black;
     height: 100svh;
     width: 100svw;
-    padding: 8rem;
+    padding: 4rem 8rem;
 }
 
 /******* bento-container *******/
 
 .bento-container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    
+    grid-template-columns: 2fr 1fr;
+    border-radius: 1rem;
+}
+
+.bento-sub-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.bento-sub-container.vertical{
+    grid-template-rows: 1fr 1fr; 
+}
+
+.bento-sub-container.horizontal{
+    grid-template-columns: 1fr 1fr; 
+}
+
+.bento-sub-container.horizontal{
+    
+}
+
+
+.bento-node{
+    border: 1px solid black;
     width: 100%;
     height: 100%;
     background: white;
-    border-radius: 1rem;
 }
+
+
+
+
+
+
