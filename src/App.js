@@ -25,7 +25,7 @@ function App () {
 
   const [gamePageOpen, setGamePageOpen] = useState(false);
   const [game, setGame] = useState(null);
-  const {data:frontPageData, loading:frontPageLoading } = useApiHandler(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=2024-01-01,2024-12-31&page_size=8`)
+  const {data:frontPageData, loading:frontPageLoading } = useApiHandler(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=2022-01-01,2022-12-31&page_size=8`)
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
 

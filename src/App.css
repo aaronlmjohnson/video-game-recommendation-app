@@ -63,15 +63,20 @@ body{
 .bento-node{
     width: 100%;
     height: 100%;
-    background: white;
     background-size: cover;
     background-position: center;
+    border-radius: 1rem;
 }
 
 
 .bento-node:hover{
     transform: scale(1.4);
     animation: zoom-in .5s;
+}
+
+.main-node:hover{
+    transform: scale(1);
+    animation: none;
 }
 
 .bento-sub-container.vertical > .bento-node.first{
