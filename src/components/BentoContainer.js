@@ -3,18 +3,20 @@ import BentoNode from "./BentoNode";
 
 const BentoContainer = ({ data })=>{
     const maxDepth = 4;
-    console.log("terminal depth:", 1);
     return (
+        data ? 
         <main className="bento-container">
              <BentoSubContainer
                 depth={1}
                 maxDepth={maxDepth}
+                data={data}
             />
             <section className={`bento-sub-container depth-${1}`}>
-                <BentoNode position={"first"}/>
-                <BentoNode position={"second"}/>
+                <BentoNode position={"first"} index={"0"} data={data}/>
+                <BentoNode position={"second"} index={1} data={data}/>
             </section>
-        </main>
+        </main> :
+        <></>
     );
 }
     

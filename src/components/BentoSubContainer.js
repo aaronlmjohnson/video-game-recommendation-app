@@ -1,6 +1,6 @@
 import BentoNode from "./BentoNode";
 
-const BentoSubContainer = ({ depth, maxDepth }) => {
+const BentoSubContainer = ({ depth, maxDepth, data }) => {
     const direction = ["horizontal", "vertical"];
     const size = ["large", "small"];
 
@@ -8,10 +8,10 @@ const BentoSubContainer = ({ depth, maxDepth }) => {
         return (
             <>
                 <section className={`bento-sub-container terminal depth-${depth + 1} ${direction[(depth + 1) % 2]} ${size[1]}`}>
-                    <BentoNode position={"first"}/>
-                    <BentoNode position={"second"}/>
+                    <BentoNode position={"first"} index={depth * 2} data={data}/>
+                    <BentoNode position={"second"} index={(depth * 2) + 1} data={data}/>
                 </section>
-                {(depth + 1 === maxDepth) ? <BentoNode main={true} /> : null}
+                {(depth + 1 === maxDepth) ? <BentoNode main={true} index={null}/> : null}
             </>
         )
     }
@@ -22,6 +22,7 @@ const BentoSubContainer = ({ depth, maxDepth }) => {
                 <BentoSubContainer
                     depth={depth + 1}
                     maxDepth={maxDepth}
+                    data={data}
                 />
                 {terminalBlock()}
             </>
@@ -35,6 +36,7 @@ const BentoSubContainer = ({ depth, maxDepth }) => {
                 <BentoSubContainer
                     depth={depth + 1}
                     maxDepth={maxDepth}
+                    data={data}
                 />
             </>
         )

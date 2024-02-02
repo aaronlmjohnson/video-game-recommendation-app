@@ -64,7 +64,10 @@ body{
     width: 100%;
     height: 100%;
     background: white;
+    background-size: cover;
+    background-position: center;
 }
+
 
 .bento-node:hover{
     transform: scale(1.4);

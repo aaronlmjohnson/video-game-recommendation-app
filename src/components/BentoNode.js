@@ -1,16 +1,17 @@
-const BentoNode = ({main, position})=>{
+const BentoNode = ({ main, position, index, data }) => {
     const hsl = [
         Math.ceil(Math.random() * 360),
         Math.ceil(Math.random() * 100),
         50 + Math.ceil(Math.random() * 20)
     ];
 
-    return (
-        <div style={{background: `hsl(${hsl[0]} ${hsl[1]} ${hsl[2]})`}}className={`bento-node ${(main && "main-node") || position}`}>
+    const src = index ? data[index] : ""
 
+    return (
+        <div style={{ backgroundImage: `url(${src})` }} className={`bento-node ${(main && "main-node") || position}`}>
         </div>
     );
 }
-    
+
 
 export default BentoNode;

@@ -40,7 +40,9 @@ function App () {
     <div className="wrapper">
       {frontPageLoading ? 
       <LoadingScreen /> :
-      <BentoContainer />}
+      <BentoContainer 
+        data={frontPageData?.results.map((game)=> game.background_image)}
+      />}
     </div>
   );
 }
