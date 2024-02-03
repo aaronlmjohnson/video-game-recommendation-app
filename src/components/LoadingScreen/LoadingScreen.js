@@ -1,6 +1,13 @@
+import Animation from "../../scripts/Animation";
+const { WavyText } = Animation;
+
 const LoadingScreen = ()=>{
     return(<div className="loading-screen">
-        <h1>Loading...</h1>
+        
+            <WavyText 
+                text={"Loading..."}
+            />
+        
     </div>);
 }
 
