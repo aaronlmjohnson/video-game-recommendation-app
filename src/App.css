@@ -71,11 +71,6 @@ body{
     border-radius: 1rem;
 }
 
-.bento-node:hover{
-    transform: scale(1.4);
-    animation: zoom-in .5s;
-}
-
 .main-node:hover{
     transform: scale(1);
     animation: none;

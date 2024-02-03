@@ -38,7 +38,7 @@ function App () {
   
   return (
     <div className="wrapper">
-      {true ? 
+      {frontPageLoading ? 
       <LoadingScreen /> :
       <BentoContainer 
         data={frontPageData?.results.map((game)=> game.background_image)}
