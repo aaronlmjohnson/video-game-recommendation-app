@@ -31,21 +31,25 @@ const BentoNode = ({ main, position, index, data }) => {
         const nodeH = e.target.offsetHeight;
 
         const expandAnimation = [
-            { transform: "scaleX(1) scaleY(1)"},
-            { transform: `scaleX(${targetSize / nodeW}) scaleY(${targetSize / nodeH})`}
+            { transform: "scaleX(1) scaleY(1)", zIndex: '1000'},
+            { transform: `scaleX(${targetSize / nodeW}) scaleY(${targetSize / nodeH})`},
         ]
 
         const shrinkAnimation = [
             { transform: `scaleX(${targetSize / nodeW}) scaleY(${targetSize / nodeH})`},
-            { transform: `scaleX(1) scaleY(1)`}
+            { transform: `scaleX(1) scaleY(1)`, zIndex: '1'}
         ]
 
         const target = e.target;
         const finishHandler = ()=> {
                 target.style.transform = `scaleX(${targetSize / nodeW}) scaleY(${targetSize / nodeH})`
+                target.style.zIndex = '1000';
         };
 
-        const onShrinkFinish = ()=> target.style.transform = `scaleX(1) scaleY(1)`
+        const onShrinkFinish = ()=> {
+            target.style.transform = `scaleX(1) scaleY(1)`;
+            target.style.zIndex = '1';
+        }
 
         const onleaveHandler = ()=> e.target.animate(shrinkAnimation, timing).onfinish = onShrinkFinish;
         const targetAnimation = e.target.animate( expandAnimation, timing);
@@ -53,22 +57,13 @@ const BentoNode = ({ main, position, index, data }) => {
         targetAnimation.onfinish = finishHandler;
 
         e.target.onmouseleave = onleaveHandler
-        
-        
     }
 
     const timing = {
         duration: 500,
         iterations: 1,
+        easing: "ease-out"
       };
-
-    //on hover determine the blocks size
-    //scale in size until it reaches a size of roughly 500x500px
-    //other effects???
-
-    //need to get the current size of the node that's being hovered
-
-    //backgroundImage: `url(${src})`
 
     const src = index ? data[index] : ""
 
