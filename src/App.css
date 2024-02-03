@@ -89,10 +89,26 @@ body{
     grid-row: span 2;
     background: none !important;
 }
+span{
+    display: inline-block;
+}
 
 @media (max-width: 1024px){
 
 }
+
+@keyframes zoom-in {
+    0%{
+        transform: scale(1)
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}
+
+
+
+
 
 
 
