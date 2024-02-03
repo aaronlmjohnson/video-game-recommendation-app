@@ -72,8 +72,7 @@ body{
 }
 
 .main-node:hover{
-    transform: scale(1);
-    animation: none;
+
 }
 
 .bento-sub-container.vertical > .bento-node.first{

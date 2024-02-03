@@ -68,10 +68,10 @@ const BentoNode = ({ main, position, index, data }) => {
     const src = index ? data[index] : ""
 
     return (
+        main ?
+        <MainNode /> :
         <div style={styleBlock()} className={`bento-node ${(main && "main-node") || position}`} onMouseEnter={scaleAnimation} >
-            {
-                main ? <MainNode /> : <></>
-            }
+            
         </div>
     );
 }
