@@ -1,8 +1,10 @@
 @import url(Animations.css);
 
 :root{
-    --gradient-br: #7147f1;
-    --gradient-tl: #242134;
+    --gradient-top: #0c0c14;
+    --gradient-middle: #241434;
+    --gradient-bottom: #975ad4;
+
     --main-bg-color-op-50: hsla(0, 0%, 12%, 0.507);  
     --i: 0;  
 }
@@ -10,9 +12,9 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* background: black linear-gradient(180deg, var(--gradient-top), var(--gradient-middle), var(--gradient-bottom)); */
 
 .wrapper{
-    background: linear-gradient(135deg, var(--gradient-tl), var(--gradient-br));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,10 +67,47 @@ body{
 
 .bento-node{
     width: 100%;
-    height: 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
+}
+
+.bento-node > .overlay {
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.overlay > .game-name {
+    position: relative;
+    color: rgba(48, 48, 48, 1);
+    background: white;
+    padding: .5rem;
+    opacity: 0;
+    transition: all .25s ease;
+    border-radius: 1rem;
+}
+
+
+.bento-node:hover {
+    /* transform: rotate(.5deg); */
+    cursor: pointer;
+}
+
+.bento-node > .overlay:hover {
+    background: rgba(0, 0, 0, .4);
+    transition: fade-in transform .25s ease;
+
+}
+
+.bento-node > .overlay:hover > .game-name {
+    opacity: 1;
+    transform: translateY(-50%);
 }
 
 .main-node:hover{
@@ -82,6 +121,9 @@ body{
 .main-node{
     grid-row: span 2;
     background: none !important;
+}
+h1{
+    color: white;
 }
 span{
     display: inline-block;
@@ -97,6 +139,18 @@ span{
     }
     100%{
         transform: scale(1.4);
+    }
+}
+
+
+
+@keyframes fade-in-and-up {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-50%);
     }
 }
 

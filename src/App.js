@@ -35,13 +35,20 @@ function App () {
     const formData = new FormData(e.target);
     // fetchRecommendedGames(formData);
   }
+
+  const nameAndImageData = (data)=>{
+    return data?.results.reduce((accum, game)=> {
+      accum.push({src: game.background_image, name: game.name});
+      return accum;
+    }, [])
+  }
   
   return (
     <div className="wrapper">
       {frontPageLoading ? 
       <LoadingScreen /> :
       <BentoContainer 
-        data={frontPageData?.results.map((game)=> game.background_image)}
+        data={nameAndImageData(frontPageData)}
       />}
     </div>
   );
