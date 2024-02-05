@@ -35,7 +35,6 @@ body{
     display: grid;
     gap: 1.5rem;
     padding: 1.5rem;
-    min-width: 1200px;
     height: 100%;
     grid-template-columns: 2fr 1fr;
     border-radius: 1rem;
@@ -71,6 +70,7 @@ body{
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
+    transform: rotate(.5deg);
 }
 
 .bento-node > .overlay {
@@ -81,13 +81,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: end;
+    transition: all .25s ease;
+
 }
 
 .overlay > .game-name {
     position: relative;
     color: rgba(48, 48, 48, 1);
     background: white;
-    padding: .5rem;
+    font-weight: bold;
+    padding: 1rem;
     opacity: 0;
     transition: all .25s ease;
     border-radius: 1rem;
@@ -101,13 +104,14 @@ body{
 
 .bento-node > .overlay:hover {
     background: rgba(0, 0, 0, .4);
-    transition: fade-in transform .25s ease;
 
 }
 
+
 .bento-node > .overlay:hover > .game-name {
     opacity: 1;
-    transform: translateY(-50%);
+    transform: translateY(-50%) ;
+    
 }
 
 .main-node:hover{
