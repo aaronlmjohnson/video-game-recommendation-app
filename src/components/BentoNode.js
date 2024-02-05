@@ -17,7 +17,10 @@ const BentoNode = ({ main, position, index, data }) => {
     const MainNode = ()=>{
 
         return(
-            <Spline scene="https://prod.spline.design/L5w1gdU9GPblzZPb/scene.splinecode"  className=".spline-main"/>
+            <div className={`bento-node main-node`}>
+                <Spline scene="https://prod.spline.design/L5w1gdU9GPblzZPb/scene.splinecode" />
+            </div>
+            
         )
     }
 
