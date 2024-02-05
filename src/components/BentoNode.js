@@ -1,4 +1,9 @@
 import { useState } from "react";
+import { Application } from '@splinetool/runtime';
+
+import Spline from '@splinetool/react-spline';
+
+
 
 const BentoNode = ({ main, position, index, data }) => {
     const [reversing, setReversing] = useState(false);
@@ -12,9 +17,7 @@ const BentoNode = ({ main, position, index, data }) => {
     const MainNode = ()=>{
 
         return(
-            <>
-                <h1>2024</h1>
-            </>
+            <Spline scene="https://prod.spline.design/L5w1gdU9GPblzZPb/scene.splinecode"  className=".spline-main"/>
         )
     }
 

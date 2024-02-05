@@ -1,6 +1,7 @@
 import BentoSubContainer from "./BentoSubContainer";
 import BentoNode from "./BentoNode";
 
+
 const BentoContainer = ({ data })=>{
     const maxDepth = 4;
     return (
@@ -22,3 +23,4 @@ const BentoContainer = ({ data })=>{
     
 
 export default BentoContainer;
+
