@@ -1,26 +1,25 @@
 import { useState } from "react";
-import { Application } from '@splinetool/runtime';
-
-import Spline from '@splinetool/react-spline';
-
-
+import SplineSceneHandler from "./SplineSceneHandler";
 
 const BentoNode = ({ main, position, index, data }) => {
+
     const [reversing, setReversing] = useState(false);
     const hsl = [
         Math.ceil(Math.random() * 360),
         Math.ceil(Math.random() * 100),
         50 + Math.ceil(Math.random() * 20)
     ];
+    
 
+    
 
     const MainNode = ()=>{
+        
 
+        
         return(
             <div className={`bento-node main-node`}>
-                <button className="spline-button">
-                    <Spline scene="https://prod.spline.design/L5w1gdU9GPblzZPb/scene.splinecode" className="spline-div"/>
-                </button>
+                    
             </div>
             
         )

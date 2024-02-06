@@ -136,7 +136,7 @@ span{
     display: inline-block;
 }
 /******* spline styles *******/
-.spline-div{
+/* .spline-div{
     
 }
 
@@ -145,7 +145,7 @@ span{
     padding: 0;
     border: none;
     cursor: pointer;
-}
+} */
 
 
 @media (max-width: 1024px){
