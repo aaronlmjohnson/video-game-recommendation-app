@@ -4,7 +4,7 @@ const MainBentoNode = ()=>{
 
     return(
         <div className={`bento-node main-node`}>
-                    
+                <SplineSceneHandler />  
         </div>
     )
 }

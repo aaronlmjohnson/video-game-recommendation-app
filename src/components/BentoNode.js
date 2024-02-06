@@ -15,7 +15,6 @@ const BentoNode = ({ main, position, index, data }) => {
         return {
             'backgroundImage' : `url(${src})`,
             // 'background': `hsl(${hsl[0]} ${hsl[1]} ${hsl[2]})`,
-            
         }
     }
 
