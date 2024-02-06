@@ -1,5 +1,6 @@
 import { useState } from "react";
-import SplineSceneHandler from "./SplineSceneHandler";
+
+import MainBentoNode from "./MainBentoNode";
 
 const BentoNode = ({ main, position, index, data }) => {
 
@@ -9,21 +10,6 @@ const BentoNode = ({ main, position, index, data }) => {
         Math.ceil(Math.random() * 100),
         50 + Math.ceil(Math.random() * 20)
     ];
-    
-
-    
-
-    const MainNode = ()=>{
-        
-
-        
-        return(
-            <div className={`bento-node main-node`}>
-                    
-            </div>
-            
-        )
-    }
 
     const styleBlock = ()=>{
         return {
@@ -33,13 +19,11 @@ const BentoNode = ({ main, position, index, data }) => {
         }
     }
 
-
-    
     const src = index ? data[index].src : ""
 
     return (
         main ?
-        <MainNode /> :
+        <MainBentoNode /> :
         <div style={styleBlock()} className={`bento-node ${(main && "main-node") || position}`}>
             <div className="overlay">
                 <h2 className="game-name">{data[index].name}</h2>
