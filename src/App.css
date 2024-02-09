@@ -36,31 +36,46 @@ body{
     gap: 1.5rem;
     min-width: 1024px;
     height: 80%;
-    border: 5px solid black;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
     border-radius: 1rem;
 }
 
 .bento-sub-container {
     display: grid;
-    background: hsl(283, 37%, 76%);
+    gap: 1rem;
 }
 
 .bento-sub-container.zero.top.left {
     grid-template-rows: 1fr 2fr;
-    gap: 1.5rem;
 }
+
+.bento-sub-container.zero.top {
+    grid-template-rows: 3fr 2fr;
+}
+
+.bento-sub-container.zero.bottom {
+    grid-column: span 2;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: subgrid;
+}
+
+.bento-sub-container.one.top{
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .bento-sub-container.one.bottom{
+    grid-template-columns: 1fr 2fr;
+  }
 
 .bento-node{
+    background: hsl(283, 37%, 76%);
+
     width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1rem;
-    transform: rotate(.5deg);
+    height: 100%;
 }
 
-.bento-node > .overlay {
+/* .bento-node > .overlay {
     background: rgba(0, 0, 0, 0);
     width: 100%;
     height: 100%;
@@ -81,7 +96,7 @@ body{
     transition: all .25s ease;
     border-radius: 1rem;
     font-size: 1rem;
-}
+} */
 
 
 .bento-node:hover {
@@ -123,8 +138,23 @@ span{
 @media (max-width: 768px){
     .bento-container{
         min-width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .bento-sub-container.zero.top.left {
+        grid-column: span 2;
+    }
+    
+    .bento-sub-container.zero.top {
+        
+    }
+    
+    .bento-sub-container.zero.bottom {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column: span 1;
+
     }
 }
 
