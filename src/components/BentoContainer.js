@@ -10,6 +10,7 @@ const BentoContainer = ({ data })=>{
           return (
             <BentoNode 
               data={dataItem}
+              key={dataItem.id}
             />
           )
         })
