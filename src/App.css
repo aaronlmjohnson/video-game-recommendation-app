@@ -68,7 +68,7 @@ body{
   .bento-sub-container.one.bottom{
     grid-template-columns: 1fr 2fr;
   }
-
+/******* Bento Node *******/
 .bento-node{
     position:relative;
     border-radius: 1rem;
@@ -82,12 +82,6 @@ body{
     border: none;
 }
 
-.bento-node.main > .year-selection-form{
-    grid-column: span 2;
-    border: 3px solid white;
-    border-radius: 1rem;
-}
-
 .bento-node > img{
     width: 0;
     height: 0;
@@ -95,7 +89,6 @@ body{
     min-height: 100%;
     object-fit: cover;
     border-radius: 1rem;
-
 }
 
 .bento-node > .overlay {
@@ -126,7 +119,14 @@ body{
 
 
 .bento-node:hover {
-    /* transform: rotate(.5deg); */
+    cursor: pointer;
+}
+
+.bento-node.main:hover {
+    cursor: default;
+}
+
+.bento-node.main:hover button{
     cursor: pointer;
 }
 
@@ -148,6 +148,53 @@ h1{
 }
 span{
     display: inline-block;
+}
+
+/******* year selection form *******/
+.year-selection-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2;
+    border: 3px solid white;
+    border-radius: 1rem;
+}
+.year-selection-form{
+    display: flex;
+    flex-direction: column  ;
+}
+
+.year-selection-form .year-container{
+    display: flex;
+}
+.year-selection-form button{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: none;
+}
+
+button.submit {
+    background: white;
+    width: 100%;
+    color: #6444FB;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: .25rem 0;
+}
+
+.year-selection-form  input{
+    font-size: 4rem;
+    border: none;
+    padding: 0;
+    width: 8.8rem;
+    background: none;
+    color: white;
+    font-weight: bold;
+    appearance: none;
 }
 
 /*** Small Screens ***/
