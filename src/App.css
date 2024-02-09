@@ -11,6 +11,7 @@
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #6444fb;
 }
 /* background: black linear-gradient(180deg, var(--gradient-top), var(--gradient-middle), var(--gradient-bottom)); */
 
@@ -71,7 +72,20 @@ body{
 .bento-node{
     position:relative;
     border-radius: 1rem;
+    border: 3px solid white;
+}
 
+.bento-node.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 2fr;
+    border: none;
+}
+
+.bento-node.main > .year-selection-form{
+    grid-column: span 2;
+    border: 3px solid white;
+    border-radius: 1rem;
 }
 
 .bento-node > img{
@@ -128,9 +142,6 @@ body{
     
 }
 
-.main-node:hover{
-    cursor: default;
-}
 
 h1{
     color: white;

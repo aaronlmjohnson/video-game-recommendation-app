@@ -1,9 +1,12 @@
+import YearSelectionForm from "./YearSelectionForm";
 
 const MainBentoNode = ()=>{
 
     return(
         <div className={`bento-node main`}>
-                Main content
+            <YearSelectionForm />
+            <div></div>
+            <div></div>
         </div>
     )
 }
