@@ -1,19 +1,19 @@
 import BentoSubContainer from "./BentoSubContainer";
 import BentoNode from "./BentoNode";
 
-
 const BentoContainer = ({ data })=>{
-    const handleNodes = (count)=>{
-        const nodeArr = [];
-        //handle adding data
-        for(let i = 0; i < count; i++){
-            nodeArr.push(
-                <BentoNode 
-                
-                />
-            )
-        }
-        return nodeArr;
+
+    const handleNodes = (dataStart, dataEnd)=>{
+        const dataSegment = data.slice(dataStart, dataEnd);
+
+        const nodes = dataSegment.map((dataItem)=>{
+          return (
+            <BentoNode 
+              data={dataItem}
+            />
+          )
+        })
+        return nodes.length === 1 ? [...nodes, <BentoNode main={true}/>] : nodes;
     }
 
     return (
@@ -22,26 +22,25 @@ const BentoContainer = ({ data })=>{
           <section className={`bento-sub-container zero top left`}>
             <BentoSubContainer 
                 classList = {"bento-sub-container one top"}
-                bentoNodes={handleNodes(2)}
+                bentoNodes={handleNodes(6, 8)}
             />
             <BentoSubContainer 
                 classList = {"bento-sub-container one bottom"}
-                bentoNodes={handleNodes(2)}
+                bentoNodes={handleNodes(8, 10)}
             />
           </section>
           <BentoSubContainer 
             classList = {"bento-sub-container zero top"}
-            bentoNodes={handleNodes(2)}
+            bentoNodes={handleNodes(0, 2)}
           />
           <BentoSubContainer 
             classList = {"bento-sub-container zero bottom"}
-            bentoNodes={handleNodes(4)}
+            bentoNodes={handleNodes(2, 6)}
           />
         </main> :
         <></>
     );
 }
     
-
 export default BentoContainer;
 
