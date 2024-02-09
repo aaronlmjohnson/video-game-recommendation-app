@@ -3,11 +3,21 @@ import BentoNode from "./BentoNode";
 
 
 const BentoContainer = ({ data })=>{
-    const maxDepth = 4;
+    const handleNodes = (count)=>{
+        const nodeArr = [];
+
+        for(let i = 0; i < count; i++){
+            
+        }
+    }
     return (
         data ? 
         <main className="bento-container">
              <BentoSubContainer
+                classList={"zero "}
+                bentoNodes={handleNodes()}
+            />
+            <BentoSubContainer
                 classList={"zero "}
             />
         </main> :

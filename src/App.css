@@ -41,6 +41,16 @@ body{
     border-radius: 1rem;
 }
 
+.bento-sub-container {
+    display: grid;
+    background: hsl(283, 37%, 76%);
+}
+
+.bento-sub-container.zero.top.left {
+    grid-template-rows: 1fr 2fr;
+    gap: 1.5rem;
+}
+
 .bento-node{
     width: 100%;
     height: auto;
