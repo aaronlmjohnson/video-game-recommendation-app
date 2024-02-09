@@ -8,14 +8,8 @@ const BentoContainer = ({ data })=>{
         data ? 
         <main className="bento-container">
              <BentoSubContainer
-                depth={1}
-                maxDepth={maxDepth}
-                data={data}
+                classList={"zero "}
             />
-            <section className={`bento-sub-container depth-${1}`}>
-                <BentoNode position={"first"} index={"0"} data={data}/>
-                <BentoNode position={"second"} index={1} data={data}/>
-            </section>
         </main> :
         <></>
     );
