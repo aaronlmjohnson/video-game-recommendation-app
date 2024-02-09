@@ -1,15 +1,12 @@
-import { useState } from "react";
-
-import MainBentoNode from "./MainBentoNode";
-
-const BentoNode = ({data, main}) => {
+const BentoNode = ({data }) => {
     return (
-        main ? 
-        <div className={`bento-node main`}>
 
-        </div> :
         <div className={`bento-node `}>
-            <img src={data.src} alt={"image"}/>
+            <div className="overlay">
+                <h2 className={"game-name"}>{data.name}</h2>
+            </div>
+            <img src={data.src} alt={data.name}/>
+            
         </div>
     );
 }

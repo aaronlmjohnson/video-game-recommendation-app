@@ -69,8 +69,9 @@ body{
   }
 
 .bento-node{
-    background: hsl(283, 37%, 76%);
-    
+    position:relative;
+    border-radius: 1rem;
+
 }
 
 .bento-node > img{
@@ -79,21 +80,26 @@ body{
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+    border-radius: 1rem;
+
 }
 
-/* .bento-node > .overlay {
+.bento-node > .overlay {
+    display:flex;
+    align-items: end;
+    justify-content: center;
     background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
     align-items: end;
     transition: all .25s ease;
 }
 
 .overlay > .game-name {
-    position: relative;
     color: rgba(48, 48, 48, 1);
     background: white;
     font-weight: bold;
@@ -102,7 +108,7 @@ body{
     transition: all .25s ease;
     border-radius: 1rem;
     font-size: 1rem;
-} */
+} 
 
 
 .bento-node:hover {

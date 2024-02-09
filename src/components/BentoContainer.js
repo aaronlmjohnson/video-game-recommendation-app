@@ -1,5 +1,6 @@
 import BentoSubContainer from "./BentoSubContainer";
 import BentoNode from "./BentoNode";
+import MainBentoNode from "./MainBentoNode";
 
 const BentoContainer = ({ data })=>{
 
@@ -14,7 +15,7 @@ const BentoContainer = ({ data })=>{
             />
           )
         })
-        return nodes.length === 1 ? [...nodes, <BentoNode main={true}/>] : nodes;
+        return nodes.length === 1 ? [...nodes, <MainBentoNode />] : nodes;
     }
 
     return (

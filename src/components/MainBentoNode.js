@@ -2,7 +2,7 @@
 const MainBentoNode = ()=>{
 
     return(
-        <div className={`bento-node main-node`}>
+        <div className={`bento-node main`}>
                 Main content
         </div>
     )
