@@ -14,29 +14,29 @@ body{
 }
 /* background: black linear-gradient(180deg, var(--gradient-top), var(--gradient-middle), var(--gradient-bottom)); */
 
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    height: 100svh;
-    width: 100svw;
-    padding: 4rem 8rem;
-}
+
 /******* loading-screen *******/
 .loading-screen > h1{
     font-size: 4rem;
     color: white;
 }
+/*****************************/
 
+.wrapper{
+    display: flex;
+    color: black;
+    height: 100svh;
+}
 
 /******* bento-container *******/
 
 .bento-container {
     display: grid;
+    margin: auto;
     gap: 1.5rem;
-    padding: 1.5rem;
-    height: 100%;
+    min-width: 1024px;
+    height: 80%;
+    border: 5px solid black;
     grid-template-columns: 2fr 1fr;
     border-radius: 1rem;
 }
@@ -59,9 +59,7 @@ body{
     justify-content: center;
     align-items: end;
     transition: all .25s ease;
-
 }
-
 
 .overlay > .game-name {
     position: relative;
@@ -104,10 +102,29 @@ span{
     display: inline-block;
 }
 
-
+/*** Small Screens ***/
 @media (max-width: 1024px){
-
+    .bento-container{
+        min-width: 768px;
+    }
 }
+
+/*** Tablets ***/
+@media (max-width: 768px){
+    .bento-container{
+        min-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+}
+
+/*** Mobile Devices ***/
+@media (max-width: 480px){
+    .bento-container{
+        min-width: 768px;
+    }
+}
+
 
 @keyframes zoom-in {
     0%{
