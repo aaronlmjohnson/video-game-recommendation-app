@@ -300,8 +300,6 @@ span{
     }
 }
 
-
-
 @keyframes fade-in-and-up {
     0%{
         transform: translateY(0);
