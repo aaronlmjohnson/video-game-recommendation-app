@@ -1,11 +1,12 @@
 import YearSelectionForm from "./YearSelectionForm";
+import RandomGameButton from "./RandomGameButton";
 
 const MainBentoNode = ()=>{
 
     return(
         <div className={`bento-node main`}>
             <YearSelectionForm />
-            <div></div>
+            <RandomGameButton />
             <div></div>
         </div>
     )
