@@ -80,6 +80,7 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr 2fr;
     border: none;
+    gap: 1rem;
 }
 
 .bento-node > img{
@@ -153,7 +154,7 @@ span{
     justify-content: center;
     align-items: center;
     grid-column: span 2;
-    /* border: 3px solid white; */
+    border: 3px solid white;
     border-radius: 1rem;
 }
 .year-selection-form{
@@ -194,7 +195,7 @@ button.submit {
 }
 
 /******* Random Game Button *******/
-.random-game-button{
+.random-game-button, .search-form-button{
     display: flex;
     position: relative;
     flex-direction: column;
@@ -211,7 +212,7 @@ button.submit {
 .random-game-button-container:hover > .random-game-header.inactive {
 }
 
-.random-game-header{
+.random-game-header, .select-form-header{
     font-size: 1rem;
     color: white;
 
