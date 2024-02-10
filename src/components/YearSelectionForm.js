@@ -1,27 +1,41 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { useContext } from 'react'
+import { YearContext } from '../App'
 
 const YearSelectionForm = ()=>{
+    const {year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch} = useContext(YearContext);
+    const api_url = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${year}-01-01,${year}-12-31&page_size=9`
+
     const handleYear = (e)=>{
         e.preventDefault();
-        console.log("year")
+        const direction = e.currentTarget.classList[0];
+
+        if(direction === "left")
+            setYear(prevYear => prevYear - 1 < FIRST_YEAR ? FIRST_YEAR : prevYear - 1);
+        else 
+            setYear(prevYear => prevYear + 1 > CURRENT_YEAR ? CURRENT_YEAR : prevYear + 1);
     }
+
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        refetch(api_url);
+    }
+
     return(
         <div className="year-selection-form-container">
-            <form className="year-selection-form">
+            <form className="year-selection-form" onSubmit={handleSubmit}>
                 <div className="year-container">
-                    <button onClick={handleYear}>
-                    <FontAwesomeIcon icon={faAngleLeft} />
+                    <button className="left" onClick={handleYear}>
+                        <FontAwesomeIcon icon={faAngleLeft} />
                     </button>
-                    <input value={2024} />
-                    <button onClick={handleYear}>
+                    <p className="year-text">{year}</p>
+                    <button className="right" onClick={handleYear}>
                         <FontAwesomeIcon icon={faAngleRight} />
                     </button>
                 </div>
             
-            <button className="submit" type="submit">
-                Search
-            </button>
+            <input className="submit" type="submit" value={"Search"} />
         </form>
         </div>
        

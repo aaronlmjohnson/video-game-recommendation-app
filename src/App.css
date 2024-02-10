@@ -17,6 +17,12 @@ body{
 
 
 /******* loading-screen *******/
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .loading-screen > h1{
     font-size: 4rem;
     color: white;
@@ -183,7 +189,7 @@ button.submit {
     padding: .25rem 0;
 }
 
-.year-selection-form  input{
+.year-text{
     font-size: 4rem;
     border: none;
     padding: 0;

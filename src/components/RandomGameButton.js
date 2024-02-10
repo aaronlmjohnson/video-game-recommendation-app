@@ -11,7 +11,6 @@ const RandomGameButton = ()=>{
 
     const handleHover = ()=>{
         setHeaderActive(true);
-        console.log(headerActive)
     }
 
     const handleLeave = ()=>{
