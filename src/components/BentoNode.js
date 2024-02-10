@@ -1,7 +1,13 @@
-const BentoNode = ({ data }) => {
-    const handleClick = ()=>{
+import { useContext } from "react";
+import { YearContext } from "../App";
 
+const BentoNode = ({ data }) => {
+    const { setGameDetailOpen } = useContext(YearContext);
+
+    const handleClick = ()=>{
+        setGameDetailOpen(true);
     }
+    
     return (
         <div className={`bento-node`} onClick={handleClick}>
             <div className="overlay">

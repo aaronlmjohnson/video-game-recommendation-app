@@ -80,7 +80,7 @@ body{
     border-radius: 1rem;
     border: 3px solid white;
     transition: all .2s ease-in;
-
+    z-index: 2;
 }
 
 .bento-node:hover{
@@ -95,10 +95,10 @@ body{
     border: none;
     gap: 1rem;
     transition: none;
+    z-index: 1;
 }
 .bento-node.main:hover{
     transform: none;
-    z-index: 1;
 }
 
 .bento-node > img{
