@@ -1,7 +1,9 @@
-const BentoNode = ({data }) => {
-    
+const BentoNode = ({ data }) => {
+    const handleClick = ()=>{
+
+    }
     return (
-        <div className={`bento-node `}>
+        <div className={`bento-node`} onClick={handleClick}>
             <div className="overlay">
                 <h2 className={"game-name"}>{data.name}</h2>
             </div>

@@ -79,6 +79,13 @@ body{
     position:relative;
     border-radius: 1rem;
     border: 3px solid white;
+    transition: all .2s ease-in;
+
+}
+
+.bento-node:hover{
+    transform: scale(1.3);
+    z-index: 20;
 }
 
 .bento-node.main{
@@ -87,6 +94,11 @@ body{
     grid-template-rows: 3fr 2fr;
     border: none;
     gap: 1rem;
+    transition: none;
+}
+.bento-node.main:hover{
+    transform: none;
+    z-index: 1;
 }
 
 .bento-node > img{
