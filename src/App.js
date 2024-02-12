@@ -10,10 +10,11 @@ import { createContext, useEffect, useState } from 'react';
 // import developers from './developers.json';
 // import useRecommendedGames from './components/useRecommendedGames/useRecommendedGames';
 // import RecommendedGames from './components/RecommendedGames/RecommendedGames';
-// import FindAGame from './components/FindAGame/FindAGame';
+import FindAGame from './components/FindAGame/FindAGame';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import BentoContainer from './components/BentoContainer';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+import GameSearchForm from './components/GameSearchForm';
 export const YearContext = createContext();
 
 function App () {
@@ -25,7 +26,9 @@ function App () {
   const FIRST_YEAR = 1972;
   const [year, setYear] = useState(CURRENT_YEAR); 
   // const [renderGameForm, setRenderGameForm] = useState(false);
-  const {data:gameData, loading: gameDataLoading, refetch:fetchGameData} = useState(false);
+  const [gameId, setGameId] = useState(null);
+  const [gameDetailOpen, setGameDetailOpen] = useState(false);
+  const [gameSearchFormOpen, setSearchFormOpen] = useState(true);
   const {data:frontPageData, loading:frontPageLoading, refetch} = useApiHandler(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${year}-01-01,${year}-12-31&page_size=9`)
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
@@ -45,12 +48,14 @@ function App () {
   }
   
   return (
-    <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, fetchGameData}}>
+    <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId, setSearchFormOpen}}>
       <div className="wrapper">
         {
           frontPageLoading ? 
           <LoadingScreen /> :
           <>
+            {gameDetailOpen && <GameDetail />}
+            {gameSearchFormOpen && <GameSearchForm />}
             <BentoContainer 
               data={nameAndImageData(frontPageData)}
               year={year}

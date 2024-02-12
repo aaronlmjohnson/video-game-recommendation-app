@@ -2,9 +2,10 @@ import { useContext } from "react";
 import { YearContext } from "../App";
 
 const BentoNode = ({ data }) => {
-    const { setGameDetailOpen } = useContext(YearContext);
+    const { setGameDetailOpen, setGameId } = useContext(YearContext);
 
     const handleClick = ()=>{
+        setGameId(data.id);
         setGameDetailOpen(true);
     }
     

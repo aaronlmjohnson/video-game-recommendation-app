@@ -20,9 +20,9 @@ const FindAGame = ({setRenderGameForm, recommendedGames, data, handleSubmit, loa
                     setRenderGameForm={null}
                     loading={loading}
                 />
-                {!loading() ? 
+                {/* {!loading() ? 
                     <RecommendedGames data={recommendedGames} setGamePageOpen={setGamePageOpen} fetchGame={fetchGame} /> : <>Loading</> 
-                }
+                } */}
             </div>
         </div>
     )

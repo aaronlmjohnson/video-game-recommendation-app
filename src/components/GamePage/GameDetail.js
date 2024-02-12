@@ -4,11 +4,15 @@ import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 import GameNotFound from './GameNotFound';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { YearContext } from '../../App';
 import useApiHandler from '../useGameAPI/useApiHandler';
 import GameDetailList from './GameDetailList';
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 
-const GamePage = ({ setGamePageOpen, gameId })=>{
+const GameDetail = ()=>{
+    const { setGameDetailOpen, gameId } = useContext(YearContext);
+
     const [mainScreenshot, setMainScreenshot] = useState(null);
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
 
@@ -24,15 +28,17 @@ const GamePage = ({ setGamePageOpen, gameId })=>{
     }
 
         return(
-            (gameLoading && screenshotsLoading) ? 
-            "":
-            gameData &&
             <> 
                 <div className="overlay"></div>
-                <section className="game-detail">
+                
+                {/* (gameLoading && screenshotsLoading) ? 
+            gameData && */}
+            {gameLoading && screenshotsLoading ?
+                <LoadingScreen /> :
+                gameData && <section className="game-detail">
                     <nav>
                         <h1 >{gameData.name}</h1>
-                        <button onClick={()=> setGamePageOpen(false)}>Close</button>
+                        <button onClick={()=> setGameDetailOpen(false)}>Close</button>
                     </nav>
                     <section className="game-detail-content">
                         <section className="screenshot-section">
@@ -51,8 +57,9 @@ const GamePage = ({ setGamePageOpen, gameId })=>{
                         </aside>
                     </section>
                 </section>
+            }
             </>
         )
 }
 
-export default GamePage;
+export default GameDetail;

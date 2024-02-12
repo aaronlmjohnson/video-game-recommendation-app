@@ -1,17 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { YearContext } from '../App';
 
 const SearchFormButton = ()=>{
-    const [headerActive, setHeaderActive] = useState(false)
+    const [headerActive, setHeaderActive] = useState(false);
+
+    const { setSearchFormOpen } = useContext(YearContext);
+
     const handleClick = (e)=>{
         e.preventDefault();
-        console.log("year")
+        setSearchFormOpen(true);
     }
 
     const handleHover = ()=>{
         setHeaderActive(true);
-        console.log(headerActive)
     }
 
     const handleLeave = ()=>{
@@ -19,7 +22,7 @@ const SearchFormButton = ()=>{
     }
 
     return(
-        <button className="search-form-button">
+        <button className="search-form-button" onClick={handleClick}>
             <h2 className="select-form-header">
                 Search for a Game
             </h2>
