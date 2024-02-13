@@ -15,6 +15,7 @@ import useApiHandler from './components/useGameAPI/useApiHandler';
 import BentoContainer from './components/BentoContainer';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import GameSearchForm from './components/GameSearchForm';
+import GameFilterOptions from './components/GameFilterOptions';
 export const YearContext = createContext();
 
 function App () {
@@ -54,6 +55,7 @@ function App () {
           frontPageLoading ? 
           <LoadingScreen /> :
           <>
+          <GameFilterOptions />
             {gameDetailOpen && <GameDetail />}
             <BentoContainer 
               data={nameAndImageData(frontPageData)}
