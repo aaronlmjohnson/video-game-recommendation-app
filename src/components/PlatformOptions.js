@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import CheckboxesListing from "./CheckboxesListing";
 
 
-const PlatformOptions = ({ platforms })=>{
+const PlatformOptions = ({ platforms, form, setForm })=>{
+
    const platformsPlaceholder = [
     {
     "id": 4,
@@ -196,11 +198,31 @@ const PlatformOptions = ({ platforms })=>{
     ]
     }
     ]
+
+    const [checked, setChecked] = useState([]);
+
+    useEffect(()=>{
+        console.log(checked);
+    }, [checked])
+
+
+    // const platformHandler = (e)=>{
+    //     setChecked(
+    //          prevState =>{
+    //             if(e.target.checked)
+    //                 return [...prevState, e.target.value];
+    //             else 
+    //                 return prevState?.filter(option => option !== e.target.value && !e.target.checked);
+    //         }
+    //     )
+    // }
     return (
         <div className="platform-options">
              <h2>Platforms</h2>
              <CheckboxesListing 
                 data={platformsPlaceholder}
+                checked={checked}
+                setChecked={setChecked}
              />
         </div>
     )
