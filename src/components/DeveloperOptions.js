@@ -1,7 +1,7 @@
 import CheckboxesListing from "./CheckboxesListing";
-
-
-const DeveloperOptions = ({ developers })=>{
+import { useState, useEffect } from "react";
+//data, heading, form parameter
+const DeveloperOptions = ({ developers, setForm })=>{
     const developersPlaceholder = [
         {
         "id": 405,
@@ -183,12 +183,23 @@ const DeveloperOptions = ({ developers })=>{
         }
         ]
         }
-        ]
+    ]
+
+    const [checked, setChecked] = useState([]);
+
+    useEffect(()=>{
+        setForm((prevForm) => {
+            return {...prevForm, developers: checked.join(',')}
+        });
+    }, [checked]);
+
     return (
         <div className="developer-options">
              <h2>Developers</h2>
              <CheckboxesListing 
                 data={developersPlaceholder}
+                checked={checked}
+                setChecked={setChecked}
              />
         </div>
     )

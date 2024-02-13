@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CheckboxesListing from "./CheckboxesListing";
 
 
-const PlatformOptions = ({ platforms, form, setForm })=>{
+const PlatformOptions = ({ platforms, setForm })=>{
 
    const platformsPlaceholder = [
     {
@@ -202,8 +202,10 @@ const PlatformOptions = ({ platforms, form, setForm })=>{
     const [checked, setChecked] = useState([]);
 
     useEffect(()=>{
-        setForm({...form, platforms: checked.join(',')})
-    }, [checked])
+        setForm((prevForm) => {
+            return {...prevForm, platforms: checked.join(',')}
+        });
+    }, [checked]);
 
     return (
         <div className="platform-options">
