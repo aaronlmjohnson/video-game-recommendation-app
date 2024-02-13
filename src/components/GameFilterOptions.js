@@ -1,3 +1,4 @@
+import DateRange from "./DateRange";
 import DeveloperOptions from "./DeveloperOptions";
 import GenreOptions from "./GenreFilterOptions";
 import PlatformOptions from "./PlatformOptions";
@@ -11,6 +12,7 @@ const GameFilterOptions = ()=>{
             <PlatformOptions />
             <GenreOptions />
             <DeveloperOptions />
+            <DateRange />
         </div>
     )
 }
