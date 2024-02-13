@@ -202,20 +202,9 @@ const PlatformOptions = ({ platforms, form, setForm })=>{
     const [checked, setChecked] = useState([]);
 
     useEffect(()=>{
-        console.log(checked);
+        setForm({...form, platforms: checked.join(',')})
     }, [checked])
 
-
-    // const platformHandler = (e)=>{
-    //     setChecked(
-    //          prevState =>{
-    //             if(e.target.checked)
-    //                 return [...prevState, e.target.value];
-    //             else 
-    //                 return prevState?.filter(option => option !== e.target.value && !e.target.checked);
-    //         }
-    //     )
-    // }
     return (
         <div className="platform-options">
              <h2>Platforms</h2>

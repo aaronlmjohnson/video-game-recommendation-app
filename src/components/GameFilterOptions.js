@@ -12,9 +12,9 @@ const GameFilterOptions = ()=>{
         dateRange:""
     });
 
-    // useEffect(()=>{
-    //     console.log("form:", form);
-    // },[form])
+    useEffect(()=>{
+        console.log("form:", form);
+    },[form])
 
     const handleFormChange = ()=>{
 

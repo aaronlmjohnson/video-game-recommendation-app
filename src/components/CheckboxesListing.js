@@ -1,4 +1,5 @@
 const CheckboxesListing = ({ data, setChecked })=>{
+    
     const handler = (e)=>{
         setChecked(
              prevState =>{
