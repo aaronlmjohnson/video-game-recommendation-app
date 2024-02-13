@@ -1,12 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { useContext, useState } from 'react'
-import { YearContext } from '../App';
 
-const SearchFormButton = ()=>{
+
+const SearchFormButton = ({ setSearchFormOpen })=>{
     const [headerActive, setHeaderActive] = useState(false);
-
-    const { setSearchFormOpen } = useContext(YearContext);
 
     const handleClick = (e)=>{
         e.preventDefault();

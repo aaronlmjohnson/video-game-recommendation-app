@@ -28,7 +28,7 @@ function App () {
   // const [renderGameForm, setRenderGameForm] = useState(false);
   const [gameId, setGameId] = useState(null);
   const [gameDetailOpen, setGameDetailOpen] = useState(false);
-  const [gameSearchFormOpen, setSearchFormOpen] = useState(true);
+  
   const {data:frontPageData, loading:frontPageLoading, refetch} = useApiHandler(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${year}-01-01,${year}-12-31&page_size=9`)
   // const [formData, setFormData] = useState({platforms, genres, developers}); 
   // const {recommendedGames, fetchRecommendedGames, recommendedGamesLoading} = useRecommendedGames();
@@ -48,14 +48,13 @@ function App () {
   }
   
   return (
-    <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId, setSearchFormOpen}}>
+    <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId}}>
       <div className="wrapper">
         {
           frontPageLoading ? 
           <LoadingScreen /> :
           <>
             {gameDetailOpen && <GameDetail />}
-            {gameSearchFormOpen && <GameSearchForm />}
             <BentoContainer 
               data={nameAndImageData(frontPageData)}
               year={year}

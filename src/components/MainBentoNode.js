@@ -1,14 +1,25 @@
 import YearSelectionForm from "./YearSelectionForm";
 import RandomGameButton from "./RandomGameButton";
 import SearchFormButton from "./SearchFormButton";
+import { useState } from "react";
+import GameSearchForm from "./GameSearchForm";
 
 const MainBentoNode = ()=>{
+    const [searchFormOpen, setSearchFormOpen] = useState(true);
 
     return(
         <div className={`bento-node main`}>
             <YearSelectionForm />
             <RandomGameButton />
-            <SearchFormButton />
+            {
+            searchFormOpen ?
+            <GameSearchForm 
+                setSearchFormOpen={setSearchFormOpen}
+            /> : 
+            <SearchFormButton 
+                setSearchFormOpen={setSearchFormOpen}
+            />
+            }
         </div>
     )
 }
