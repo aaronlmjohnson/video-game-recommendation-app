@@ -28,6 +28,10 @@ body{
     font-size: 4rem;
     color: white;
 }
+
+.hidden {
+    display: none;
+}
 /*****************************/
 
 .wrapper{
@@ -261,6 +265,12 @@ span{
     left: 0;
     background: black;
     color: white;
+}
+
+.filter-toggle {
+    background: none;
+    border: none;
+    color: #6444fb;
 }
 
 /* .random-game-header.inactive {

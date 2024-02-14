@@ -1,9 +1,10 @@
 import CheckboxesListing from "./CheckboxesListing";
 import { useState, useEffect } from "react";
-//data, heading, form parameter
+
 const GameFormCheckboxes = ({ data, heading, setForm, propertyName})=>{
 
     const [checked, setChecked] = useState([]);
+    const [hidden, setHidden] = useState('hidden');
 
     useEffect(()=>{
         setForm((prevForm) => {
@@ -11,14 +12,20 @@ const GameFormCheckboxes = ({ data, heading, setForm, propertyName})=>{
         });
     }, [checked]);
 
+    const handleToggle = (e)=>{
+        e.preventDefault();
+        setHidden(prevState => prevState === 'hidden' ? '' : 'hidden')
+    }
+
     return (
         <div className="game-checkboxes">
              <h2>{heading}</h2>
              <CheckboxesListing 
                 data={data}
-                checked={checked}
                 setChecked={setChecked}
+                hidden={hidden}
              />
+             <button className="filter-toggle" onClick={handleToggle}>{hidden ? "See More ▼" : "See Less ▲"}</button>
         </div>
     )
 }
