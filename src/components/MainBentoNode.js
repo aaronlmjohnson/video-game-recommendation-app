@@ -8,18 +8,23 @@ const MainBentoNode = ()=>{
     const [searchFormOpen, setSearchFormOpen] = useState(true);
 
     return(
+       
         <div className={`bento-node main`}>
-            <YearSelectionForm />
-            <RandomGameButton />
             {
-            searchFormOpen ?
-            <GameSearchForm 
-                setSearchFormOpen={setSearchFormOpen}
-            /> : 
-            <SearchFormButton 
-                setSearchFormOpen={setSearchFormOpen}
-            />
+                searchFormOpen ?
+                <GameSearchForm 
+                    setSearchFormOpen={setSearchFormOpen}
+                /> :
+                <>
+                    <YearSelectionForm />
+                    <RandomGameButton />
+                    
+                    <SearchFormButton 
+                        setSearchFormOpen={setSearchFormOpen}
+                    />
+                </>
             }
+
         </div>
     )
 }

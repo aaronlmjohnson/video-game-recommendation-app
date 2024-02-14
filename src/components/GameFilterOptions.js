@@ -1,22 +1,8 @@
 import { useEffect, useState } from "react";
 import DateRange from "./DateRange";
-import DeveloperOptions from "./DeveloperOptions";
-import GenreOptions from "./GenreFilterOptions";
-import PlatformOptions from "./PlatformOptions";
 import GameFormCheckboxes from "./GameFormCheckboxes";
 
-const GameFilterOptions = ()=>{
-    const [form, setForm] = useState({
-        platforms:"",
-        developers:"",
-        genres:"",
-        dateRange:""
-    });
-
-    useEffect(()=>{
-        console.log("form:", form);
-    },[form])
-
+const GameFilterOptions = ({ setForm })=>{
     const developersPlaceholder = [
         {
         "id": 405,
@@ -542,7 +528,7 @@ const GameFilterOptions = ()=>{
     ];
 
     return (
-        form && <div className="game-filter-options">
+        <div className="game-filter-options">
             <GameFormCheckboxes 
                 data={developersPlaceholder}
                 heading={"Developers"}

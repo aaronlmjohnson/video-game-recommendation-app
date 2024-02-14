@@ -26,6 +26,7 @@ function App () {
   const CURRENT_YEAR = new Date().getFullYear();
   const FIRST_YEAR = 1972;
   const [year, setYear] = useState(CURRENT_YEAR); 
+
   // const [renderGameForm, setRenderGameForm] = useState(false);
   const [gameId, setGameId] = useState(null);
   const [gameDetailOpen, setGameDetailOpen] = useState(false);
@@ -55,7 +56,6 @@ function App () {
           frontPageLoading ? 
           <LoadingScreen /> :
           <>
-          <GameFilterOptions />
             {gameDetailOpen && <GameDetail />}
             <BentoContainer 
               data={nameAndImageData(frontPageData)}

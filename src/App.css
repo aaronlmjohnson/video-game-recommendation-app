@@ -91,6 +91,7 @@ body{
 
 .bento-node.main{
     display: grid;
+    position: static;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr 2fr;
     border: none;
@@ -219,7 +220,6 @@ span{
 /******* Random Game Button *******/
 .random-game-button, .search-form-button{
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -242,10 +242,23 @@ span{
 
 /******* Search Form *******/
 .search-form{
+    background: black;
+    color: white;
+    border-radius: 1rem;
+    border: 3px solid white;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+
+/******* Game Filter Options *******/
+.game-filter-options{
     position: absolute;
-    z-index: 1000;
-    width: 100%;
+    z-index: 2000;
+    width: 200px;
     height: 100%;
+    top: 0;
+    left: 0;
     background: black;
     color: white;
 }
