@@ -6,7 +6,7 @@ import GameSearchField from "./GameSearchField";
 const GameSearchForm = ({ setSearchFormOpen })=>{
     const [displayFilters, setDisplayFilters] = useState(false);
     const {GAMES_URL, refetch} = useContext(YearContext);
-    // https://api.rawg.io/api/games?key=9ff2d4cc97c24f959f6e39996f82a045
+
     const [form, setForm] = useState({
         platforms:"",
         developers:"",
@@ -42,5 +42,5 @@ const GameSearchForm = ({ setSearchFormOpen })=>{
         </form>
     )
 }
-// display filters in app.js
+
 export default GameSearchForm;
