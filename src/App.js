@@ -50,7 +50,7 @@ function App () {
   }
   
   return (
-    <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId}}>
+    <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId, GAMES_URL}}>
       <div className="wrapper">
         {
           frontPageLoading ? 

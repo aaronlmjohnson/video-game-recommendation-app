@@ -9,7 +9,7 @@ const DateRange = ({setForm})=>{
         setForm(
             prevForm => {
                 return {
-                    ...prevForm, dateRange:`${startDate ? startDate + ',' : ""}${endDate}`
+                    ...prevForm, dates:`${startDate ? startDate + ',' : ""}${endDate}`
                 };
             }
         );
