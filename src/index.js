@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FilterOptionsContextProvider from './contexts/FilterOptionsContext';
+import YearContextProvider from './contexts/YearContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   // <React.StrictMode>
+  <YearContextProvider>
   <FilterOptionsContextProvider>
     <App />
   </FilterOptionsContextProvider>
+  </YearContextProvider>
   // </React.StrictMode>
 );
 

@@ -4,17 +4,14 @@ import { createContext, useEffect, useState } from 'react';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import BentoContainer from './components/BentoContainer';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+import useYearContext from './customHooks/useYearContext';
 
 export const YearContext = createContext();
 
 function App () {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
-
-
-  const CURRENT_YEAR = new Date().getFullYear();
-  const FIRST_YEAR = 1972;
-  const [year, setYear] = useState(CURRENT_YEAR); 
+  const {year} = useYearContext();
 
   const [gameId, setGameId] = useState(null);
   const [gameDetailOpen, setGameDetailOpen] = useState(false);
@@ -37,8 +34,7 @@ function App () {
   
   return (
     <>
-    {/* <FilterOptionsContextProvider> */}
-    <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId, GAMES_URL}}>
+    <YearContext.Provider value={{RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId, GAMES_URL}}>
       <div className="wrapper">
         {
           frontPageLoading ? 
@@ -47,13 +43,11 @@ function App () {
             {gameDetailOpen && <GameDetail />}
             <BentoContainer 
               data={nameAndImageData(frontPageData)}
-              year={year}
             />
           </>
         }        
       </div>
     </YearContext.Provider>
-    {/* </FilterOptionsContextProvider> */}
     </>
   );
 }

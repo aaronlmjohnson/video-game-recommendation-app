@@ -6,7 +6,7 @@ const RandomGameButton = ()=>{
     const [headerActive, setHeaderActive] = useState(false)
     const handleClick = (e)=>{
         e.preventDefault();
-        console.log("year")
+        console.log("display random game")
     }
 
     const handleHover = ()=>{
@@ -18,7 +18,7 @@ const RandomGameButton = ()=>{
     }
 
     return(
-        <button className="random-game-button" onMouseOver={handleHover} onMouseLeave={handleLeave}>
+        <button className="random-game-button" onClick={handleClick}>
             <h2 className={`random-game-header ${headerActive ? 'active' : 'inactive'}`}>
                 Select a Random Game.
             </h2>
