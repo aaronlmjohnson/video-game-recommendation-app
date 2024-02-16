@@ -265,6 +265,7 @@ span{
     left: 0;
     background: black;
     color: white;
+    overflow: auto;
 }
 
 .filter-toggle {

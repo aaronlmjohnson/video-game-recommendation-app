@@ -4,26 +4,13 @@ import { createContext, useEffect, useState } from 'react';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import BentoContainer from './components/BentoContainer';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
-// import useFilterOptionsContext from './customHooks/useFilterOptionsContext';
-// import FilterOptionsContextProvider from './contexts/FilterOptionsContext';
-import useFilterOptionsContext from './customHooks/useFilterOptionsContext';
 
 export const YearContext = createContext();
 
 function App () {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
-  const { optionsLoading, developers, platforms, genres } = useFilterOptionsContext();
 
-  useEffect(()=>{
-    if(genres && developers && platforms){
-      console.log("developers", developers);
-      console.log("platforms", platforms);
-      console.log("genres", genres);
-  }
-  }, [optionsLoading])
-  
-  // const {platforms, developers, genres, optionsLoading} = useFilterOptionsContext();
 
   const CURRENT_YEAR = new Date().getFullYear();
   const FIRST_YEAR = 1972;
