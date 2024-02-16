@@ -4,28 +4,30 @@ import { createContext, useEffect, useState } from 'react';
 import useApiHandler from './components/useGameAPI/useApiHandler';
 import BentoContainer from './components/BentoContainer';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+// import useFilterOptionsContext from './customHooks/useFilterOptionsContext';
+// import FilterOptionsContextProvider from './contexts/FilterOptionsContext';
 import useFilterOptionsContext from './customHooks/useFilterOptionsContext';
-import FilterOptionsContextProvider from './contexts/FilterOptionsContext';
 
 export const YearContext = createContext();
 
 function App () {
   const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
   const GAMES_URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
-  const {platforms, developers, genres, optionsLoading} = useFilterOptionsContext();
+  const { optionsLoading, developers, platforms, genres } = useFilterOptionsContext();
 
   useEffect(()=>{
-    if(!optionsLoading){
-      console.log("platforms", platforms);
+    if(genres && developers && platforms){
       console.log("developers", developers);
+      console.log("platforms", platforms);
       console.log("genres", genres);
-    }
+  }
   }, [optionsLoading])
+  
+  // const {platforms, developers, genres, optionsLoading} = useFilterOptionsContext();
 
   const CURRENT_YEAR = new Date().getFullYear();
   const FIRST_YEAR = 1972;
   const [year, setYear] = useState(CURRENT_YEAR); 
-
 
   const [gameId, setGameId] = useState(null);
   const [gameDetailOpen, setGameDetailOpen] = useState(false);
@@ -48,7 +50,7 @@ function App () {
   
   return (
     <>
-    <FilterOptionsContextProvider>
+    {/* <FilterOptionsContextProvider> */}
     <YearContext.Provider value={{year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch, setGameDetailOpen, gameId, setGameId, GAMES_URL}}>
       <div className="wrapper">
         {
@@ -64,7 +66,7 @@ function App () {
         }        
       </div>
     </YearContext.Provider>
-    </FilterOptionsContextProvider>
+    {/* </FilterOptionsContextProvider> */}
     </>
   );
 }

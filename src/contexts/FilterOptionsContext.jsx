@@ -1,7 +1,6 @@
 import { createContext, useState } from "react"
 import useApiHandler from "../components/useGameAPI/useApiHandler";
 export const FilterOptionsContext = createContext();
-console.log(FilterOptionsContext);
 
 const FilterOptionsContextProvider = ({children})=>{
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
