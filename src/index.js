@@ -5,15 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FilterOptionsContextProvider from './contexts/FilterOptionsContext';
 import YearContextProvider from './contexts/YearContext';
+import GameDataContextProvider from './contexts/GameDataContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   // <React.StrictMode>
   <YearContextProvider>
-  <FilterOptionsContextProvider>
-    <App />
-  </FilterOptionsContextProvider>
+    <GameDataContextProvider>
+    <FilterOptionsContextProvider>
+      <App />
+    </FilterOptionsContextProvider>
+    </GameDataContextProvider>
   </YearContextProvider>
   // </React.StrictMode>
 );

@@ -1,11 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { useContext } from 'react'
-import { YearContext } from '../App'
+import useYearContext from '../customHooks/useYearContext'
+import useApiHandler from './useGameAPI/useApiHandler'
 
 const YearSelectionForm = ()=>{
-    const {year, setYear, FIRST_YEAR, CURRENT_YEAR, RAWG_API_KEY, refetch} = useContext(YearContext);
+    // const {RAWG_API_KEY, refetch} = useContext(YearContext);
+    const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
+
+    const {year, setYear, FIRST_YEAR, CURRENT_YEAR } = useYearContext();
     const api_url = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${year}-01-01,${year}-12-31&page_size=9`
+    const {refetch} = useApiHandler();
 
     const handleYear = (e)=>{
         e.preventDefault();

@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { YearContext } from "../App";
+import useGameDataContext from "../customHooks/useGameDataContext";
 
 const BentoNode = ({ data }) => {
-    const { setGameDetailOpen, setGameId } = useContext(YearContext);
+
+    const { setGameDetailOpen, setGameId } = useGameDataContext();
 
     const handleClick = ()=>{
         setGameId(data.id);

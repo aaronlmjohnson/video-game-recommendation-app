@@ -4,14 +4,14 @@ import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 import GameNotFound from './GameNotFound';
-import { useState, useEffect, useContext } from 'react';
-import { YearContext } from '../../App';
+import { useState } from 'react';
 import useApiHandler from '../useGameAPI/useApiHandler';
 import GameDetailList from './GameDetailList';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
+import useGameDataContext from '../../customHooks/useGameDataContext';
 
 const GameDetail = ()=>{
-    const { setGameDetailOpen, gameId } = useContext(YearContext);
+    const { setGameDetailOpen, gameId } = useGameDataContext();
 
     const [mainScreenshot, setMainScreenshot] = useState(null);
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
