@@ -4,17 +4,21 @@ import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 import GameNotFound from './GameNotFound';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useApiHandler from '../useGameAPI/useApiHandler';
 import GameDetailList from './GameDetailList';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import useGameDataContext from '../../customHooks/useGameDataContext';
 
 const GameDetail = ()=>{
-    const { setGameDetailOpen, gameId } = useGameDataContext();
+    const { setGameDetailOpen, gameId, gameDetailDataError } = useGameDataContext();
 
     const [mainScreenshot, setMainScreenshot] = useState(null);
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
+
+    useEffect(()=>{
+        if(gameDetailDataError)console.log("error")
+    },[gameDetailDataError])
 
     const url = `https://api.rawg.io/api/games/${gameId}?key=${RAWG_API_KEY}`;
     const { data:gameData, loading:gameLoading } = useApiHandler(url);
@@ -35,7 +39,7 @@ const GameDetail = ()=>{
             gameData && */}
             {gameLoading && screenshotsLoading ?
                 <LoadingScreen /> :
-                gameData && <section className="game-detail">
+                gameDetailDataError ? <>{gameDetailDataError}</> : gameData && <section className="game-detail">
                     <nav>
                         <h1 >{gameData.name}</h1>
                         <button onClick={()=> setGameDetailOpen(false)}>Close</button>

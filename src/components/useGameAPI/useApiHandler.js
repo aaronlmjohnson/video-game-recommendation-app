@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useApiHandler =  (url = "")=>{
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(null);
 
     useEffect(()=>{ 
         if(url) refetch(url);
@@ -18,12 +18,14 @@ const useApiHandler =  (url = "")=>{
                         "Content-Type": "application/json",
                     },
                 });
-                if(!response.ok) 
+                if(!response.ok){ 
+                    setError(true);
                     throw Error(response.status);
+                }
                 const apiData = await response.json();
                 setData(apiData);
             }catch(e){
-                setError(true);
+                setError(e.message);
             }finally{
 
                 setLoading(false);

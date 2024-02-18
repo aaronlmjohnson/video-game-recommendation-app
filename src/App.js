@@ -5,14 +5,7 @@ import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import useGameDataContext from './customHooks/useGameDataContext';
 
 function App () {
-  const {frontPageLoading, gameDetailOpen, frontPageData } = useGameDataContext();
-
-  const handleSubmit = (e, queryData)=>{
-    e.preventDefault();
-    
-    const formData = new FormData(e.target);
-
-  }
+  const {frontPageLoading, gameDetailOpen, frontPageData, gameDetailDataError } = useGameDataContext();
 
   const nameAndImageData = (data)=>{
     return data?.results.reduce((accum, game)=> {
@@ -27,7 +20,7 @@ function App () {
           frontPageLoading ? 
           <LoadingScreen /> :
           <>
-            {gameDetailOpen && <GameDetail />}
+            {gameDetailDataError ? <div className="error-text">{gameDetailDataError}</div> :gameDetailOpen && <GameDetail />}
             <BentoContainer 
               data={nameAndImageData(frontPageData)}
             />

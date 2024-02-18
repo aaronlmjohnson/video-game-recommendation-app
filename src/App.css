@@ -24,6 +24,10 @@ body{
     width: 100%;
     z-index: 31;
 }
+
+.error-text {
+    color: white; 
+}
 .loading-screen > h1{
     font-size: 4rem;
     color: white;

@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useState } from "react";
 import GameFilterOptions from "./GameFilterOptions";
 import GameSearchField from "./GameSearchField";
 import useGameDataContext from "../customHooks/useGameDataContext";

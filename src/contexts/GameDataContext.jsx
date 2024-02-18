@@ -11,16 +11,20 @@ const GameDataContextProvider = ({children})=>{
     const [gameId, setGameId] = useState(null);
     const [gameDetailOpen, setGameDetailOpen] = useState(false);
 
+    const getGameUrl = (id)=> `https://api.rawg.io/api/games/${id}?key=${RAWG_API_KEY}`;
+
     const {
         data:frontPageData, 
         loading:frontPageLoading, 
-        refetch:refetchFrontPageData
+        refetch:refetchFrontPageData,
+        error:frontPageDataError,
     } = useApiHandler(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&dates=${year}-01-01,${year}-12-31&page_size=9`);
 
     const {
         data:gameDetailData,
         loading: gameDetailDataLoading,
-        refetch: refetchGameDetailData
+        refetch: refetchGameDetailData,
+        error: gameDetailDataError
     } = useApiHandler();
 
 
@@ -31,14 +35,17 @@ const GameDataContextProvider = ({children})=>{
                     frontPageData,
                     frontPageLoading,
                     refetchFrontPageData,
+                    frontPageDataError,
                     gameId,
                     setGameId,
                     gameDetailOpen,
                     setGameDetailOpen,
                     gameDetailData,
                     gameDetailDataLoading,
+                    gameDetailDataError,
                     refetchGameDetailData,
-                    GAMES_URL
+                    GAMES_URL,
+                    getGameUrl
                 }
             }
         >
