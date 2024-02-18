@@ -3,29 +3,37 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
-import GameNotFound from './GameNotFound';
+import GameNotFound from './404';
 import { useState, useEffect } from 'react';
 import useApiHandler from '../useGameAPI/useApiHandler';
 import GameDetailList from './GameDetailList';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import useGameDataContext from '../../customHooks/useGameDataContext';
+import RandomGameButton from '../RandomGameButton';
 
 const GameDetail = ()=>{
-    const { setGameDetailOpen, gameId, gameDetailDataError } = useGameDataContext();
+    const {
+        gameId,
+        RAWG_API_KEY,
+        setGameDetailOpen
+     } = useGameDataContext();
 
     const [mainScreenshot, setMainScreenshot] = useState(null);
-    const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
+    const screenshotUrl = `https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`;
+
+    const { data:screenshotData, loading:screenshotsLoading, refetch:newScreenshots } = useApiHandler(screenshotUrl);
+
+    const { data:detailData, 
+            loading:detailLoading, 
+            error:detailError,
+            refetch:newDetail,
+            setError: setDetailError 
+    } = useApiHandler(`https://api.rawg.io/api/games/${gameId}?key=9ff2d4cc97c24f959f6e39996f82a045`);
 
     useEffect(()=>{
-        if(gameDetailDataError)console.log("error")
-    },[gameDetailDataError])
-
-    const url = `https://api.rawg.io/api/games/${gameId}?key=${RAWG_API_KEY}`;
-    const { data:gameData, loading:gameLoading } = useApiHandler(url);
-
-    const screenshotUrl = `https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`;
-    const { data:screenshotData, loading:screenshotsLoading } = useApiHandler(screenshotUrl);
-
+        newDetail(`https://api.rawg.io/api/games/${gameId}?key=9ff2d4cc97c24f959f6e39996f82a045`);
+        newScreenshots(`https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`);
+    },[gameId])
     const limitDescription = (description)=>{
         const strArr = description.split('.' || '?' || '!');
         return [strArr[0], strArr[1], strArr[2]].join('.') +"...";
@@ -34,15 +42,15 @@ const GameDetail = ()=>{
         return(
             <> 
                 <div className="overlay"></div>
-                
-                {/* (gameLoading && screenshotsLoading) ? 
-            gameData && */}
-            {gameLoading && screenshotsLoading ?
-                <LoadingScreen /> :
-                gameDetailDataError ? <>{gameDetailDataError}</> : gameData && <section className="game-detail">
+                {detailLoading && <LoadingScreen />}
+                {!detailLoading && 
+                <section className="game-detail">
+                  {detailError && <GameNotFound setError={setDetailError}/>}
+                   {detailData &&  <>
                     <nav>
-                        <h1 >{gameData.name}</h1>
+                        <h1 >{detailData.name}</h1>
                         <button onClick={()=> setGameDetailOpen(false)}>Close</button>
+                        <RandomGameButton />
                     </nav>
                     <section className="game-detail-content">
                         <section className="screenshot-section">
@@ -55,11 +63,12 @@ const GameDetail = ()=>{
                             /> 
                         </section>
                         <aside className="game-details-section">
-                            <img className="game-details-section-img" src={gameData.background_image} alt={gameData.name} />
-                            <p>{limitDescription(gameData.description_raw)}</p>
-                            <GameDetailList properties={gameData}/>
+                            <img className="game-details-section-img" src={detailData.background_image} alt={detailData.name} />
+                            <p>{limitDescription(detailData.description_raw)}</p>
+                            <GameDetailList properties={detailData}/>
                         </aside>
                     </section>
+                    </>}
                 </section>
             }
             </>

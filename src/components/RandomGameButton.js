@@ -12,16 +12,12 @@ const RandomGameButton = ()=>{
 
     const handleClick = (e)=>{
         e.preventDefault();
-        setGameId(345795); //Math.ceil(Math.random() * MAX_GAMES)
+        setGameId(Math.ceil(Math.random()* MAX_GAMES));
         setGameDetailOpen(true);
     }
 
     return(
         <button className="random-game-button" onClick={handleClick}>
-            <h2 className={`random-game-header`}>
-                Select a Random Game.
-            </h2>
-
                 <FontAwesomeIcon icon={faDice} />
         </button>       
     )

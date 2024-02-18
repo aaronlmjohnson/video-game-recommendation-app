@@ -1,7 +1,14 @@
-const ScreenshotCarousel = ({ screenshotData, mainScreenshot, setMainScreenshot })=>{
+import { useEffect } from "react";
+import useGameDataContext from "../../customHooks/useGameDataContext";
 
+const ScreenshotCarousel = ({ screenshotData, mainScreenshot, setMainScreenshot })=>{
+    const {gameId} = useGameDataContext();
     const handleClick = (src)=> setMainScreenshot(src)
     const highlight = (src)=>(src === mainScreenshot) && "highlight";
+
+    useEffect(()=>{
+        if(screenshotData) setMainScreenshot(screenshotData.results[0].image);
+    },[gameId, screenshotData]);
 
     return (
        <div className="game-detail-carousel">

@@ -45,6 +45,7 @@ const GameDataContextProvider = ({children})=>{
                     gameDetailDataError,
                     refetchGameDetailData,
                     GAMES_URL,
+                    RAWG_API_KEY,
                     getGameUrl
                 }
             }

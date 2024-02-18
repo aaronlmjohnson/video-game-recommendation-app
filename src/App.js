@@ -20,7 +20,7 @@ function App () {
           frontPageLoading ? 
           <LoadingScreen /> :
           <>
-            {gameDetailDataError ? <div className="error-text">{gameDetailDataError}</div> :gameDetailOpen && <GameDetail />}
+            {gameDetailOpen && <GameDetail />}
             <BentoContainer 
               data={nameAndImageData(frontPageData)}
             />
