@@ -33,6 +33,7 @@ const GameDetail = ()=>{
     useEffect(()=>{
         newDetail(`https://api.rawg.io/api/games/${gameId}?key=${RAWG_API_KEY}`);
         newScreenshots(`https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`);
+        console.log(gameId);
     },[gameId])
     const limitDescription = (description)=>{
         const strArr = description.split('.' || '?' || '!');
@@ -54,7 +55,7 @@ const GameDetail = ()=>{
                     </nav>
                     <section className="game-detail-content">
                         <section className="screenshot-section">
-                            {(screenshotData.results.length > 1 )&& <img src={mainScreenshot} alt="#" /> }
+                            {(screenshotData && screenshotData.results.length > 1 )&& <img src={mainScreenshot} alt="#" /> }
                             <ScreenshotCarousel 
                                     mainScreenshot={mainScreenshot}
                                     setMainScreenshot = {setMainScreenshot}

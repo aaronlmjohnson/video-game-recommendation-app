@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import useGameDataContext from '../customHooks/useGameDataContext';
 
 const RandomGameButton = ()=>{
-    const MAX_GAMES = 863248 //As of February 2024 this is to avoid making another API call
+    const MAX_GAMES = 264297 //As of February 2024 this is to avoid making another API call
     const {setGameDetailOpen, gameDetailData, setGameId, gameDetailDataError, gameId} = useGameDataContext();
     useEffect(()=>{
         if(gameDetailDataError)console.log("error", gameDetailDataError)
@@ -12,8 +12,8 @@ const RandomGameButton = ()=>{
 
     const handleClick = (e)=>{
         e.preventDefault();
-        setGameId(789810); //789810 this game has no screenshots
-        //Math.ceil(Math.random()* MAX_GAMES)
+        setGameId(Math.ceil(Math.random()* MAX_GAMES)); //264297 this game causes an error in game detail
+        //
         setGameDetailOpen(true);
     }
 

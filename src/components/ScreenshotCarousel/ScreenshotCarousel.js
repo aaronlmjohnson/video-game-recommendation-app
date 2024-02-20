@@ -10,12 +10,12 @@ const ScreenshotCarousel = ({ screenshotData, mainScreenshot, setMainScreenshot 
         if(isData()) setMainScreenshot(screenshotData.results[0].image);
     },[gameId, screenshotData]);
 
-    const isData = ()=> screenshotData.results.length > 0;
+    const isData = ()=> screenshotData && screenshotData.results.length > 0;
 
     return (
        isData() ?  <div className="game-detail-carousel">
             {
-                screenshotData?.map((screenshot, i)=>{
+                screenshotData?.results.map((screenshot, i)=>{
                     return(
                         <button className={`game-detail-carousel-button ${highlight(screenshot.image)}`} onClick={()=>handleClick(screenshot.image)}>
                             <img className="" key={screenshot.id} alt="#" src={screenshot.image} width="300px"/>
