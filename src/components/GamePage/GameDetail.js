@@ -28,10 +28,10 @@ const GameDetail = ()=>{
             error:detailError,
             refetch:newDetail,
             setError: setDetailError 
-    } = useApiHandler(`https://api.rawg.io/api/games/${gameId}?key=9ff2d4cc97c24f959f6e39996f82a045`);
+    } = useApiHandler(`https://api.rawg.io/api/games/${gameId}?key=${RAWG_API_KEY}`);
 
     useEffect(()=>{
-        newDetail(`https://api.rawg.io/api/games/${gameId}?key=9ff2d4cc97c24f959f6e39996f82a045`);
+        newDetail(`https://api.rawg.io/api/games/${gameId}?key=${RAWG_API_KEY}`);
         newScreenshots(`https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`);
     },[gameId])
     const limitDescription = (description)=>{
@@ -54,12 +54,13 @@ const GameDetail = ()=>{
                     </nav>
                     <section className="game-detail-content">
                         <section className="screenshot-section">
-                            <img src={mainScreenshot} alt="#" /> 
+                            {(screenshotData.results.length > 1 )&& <img src={mainScreenshot} alt="#" /> }
                             <ScreenshotCarousel 
                                     mainScreenshot={mainScreenshot}
                                     setMainScreenshot = {setMainScreenshot}
                                     screenshotData={screenshotData}
                                     screenshots={screenshotsLoading}
+
                             /> 
                         </section>
                         <aside className="game-details-section">

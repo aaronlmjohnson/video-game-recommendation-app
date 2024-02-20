@@ -12,7 +12,8 @@ const RandomGameButton = ()=>{
 
     const handleClick = (e)=>{
         e.preventDefault();
-        setGameId(Math.ceil(Math.random()* MAX_GAMES));
+        setGameId(789810); //789810 this game has no screenshots
+        //Math.ceil(Math.random()* MAX_GAMES)
         setGameDetailOpen(true);
     }
 

@@ -11,6 +11,8 @@ const useApiHandler =  (url = "")=>{
 
         async function refetch(url){ 
             try{
+                setError(null);
+                setData(null);
                 setLoading(true);
                 const response = await fetch(url, {
                     method: "GET", 

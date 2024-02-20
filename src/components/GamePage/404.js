@@ -4,6 +4,7 @@ import { faXmark, faDice } from '@fortawesome/free-solid-svg-icons'
 import GameInfoList from '../GameInfoList/GameInfoList';
 import ScreenshotCarousel from '../ScreenshotCarousel/ScreenshotCarousel';
 import useGameDataContext from '../../customHooks/useGameDataContext';
+import RandomGameButton from '../RandomGameButton';
 
 const GameNotFound = ({setError})=>{
     const { setGameId } = useGameDataContext();
@@ -16,10 +17,7 @@ const GameNotFound = ({setError})=>{
 
     return(
         <div className="game-not-found">
-            <button className="random-button-styling random-button-large" >
-                4<FontAwesomeIcon id="large-random-icon" icon={faDice} onClick={handleClick}/>4
-            </button>
-            
+            <RandomGameButton />
             <h1 id="game-not-found-prompt">Game Not Found! Roll again!</h1>
         </div>
     )
