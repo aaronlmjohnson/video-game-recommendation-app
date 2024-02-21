@@ -19,9 +19,10 @@ const GameDetailList = ({properties})=>{
 
     return(
         <ul className="game-detail-li">
-            {keys.map((objKey) =>{
+            {keys.map((objKey, i) =>{
                     return(
                         <GameDetailListing 
+                            key={`${properties.id}-${i}`}
                             objKey={objKey}
                             value={
                                 objKey === "released" || objKey === "rating" ?

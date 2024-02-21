@@ -33,7 +33,6 @@ const GameDetail = ()=>{
     useEffect(()=>{
         newDetail(`https://api.rawg.io/api/games/${gameId}?key=${RAWG_API_KEY}`);
         newScreenshots(`https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`);
-        console.log(gameId);
     },[gameId])
     const limitDescription = (description)=>{
         const strArr = description.split('.' || '?' || '!');
