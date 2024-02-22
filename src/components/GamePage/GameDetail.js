@@ -11,6 +11,7 @@ import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import useGameDataContext from '../../customHooks/useGameDataContext';
 import RandomGameButton from '../RandomGameButton';
 import GameDetailNav from './GameDetailNav';
+import ScreenshotSection from './ScreenshotSection';
 
 const GameDetail = ()=>{
     const {
@@ -19,7 +20,6 @@ const GameDetail = ()=>{
         setGameDetailOpen
      } = useGameDataContext();
 
-    const [mainScreenshot, setMainScreenshot] = useState(null);
     const screenshotUrl = `https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`;
 
     const { data:screenshotData, loading:screenshotsLoading, refetch:newScreenshots } = useApiHandler(screenshotUrl);
@@ -50,16 +50,10 @@ const GameDetail = ()=>{
                    {detailData &&  <>
                     <GameDetailNav name={detailData.name}/>
                     <section className="game-detail-content">
-                        <section className="screenshot-section">
-                            {(screenshotData && screenshotData.results.length > 1 )&& <img src={mainScreenshot} alt="#" /> }
-                            <ScreenshotCarousel 
-                                    mainScreenshot={mainScreenshot}
-                                    setMainScreenshot = {setMainScreenshot}
-                                    screenshotData={screenshotData}
-                                    screenshots={screenshotsLoading}
-
-                            /> 
-                        </section>
+                        <ScreenshotSection 
+                            screenshotData={screenshotData}
+                            screenshotsLoading={screenshotsLoading}
+                        />
                         <aside className="game-details-section">
                             <img className="game-details-section-img" src={detailData.background_image} alt={detailData.name} />
                             <p>{limitDescription(detailData.description_raw)}</p>
