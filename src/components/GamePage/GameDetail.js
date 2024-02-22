@@ -36,7 +36,7 @@ const GameDetail = ()=>{
     },[gameId])
     const limitDescription = (description)=>{
         const strArr = description.split('.' || '?' || '!');
-        return [strArr[0], strArr[1], strArr[2]].join('.') +"...";
+        return [strArr[0], strArr[1], strArr[2]].join('.').slice(0, 300) +"...";
     }
 
         return(
