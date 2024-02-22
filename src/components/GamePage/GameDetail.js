@@ -12,6 +12,7 @@ import useGameDataContext from '../../customHooks/useGameDataContext';
 import RandomGameButton from '../RandomGameButton';
 import GameDetailNav from './GameDetailNav';
 import ScreenshotSection from './ScreenshotSection';
+import GameOverview from './GameOverview';
 
 const GameDetail = ()=>{
     const {
@@ -34,11 +35,9 @@ const GameDetail = ()=>{
     useEffect(()=>{
         newDetail(`https://api.rawg.io/api/games/${gameId}?key=${RAWG_API_KEY}`);
         newScreenshots(`https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`);
-    },[gameId])
-    const limitDescription = (description)=>{
-        const strArr = description.split('.' || '?' || '!');
-        return [strArr[0], strArr[1], strArr[2]].join('.').slice(0, 300) +"...";
-    }
+    },[gameId]);
+
+   
 
         return(
             <> 
@@ -54,11 +53,9 @@ const GameDetail = ()=>{
                             screenshotData={screenshotData}
                             screenshotsLoading={screenshotsLoading}
                         />
-                        <aside className="game-details-section">
-                            <img className="game-details-section-img" src={detailData.background_image} alt={detailData.name} />
-                            <p>{limitDescription(detailData.description_raw)}</p>
-                            <GameDetailList properties={detailData}/>
-                        </aside>
+                        <GameOverview 
+                            detailData={detailData}
+                        />
                     </section>
                     </>}
                 </section>

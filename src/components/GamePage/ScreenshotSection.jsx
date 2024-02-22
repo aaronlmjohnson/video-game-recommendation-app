@@ -1,6 +1,4 @@
 import { useState } from "react";
-import useGameDataContext from "../../customHooks/useGameDataContext";
-import RandomGameButton from "../RandomGameButton";
 import ScreenshotCarousel from "../ScreenshotCarousel/ScreenshotCarousel";
 
 const ScreenshotSection = ({ screenshotData, screenshotsLoading }) => {
