@@ -10,6 +10,7 @@ import GameDetailList from './GameDetailList';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import useGameDataContext from '../../customHooks/useGameDataContext';
 import RandomGameButton from '../RandomGameButton';
+import GameDetailNav from './GameDetailNav';
 
 const GameDetail = ()=>{
     const {
@@ -47,11 +48,7 @@ const GameDetail = ()=>{
                 <section className="game-detail">
                   {detailError && <GameNotFound setError={setDetailError}/>}
                    {detailData &&  <>
-                    <nav>
-                        <h1 >{detailData.name}</h1>
-                        <button onClick={()=> setGameDetailOpen(false)}>Close</button>
-                        <RandomGameButton />
-                    </nav>
+                    <GameDetailNav name={detailData.name}/>
                     <section className="game-detail-content">
                         <section className="screenshot-section">
                             {(screenshotData && screenshotData.results.length > 1 )&& <img src={mainScreenshot} alt="#" /> }
