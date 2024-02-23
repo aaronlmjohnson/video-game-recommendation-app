@@ -9,7 +9,7 @@
         border: 5px solid white;
         border-radius: 1rem;
         min-width: 1200px;
-        height: fit-content;
+        max-height: 820px;
         overflow-y: auto;
         color: white;
     }
