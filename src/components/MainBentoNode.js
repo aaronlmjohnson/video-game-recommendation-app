@@ -17,7 +17,11 @@ const MainBentoNode = ()=>{
                 /> :
                 <>
                     <YearSelectionForm />
-                    <RandomGameButton />
+                    <div className="random-game-button-container">
+                        <h2>See a Random Game</h2>
+                        <RandomGameButton />
+                    </div>
+                    
                     
                     <SearchFormButton 
                         setSearchFormOpen={setSearchFormOpen}

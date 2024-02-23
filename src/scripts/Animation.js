@@ -1,7 +1,7 @@
 const Animation = (()=>{
 
-    const WavyText = ({ text })=>{
-        const element = <h1>{text.split('').map((char, i)=> {
+    const WavyText = ({ text, classList })=>{
+        const element = <p className={classList}>{text.split('').map((char, i)=> {
             return (<span key={i} style={
                         {
                             'animation': 'wavy 1s infinite linear',
@@ -10,7 +10,7 @@ const Animation = (()=>{
                     }>
                     {char}
                 </span>)
-        })}</h1>;
+        })}</p>;
 
         return (element);
     }

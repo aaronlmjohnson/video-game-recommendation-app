@@ -19,7 +19,7 @@ const RandomGameButton = ()=>{
 
     return(
         <button className="random-game-button" onClick={handleClick}>
-                <FontAwesomeIcon icon={faDice} />
+            <FontAwesomeIcon icon={faDice} />
         </button>       
     )
 }

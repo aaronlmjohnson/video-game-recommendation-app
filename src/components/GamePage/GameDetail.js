@@ -6,8 +6,7 @@ import useGameDataContext from "../../customHooks/useGameDataContext";
 import GameDetailNav from "./GameDetailNav";
 import ScreenshotSection from "./ScreenshotSection";
 import GameOverview from "./GameOverview";
-import Animation from "../../scripts/Animation";
-const { WavyText } = Animation;
+import LoadingComponent from "../LoadingComponent";
 
 const GameDetail = () => {
   const { gameId, RAWG_API_KEY } = useGameDataContext();
@@ -42,7 +41,7 @@ const GameDetail = () => {
       <div className="overlay"></div>
       <section className="game-detail">
         {(detailLoading && screenshotsLoading) ? (
-          <WavyText text={"Loading..."} />
+          <LoadingComponent />
         ) : (
           <>
             {detailError && <GameNotFound setError={setDetailError} />}

@@ -5,7 +5,8 @@
     --gradient-middle: #241434;
     --gradient-bottom: #975ad4;
 
-    --main-bg-color-op-50: hsla(0, 0%, 12%, 0.507);  
+    --main-bg-color-op-50: hsla(0, 0%, 12%, 0.507);
+    --main-bg-color: #6444fb;
     --i: 0;  
 }
 
@@ -226,7 +227,29 @@ span{
 }
 
 /******* Random Game Button *******/
-.random-game-button, .search-form-button{
+.random-game-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 3px solid white;
+    background: none;
+    color: white;  
+}
+
+.random-game-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+}
+
+.random-game-button:hover {
+    transform: rotate(15deg);
+}
+
+ .search-form-button{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,7 +265,7 @@ span{
 .random-game-button-container:hover > .random-game-header.inactive {
 }
 
-.random-game-header, .select-form-header{
+.bento-node.main h2{
     font-size: 1rem;
     color: white;
 
@@ -250,12 +273,46 @@ span{
 
 /******* Search Form *******/
 .search-form{
-    background: black;
+    background: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     border-radius: 1rem;
     border: 3px solid white;
     grid-row: span 2;
     grid-column: span 2;
+}
+
+.game-search-field > input {
+    background: none;
+    color: white;
+    border: 3px solid white;
+    border-radius: .5rem;
+    padding: .5rem .2rem;
+}
+
+.game-search-field > input::placeholder {
+    color: white;
+}
+
+
+.search-form-buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.search-form-buttons button {
+    border: 3px solid white;
+    background: none;
+    width: 6rem;
+    height: 2rem;
+    color: white;
+    border-radius: .5rem;
 }
 
 

@@ -36,9 +36,12 @@ const GameSearchForm = ({ setSearchFormOpen })=>{
              <GameSearchField
                 setForm={setForm}
             />
-            <button>Submit</button>
-            <button onClick={()=> setSearchFormOpen(false)}>Close</button>
-            <button onClick={handleFilters}>filter options</button>
+            <div className="search-form-buttons">
+                <button>Search</button>
+                <button onClick={handleFilters}>{displayFilters ? "Hide" : "Filters"}</button>
+                <button onClick={()=> setSearchFormOpen(false)}>Cancel</button>
+            </div>
+            
         </form>
     )
 }
