@@ -5,7 +5,7 @@ import { useState } from "react";
 import GameSearchForm from "./GameSearchForm";
 
 const MainBentoNode = ()=>{
-    const [searchFormOpen, setSearchFormOpen] = useState(true);
+    const [searchFormOpen, setSearchFormOpen] = useState(false);
 
     return(
        
