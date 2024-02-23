@@ -34,6 +34,26 @@
         font-size: 4rem;
     }
 
+    .game-not-found{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .game-not-found > p {
+        font-size: 2rem
+    }
+
+    .game-not-found > .random-game-button {
+        cursor: pointer;
+    }
+
+    .game-not-found > .random-game-button:hover {
+        color: var(--main-bg-color);
+    }
+
     .game-detail > nav{
         display: flex;
         padding-bottom: 2rem;

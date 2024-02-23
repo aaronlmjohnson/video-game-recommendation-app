@@ -18,7 +18,7 @@ const GameNotFound = ({setError})=>{
     return(
         <div className="game-not-found">
             <RandomGameButton />
-            <h1 id="game-not-found-prompt">Game Not Found! Roll again!</h1>
+            <p>Game Not Found! Roll again!</p>
         </div>
     )
 }
