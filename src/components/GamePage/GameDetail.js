@@ -2,7 +2,6 @@ import "./GameDetail.css";
 import GameNotFound from "./404";
 import { useEffect } from "react";
 import useApiHandler from "../useGameAPI/useApiHandler";
-import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import useGameDataContext from "../../customHooks/useGameDataContext";
 import GameDetailNav from "./GameDetailNav";
 import ScreenshotSection from "./ScreenshotSection";

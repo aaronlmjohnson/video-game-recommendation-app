@@ -9,7 +9,8 @@
         border: 5px solid white;
         border-radius: 1rem;
         min-width: 1200px;
-        height: 100%;
+        height: fit-content;
+        overflow-y: auto;
         color: white;
     }
 
@@ -29,6 +30,40 @@
 
     .game-detail > nav > h1 {
         font-size: 1.5rem;
+    }
+
+    .game-detail > nav > .nav-buttons {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .nav-buttons * {
+        font-size: clamp(1rem, -0.429rem + 3.81vw, 3rem);
+    }
+
+    .game-detail > nav .random-game-button {
+        border: none;
+        cursor: pointer;
+    }
+
+    .game-detail > nav .random-game-button:hover {
+        transform: rotate(15deg);
+        color:#6444fb;
+    }
+
+    .game-detail > nav .close-button {
+        display:flex;
+        align-items: center;
+        background: none;
+        border: none;
+        padding: 0;
+        color: white;
+        cursor: pointer;
+        font-size: 3rem;
+    }
+
+    .game-detail > nav .close-button:hover {
+        color:#6444fb;
     }
 
     .game-detail-content{
@@ -58,6 +93,7 @@
         border: none;
         background: none;
         padding: 0;
+        cursor: pointer;
     }
     .game-detail-carousel-button.highlight {
         border: 2px solid #6444fb;
@@ -70,6 +106,7 @@
     .game-details-section{
         display: flex;
         flex-direction: column;
+        height: fit-content;
         row-gap: 1rem;
     }
 
