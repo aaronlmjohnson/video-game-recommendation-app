@@ -4,12 +4,12 @@ import GameFormCheckboxes from "./GameFormCheckboxes";
 
 import useFilterOptionsContext from "../customHooks/useFilterOptionsContext";
 
-const GameFilterOptions = ({ setForm })=>{
+const GameFilterOptions = ({ setForm, displayFilters })=>{
     const { optionsLoading, developers, platforms, genres } = useFilterOptionsContext();
 
 
     return (
-        <div className="game-filter-options">
+        <div className={`game-filter-options ${!displayFilters && 'filter-options-hidden'}`}>
             <GameFormCheckboxes 
                 data={developers.results}
                 heading={"Developers"}

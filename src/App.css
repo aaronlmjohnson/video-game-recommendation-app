@@ -90,13 +90,14 @@ body{
     border-radius: 1rem;
     border: 3px solid white;
     transition: all .2s ease-in;
-    z-index: 2;
 }
 
 .bento-node:hover{
     transform: scale(1.3);
     z-index: 20;
 }
+
+
 
 .bento-node.main{
     display: grid;
@@ -106,7 +107,6 @@ body{
     border: none;
     gap: 1rem;
     transition: none;
-    z-index: 1;
 }
 .bento-node.main:hover{
     transform: none;
@@ -325,7 +325,7 @@ span{
 /******* Game Filter Options *******/
 .game-filter-options{
     position: absolute;
-    z-index: 2000;
+    z-index: 100;
     width: 200px;
     height: 100%;
     top: 0;
@@ -333,7 +333,15 @@ span{
     background: black;
     color: white;
     overflow: auto;
+    transition: left .1s ease-out;
 }
+
+.filter-options-hidden{
+    left: -200px;
+
+}
+
+
 
 .filter-toggle {
     background: none;
