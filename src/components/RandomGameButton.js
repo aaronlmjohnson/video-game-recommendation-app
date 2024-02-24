@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState, useEffect } from 'react'
 import useGameDataContext from '../customHooks/useGameDataContext';
 
-const RandomGameButton = ()=>{
+const RandomGameButton = ({header, classList})=>{
     const MAX_GAMES = 264297 //As of February 2024 this is to avoid making another API call
     const {setGameDetailOpen, gameDetailData, setGameId, gameDetailDataError, gameId} = useGameDataContext();
     useEffect(()=>{
@@ -18,7 +18,8 @@ const RandomGameButton = ()=>{
     }
 
     return(
-        <button className="random-game-button" onClick={handleClick}>
+        <button className={"random-game-button " + classList } onClick={handleClick}>
+            {header && <h2>{header}</h2>}
             <FontAwesomeIcon icon={faDice} />
         </button>       
     )

@@ -245,8 +245,13 @@ span{
     font-size: 3rem;
 }
 
-.random-game-button:hover {
-    transform: rotate(15deg);
+.random-game-button.home{
+    border: 3px solid white;
+    border-radius: 1rem;
+}
+
+.random-game-button:hover > svg {
+    transform: rotate(15deg) scale(1.1);
 }
 
  .search-form-button{
@@ -259,11 +264,13 @@ span{
     background: none;
     font-size: 3rem;
     color: white;
-
 }
 
-.random-game-button-container:hover > .random-game-header.inactive {
+.search-form-button:hover > svg{
+    transform: scale(1.1) rotate(5deg);
 }
+
+
 
 .bento-node.main h2{
     font-size: 1rem;

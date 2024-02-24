@@ -17,10 +17,7 @@ const MainBentoNode = ()=>{
                 /> :
                 <>
                     <YearSelectionForm />
-                    <div className="random-game-button-container">
-                        <h2>See a Random Game</h2>
-                        <RandomGameButton />
-                    </div>
+                    <RandomGameButton  header={"See a Random Game"} classList={"home"}/>
                     
                     
                     <SearchFormButton 
