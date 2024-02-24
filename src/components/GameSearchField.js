@@ -11,7 +11,6 @@ const GameSearchField = ({ setForm })=>{
     return (
         <div className="game-search-field">
              <input type="search" placeholder="Search for games by title..." onChange={handleChange}/>
-             
         </div>
     )
 }

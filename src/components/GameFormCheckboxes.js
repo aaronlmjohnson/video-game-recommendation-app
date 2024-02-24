@@ -25,7 +25,7 @@ const GameFormCheckboxes = ({ data, heading, setForm, propertyName})=>{
                 setChecked={setChecked}
                 hidden={hidden}
              />
-             <button className="filter-toggle" onClick={handleToggle}>{hidden ? "See More ▼" : "See Less ▲"}</button>
+             <button className="filter-toggle" type="button" onClick={handleToggle}>{hidden ? "See More ▼" : "See Less ▲"}</button>
         </div>
     )
 }
