@@ -29,7 +29,7 @@ body{
 .error-text {
     color: white; 
 }
-.loading-screen > h1{
+.loading-screen > p{
     font-size: 4rem;
     color: white;
 }
@@ -203,6 +203,17 @@ span{
     padding: none;
 }
 
+.year-selection-form button:hover{
+    border: none;
+    background: none;
+    color: white;
+}
+
+.year-selection-form  svg:hover {
+    transform: scale(1.2);
+    color: #241434;
+}
+
 .year-selection-form > .submit {
     background: white;
     width: 100%;
@@ -213,6 +224,12 @@ span{
     border-radius: 1rem;
     padding: .25rem 0;
     cursor: pointer;
+}
+
+.year-selection-form > .submit:hover {
+    
+    background-color: #241434;
+    color: white;
 }
 
 .year-text{
