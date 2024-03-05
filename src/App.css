@@ -348,9 +348,10 @@ span{
 
 /******* Game Filter Options *******/
 .game-filter-options{
-    position: absolute;
+    position: fixed;
     z-index: 100;
-    width: 200px;
+    width: 300px;
+    padding: 1rem;
     height: 100%;
     top: 0;
     left: 0;
@@ -361,16 +362,27 @@ span{
 }
 
 .filter-options-hidden{
-    left: -200px;
+    left: -300px;
 
 }
-
-
 
 .filter-toggle {
     background: none;
     border: none;
     color: #6444fb;
+}
+
+.overlay.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100svh;
+    opacity: 0.4;
+}
+
+.overlay.filter.filter-options-hidden{
+   display: none;
 }
 
 /* .random-game-header.inactive {
@@ -420,12 +432,24 @@ span{
     .bento-sub-container.zero.top {
         
     }
+
+    .bento-node > .overlay:hover {
+        display: none;
+    }
+    
+    .bento-node > .overlay:hover > .game-name {
+        display:none;
+    }
     
     .bento-sub-container.zero.bottom {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-column: span 1;
 
+    }
+
+    .bento-node:hover{
+        transform: none;
     }
 }
 

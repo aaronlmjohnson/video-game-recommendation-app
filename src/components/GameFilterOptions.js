@@ -9,6 +9,8 @@ const GameFilterOptions = ({ setForm, displayFilters })=>{
 
 
     return (
+        <>
+        <div className={`overlay filter ${!displayFilters && 'filter-options-hidden'}`}></div>
         <div className={`game-filter-options ${!displayFilters && 'filter-options-hidden'}`}>
             <GameFormCheckboxes 
                 data={developers.results}
@@ -32,6 +34,7 @@ const GameFilterOptions = ({ setForm, displayFilters })=>{
                 setForm={setForm}
             />
         </div>
+    </>
     )
 }
 
