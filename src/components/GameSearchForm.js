@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GameFilterOptions from "./GameFilterOptions";
 import GameSearchField from "./GameSearchField";
 import useGameDataContext from "../customHooks/useGameDataContext";
 
 const GameSearchForm = ({ setSearchFormOpen }) => {
   const [displayFilters, setDisplayFilters] = useState(false);
-  const { GAMES_URL, refetchFrontPageData } = useGameDataContext();
+  const { GAMES_URL, refetchFrontPageData, setOverlayOn } = useGameDataContext();
+
+  useEffect(()=>{
+    setOverlayOn(displayFilters ? true : false);
+  },[displayFilters])
 
   const [form, setForm] = useState({
     platforms: "",

@@ -10,6 +10,7 @@ const GameDataContextProvider = ({children})=>{
     
     const [gameId, setGameId] = useState(null);
     const [gameDetailOpen, setGameDetailOpen] = useState(false);
+    const [overlayOn, setOverlayOn] = useState(false);
 
     const getGameUrl = (id)=> `https://api.rawg.io/api/games/${id}?key=${RAWG_API_KEY}`;
 
@@ -46,7 +47,9 @@ const GameDataContextProvider = ({children})=>{
                     refetchGameDetailData,
                     GAMES_URL,
                     RAWG_API_KEY,
-                    getGameUrl
+                    getGameUrl,
+                    overlayOn,
+                    setOverlayOn
                 }
             }
         >

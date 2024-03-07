@@ -38,7 +38,6 @@ const GameDetail = () => {
 
   return (
     <>
-      <div className="overlay"></div>
       <section className="game-detail">
         {(detailLoading && screenshotsLoading) ? (
           <LoadingComponent />

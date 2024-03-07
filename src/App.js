@@ -3,9 +3,10 @@ import GameDetail from './components/GamePage/GameDetail';
 import BentoContainer from './components/BentoContainer';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import useGameDataContext from './customHooks/useGameDataContext';
+import { useEffect } from 'react';
 
 function App () {
-  const {frontPageLoading, gameDetailOpen, frontPageData, gameDetailDataError } = useGameDataContext();
+  const {frontPageLoading, gameDetailOpen, frontPageData, gameDetailDataError, setOverlayOn, overlayOn } = useGameDataContext();
 
   const nameAndImageData = (data)=>{
     return data?.results.reduce((accum, game)=> {
@@ -13,9 +14,18 @@ function App () {
       return accum;
     }, [])
   }
+
+  useEffect(()=>{
+    if(gameDetailOpen){
+      setOverlayOn(true);
+    }else{
+      setOverlayOn(false);
+    }
+  }, [gameDetailOpen])
   
   return (
       <div className="wrapper">
+        {/* {overlayOn && <div className="overlay"></div>} */}
         {
           frontPageLoading ? 
           <LoadingScreen /> :
