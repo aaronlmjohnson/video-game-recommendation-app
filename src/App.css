@@ -90,6 +90,7 @@ body{
     border-radius: 1rem;
     border: 3px solid white;
     transition: all .2s ease-in;
+    user-select: none;
 }
 
 .bento-node:hover{
@@ -98,10 +99,8 @@ body{
 }
 
 .bento-node.overlay-open:hover{
-    display: none;
-    transform: none;
     pointer-events: none;
-    z-index: 1;
+
 }
 
 .bento-node > .overlay:hover{
@@ -145,7 +144,7 @@ body{
     transition: all .25s ease;
 }
 
-.bento-node.overlay-open > .overlay {
+.bento-node.overlay-open:hover > .overlay {
     display: none;
 }
 

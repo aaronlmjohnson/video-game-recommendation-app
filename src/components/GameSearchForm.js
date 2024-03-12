@@ -35,7 +35,7 @@ const GameSearchForm = ({ setSearchFormOpen }) => {
 
   return (
     <form className="search-form" method="GET" onSubmit={handleSubmit}>
-      <GameFilterOptions setForm={setForm} displayFilters={displayFilters}/>
+      <GameFilterOptions setForm={setForm} displayFilters={displayFilters} setDisplayFilters={setDisplayFilters}/>
       <GameSearchField setForm={setForm} />
       <div className="search-form-buttons">
         <button type="submit">Search</button>

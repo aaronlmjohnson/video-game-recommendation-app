@@ -25,7 +25,7 @@ function App () {
   
   return (
       <div className="wrapper">
-        {/* {overlayOn && <div className="overlay"></div>} */}
+        {overlayOn && <div className="overlay"></div>}
         {
           frontPageLoading ? 
           <LoadingScreen /> :

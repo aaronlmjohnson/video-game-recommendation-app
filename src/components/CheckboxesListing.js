@@ -17,7 +17,7 @@ const CheckboxesListing = ({ data, setChecked, hidden })=>{
                 data.map((listing, i)=>{
                     return (
                         <li className={`${i > 4 ? hidden : ''}`} key={listing.id}>
-                            <input name={listing.name} type="checkbox" onChange={handler} value={listing.id}/>
+                            <input id={listing.name} name={listing.name} type="checkbox" onChange={handler} value={listing.id}/>
                             <label htmlFor={listing.name}>{listing.name}</label>
                         </li>
                     );

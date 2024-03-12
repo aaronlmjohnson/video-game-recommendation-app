@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import DateRange from "./DateRange";
 import GameFormCheckboxes from "./GameFormCheckboxes";
+import useGameDataContext from "../customHooks/useGameDataContext";
 
 import useFilterOptionsContext from "../customHooks/useFilterOptionsContext";
 
-const GameFilterOptions = ({ setForm, displayFilters })=>{
+const GameFilterOptions = ({ setForm, displayFilters, setDisplayFilters })=>{
     const { optionsLoading, developers, platforms, genres } = useFilterOptionsContext();
-
+    const { setOverlayOn } = useGameDataContext();
+    const handleClick = (e)=>{
+        e.preventDefault();
+        setOverlayOn(false);
+        setDisplayFilters(false);
+    }
 
     return (
         <>
@@ -32,6 +38,7 @@ const GameFilterOptions = ({ setForm, displayFilters })=>{
             <DateRange 
                 setForm={setForm}
             />
+            <button onClick={handleClick}>Hide</button>
         </div>
     </>
     )

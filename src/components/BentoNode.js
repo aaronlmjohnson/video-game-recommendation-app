@@ -4,7 +4,10 @@ const BentoNode = ({ data }) => {
 
     const { setGameDetailOpen, setGameId, overlayOn } = useGameDataContext();
 
-    const handleClick = ()=>{
+    const handleClick = (e)=>{
+        //to prevent the occasional triggering of nodes being clicked despite pointer-events set to none
+        if(overlayOn) return; 
+
         setGameId(data.id);
         setGameDetailOpen(true);
     }
