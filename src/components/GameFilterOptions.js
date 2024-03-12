@@ -38,7 +38,7 @@ const GameFilterOptions = ({ setForm, displayFilters, setDisplayFilters })=>{
             <DateRange 
                 setForm={setForm}
             />
-            <button onClick={handleClick}>Hide</button>
+            <button className="hide-button" onClick={handleClick}>Hide</button>
         </div>
     </>
     )

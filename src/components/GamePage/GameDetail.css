@@ -20,6 +20,8 @@
         height: 100%;
         z-index: 10;
         background: #6444fb;
+    }
+    .overlay.main{
         opacity: 0.5;
     }
 
@@ -169,7 +171,7 @@
     }
 
     .game-detail-listing-value{
-        color: #6444fb;
+        color: #9b89f8;
     }
 
     @media (max-width: 1200px){
