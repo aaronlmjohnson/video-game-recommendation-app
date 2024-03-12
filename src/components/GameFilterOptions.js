@@ -16,7 +16,7 @@ const GameFilterOptions = ({ setForm, displayFilters, setDisplayFilters })=>{
 
     return (
         <>
-        <div className={`game-filter-options ${!displayFilters && 'filter-options-hidden'}`}>
+        <div className={`game-filter-options ${!displayFilters && 'filter-options-hidden '} scroller`}>
             <GameFormCheckboxes 
                 data={developers.results}
                 heading={"Developers"}

@@ -39,6 +39,13 @@ body{
 }
 /*****************************/
 
+/********* scrollbar **************/
+.scroller {
+    scrollbar-color: var(--main-bg-color) black;
+    scrollbar-width: thin;
+}
+/**********************************/
+
 .wrapper{
     display: flex;
     color: black;
