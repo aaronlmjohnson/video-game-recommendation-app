@@ -1,10 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import { useContext } from 'react'
 import useYearContext from '../customHooks/useYearContext'
 import useGameDataContext from '../customHooks/useGameDataContext';
+
 const YearSelectionForm = ()=>{
-    // const {RAWG_API_KEY, refetch} = useContext(YearContext);
     const RAWG_API_KEY = process.env.REACT_APP_RAWG_API_KEY;
 
     const {year, setYear, FIRST_YEAR, CURRENT_YEAR } = useYearContext();
