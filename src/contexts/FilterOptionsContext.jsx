@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import useApiHandler from "../components/useGameAPI/useApiHandler";
+import useApiHandler from "../customHooks/useApiHandler";
 export const FilterOptionsContext = createContext();
 
 const FilterOptionsContextProvider = ({children})=>{

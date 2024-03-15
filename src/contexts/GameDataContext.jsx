@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import useApiHandler from "../components/useGameAPI/useApiHandler";
+import useApiHandler from "../customHooks/useApiHandler";
 import useYearContext from "../customHooks/useYearContext";
 export const GameDataContext = createContext();
 
