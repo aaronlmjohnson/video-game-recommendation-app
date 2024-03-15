@@ -1,7 +1,7 @@
 import './App.css';
 import GameDetail from './components/GamePage/GameDetail';
 import BentoContainer from './components/BentoContainer';
-import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+import LoadingScreen from './components/LoadingScreen';
 import useGameDataContext from './customHooks/useGameDataContext';
 import { useEffect } from 'react';
 

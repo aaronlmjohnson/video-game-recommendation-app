@@ -1,4 +1,4 @@
-import Animation from "../../scripts/Animation";
+import Animation from "../scripts/Animation";
 const { WavyText } = Animation;
 
 const LoadingScreen = ()=>{
