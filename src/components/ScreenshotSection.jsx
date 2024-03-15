@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ScreenshotCarousel from "../ScreenshotCarousel/ScreenshotCarousel";
+import ScreenshotCarousel from "./ScreenshotCarousel";
 
 const ScreenshotSection = ({ screenshotData, screenshotsLoading }) => {
   const [mainScreenshot, setMainScreenshot] = useState(null);

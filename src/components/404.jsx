@@ -1,7 +1,7 @@
 import './GameDetail';
 
-import useGameDataContext from '../../customHooks/useGameDataContext';
-import RandomGameButton from '../RandomGameButton';
+import useGameDataContext from '../customHooks/useGameDataContext';
+import RandomGameButton from './RandomGameButton';
 
 const GameNotFound = ({setError})=>{
     const { setGameId } = useGameDataContext();

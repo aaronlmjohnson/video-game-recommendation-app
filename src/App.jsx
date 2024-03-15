@@ -1,5 +1,5 @@
 import './App.css';
-import GameDetail from './components/GamePage/GameDetail';
+import GameDetail from './components/GameDetail';
 import BentoContainer from './components/BentoContainer';
 import LoadingScreen from './components/LoadingScreen';
 import useGameDataContext from './customHooks/useGameDataContext';

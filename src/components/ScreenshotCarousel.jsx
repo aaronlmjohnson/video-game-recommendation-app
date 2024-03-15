@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useGameDataContext from "../../customHooks/useGameDataContext";
+import useGameDataContext from "../customHooks/useGameDataContext";
 
 const ScreenshotCarousel = ({ screenshotData, mainScreenshot, setMainScreenshot })=>{
     const {gameId} = useGameDataContext();

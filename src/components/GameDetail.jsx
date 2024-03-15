@@ -1,12 +1,12 @@
 import "./GameDetail.css";
 import GameNotFound from "./404";
 import { useEffect } from "react";
-import useApiHandler from "../../customHooks/useApiHandler";
-import useGameDataContext from "../../customHooks/useGameDataContext";
+import useApiHandler from "../customHooks/useApiHandler";
+import useGameDataContext from "../customHooks/useGameDataContext";
 import GameDetailNav from "./GameDetailNav";
 import ScreenshotSection from "./ScreenshotSection";
 import GameOverview from "./GameOverview";
-import LoadingComponent from "../LoadingComponent";
+import LoadingComponent from "./LoadingComponent";
 
 const GameDetail = () => {
   const { gameId, RAWG_API_KEY } = useGameDataContext();
