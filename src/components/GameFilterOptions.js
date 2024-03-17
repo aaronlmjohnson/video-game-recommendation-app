@@ -4,7 +4,7 @@ import useGameDataContext from "../customHooks/useGameDataContext";
 
 import useFilterOptionsContext from "../customHooks/useFilterOptionsContext";
 
-const GameFilterOptions = ({ setForm, displayFilters, setDisplayFilters })=>{
+const GameFilterOptions = ({ setForm, displayFilters, setDisplayFilters, handleSubmit })=>{
     const { developers, platforms, genres } = useFilterOptionsContext();
     const { setOverlayOn } = useGameDataContext();
 
@@ -13,11 +13,7 @@ const GameFilterOptions = ({ setForm, displayFilters, setDisplayFilters })=>{
         setOverlayOn(false);
         setDisplayFilters(false);
     }
-
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-    }
-
+    
     return (
         <>
         <div className={`game-filter-options ${!displayFilters && 'filter-options-hidden '} scroller`}>

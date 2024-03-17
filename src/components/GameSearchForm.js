@@ -26,6 +26,7 @@ const GameSearchForm = ({ setSearchFormOpen }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setOverlayOn(false);
     let query = "";
     for (let property in form) {
       if (form[property]) query += `&${property}=${form[property]}`;
@@ -35,11 +36,16 @@ const GameSearchForm = ({ setSearchFormOpen }) => {
 
   return (
     <form className="search-form" method="GET" onSubmit={handleSubmit}>
-      <GameFilterOptions setForm={setForm} displayFilters={displayFilters} setDisplayFilters={setDisplayFilters}/>
+      <GameFilterOptions 
+        setForm={setForm} 
+        displayFilters={displayFilters} 
+        setDisplayFilters={setDisplayFilters} 
+        handleSubmit={handleSubmit}
+      />
       <GameSearchField setForm={setForm} />
       <div className="search-form-buttons">
         <button type="submit">Search</button>
-        <button onClick={handleFilters}>
+        <button type="button" onClick={handleFilters}>
           {displayFilters ? "Hide" : "Filters"}
         </button>
         <button onClick={() => setSearchFormOpen(false)}>Cancel</button>
