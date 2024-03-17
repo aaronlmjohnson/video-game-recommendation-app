@@ -376,6 +376,22 @@ button > h2{
     transition: left .1s ease-out;
 }
 
+.game-checkboxes{
+    margin-top: 1rem;
+}
+
+.checkboxes {
+    margin-top: 0.5rem;
+}
+
+.date-range{
+    margin-top: 1rem;
+}
+
+.date-range > h2 {
+    margin-bottom: 0.5rem;
+}
+
 .game-filter-options  h2{
     font-size: 1.5rem;
     color: #6444fb;
