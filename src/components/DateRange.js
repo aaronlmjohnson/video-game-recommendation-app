@@ -21,7 +21,7 @@ const DateRange = ({setForm})=>{
     }
     return (
         <div className="date-range">
-            <h1>Release Date:</h1>
+            <h2>Release Date</h2>
             <div className="date-range-container">
                 <label htmlFor="start-date">From:</label>
                 <input type="date"  name="start-date" onChange={handleChange}/>
