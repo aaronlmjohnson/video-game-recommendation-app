@@ -38,7 +38,7 @@ const GameDetail = () => {
 
   return (
     <>
-      <section className="game-detail">
+      <section className="game-detail scroller">
         {(detailLoading && screenshotsLoading) ? (
           <LoadingComponent />
         ) : (
